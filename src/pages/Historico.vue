@@ -58,7 +58,7 @@
 
 <script>
 export default {
-  name: 'Historico'
+  name: 'HistoricoPage'
 }
 </script>
 

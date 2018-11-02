@@ -4,8 +4,16 @@ const routes = [
     path: '/',
     component: () => import('layouts/HomeLayout.vue'),
     children: [
-      { path: '', component: () => import('pages/Home.vue') },
-      { path: '/historico', component: () => import('pages/Historico.vue') }
+      { path: '', component: () => import('pages/Historico.vue') },
+      { path: '/questionario', component: () => import('pages/Questionario.vue') },
+      { path: '/configuracoes', component: () => import('pages/Configuracoes.vue') }
+    ]
+  },
+  {
+    path: '/formulario',
+    component: () => import('layouts/FormularioLayout.vue'),
+    children: [
+      { path: '', component: () => import('pages/Formulario.vue') }
     ]
   }
 ]

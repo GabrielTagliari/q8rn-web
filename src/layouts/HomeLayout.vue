@@ -7,7 +7,7 @@
         </q-toolbar-title>
       </q-toolbar>
       <q-tabs align="justify" >
-        <q-route-tab class="tab" slot="title" name="tab-1" label="Histórico" icon="history" to="/historico"/>
+        <q-route-tab default class="tab" slot="title" name="tab-1" label="Histórico" icon="history" to="/"/>
         <q-route-tab class="tab" slot="title" name="tab-2" label="Questionário" icon="assignment" to="/questionario"/>
         <q-route-tab class="tab" slot="title" name="tab-3" label="Configurações" icon="settings" to="/configuracoes"/>
       </q-tabs>
