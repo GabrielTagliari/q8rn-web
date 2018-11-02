@@ -1,33 +1,17 @@
 <template>
   <q-layout>
-
-    <q-layout-header>
-      <q-toolbar class="fixed-top">
-        <q-toolbar-title class="title">
-          Q8RN
-          <span slot="subtitle">Questionário dos oito remédios naturais</span>
+    <q-layout-header reveal>
+      <q-toolbar align="center">
+        <q-toolbar-title class="q-pa-xs">
+          <img src="../assets/logo_simples.png" alt="Logo" width="50px" height="40px">
         </q-toolbar-title>
       </q-toolbar>
-      <q-tabs class="tabs fixed-bottom" align="center">
-        <q-route-tab
-          slot="title"
-          icon="history"
-          to="/your/route"
-          replace
-          label="Histórico"
-        />
-        <q-route-tab
-          slot="title"
-          icon="assignment"
-          to="/some/other/route"
-          replace
-          label="Questionário"
-        />
+      <q-tabs align="justify" >
+        <q-route-tab class="tab" slot="title" name="tab-1" label="Histórico" icon="history" to="/historico"/>
+        <q-route-tab class="tab" slot="title" name="tab-2" label="Questionário" icon="assignment" to="/questionario"/>
+        <q-route-tab class="tab" slot="title" name="tab-3" label="Configurações" icon="settings" to="/configuracoes"/>
       </q-tabs>
     </q-layout-header>
-
-    <q-layout-footer>
-    </q-layout-footer>
 
     <q-page-container>
       <router-view />
@@ -43,7 +27,7 @@ export default {
 </script>
 
 <style>
-.title {
-  text-align: center;
+.tab {
+  flex: 1 !important;
 }
 </style>
