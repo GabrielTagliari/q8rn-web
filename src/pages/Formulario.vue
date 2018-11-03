@@ -3,48 +3,50 @@
     <q-stepper ref="stepper">
       <!-- Step: Pessoal -->
       <q-step default title="Pessoal" subtitle="Aqui vamos nós">
-        <q-input v-model="nome" type="text" float-label="Nome"/>
-        <q-input v-model="codIdentificacao" type="text" float-label="Cód. Identificação"/>
-        <q-input v-model="iniciaisNome" type="text" float-label="Iniciais do nome"/>
-        <q-input v-model="idade" type="number" float-label="Idade"/>
-        <div>
-          <p class="caption q-mt-md">Sexo</p>
-          <q-option-group>
-            <q-radio v-model="sexo" val="F" color="primary" label="Feminino" />
-            <q-radio v-model="sexo" val="M" color="primary" label="Masculino" style="margin-left: 10px" />
-          </q-option-group>
+        <div class="row justify-around">
+          <q-input autofocus class="col-xs-12 col-sm-5 col-md-3 q-ma-md" v-model="nome" type="text" float-label="Nome"/>
+          <q-input class="col-xs-12 col-sm-5 col-md-3 q-ma-md" v-model="codIdentificacao" type="text" float-label="Cód. Identificação"/>
+          <q-input class="col-xs-12 col-sm-5 col-md-3 q-ma-md" upper-case v-model="iniciaisNome" type="text" float-label="Iniciais do nome"/>
+          <q-input class="col-xs-12 col-sm-5 col-md-3 q-ma-md" v-model="idade" type="number" float-label="Idade"/>
+          <div class="col-xs-12 col-sm-5 col-md-3 q-ma-md">
+            <p class="caption">Sexo</p>
+            <div>
+              <q-radio v-model="sexo" val="F" color="primary" label="Feminino" class="q-mr-md"/>
+              <q-radio v-model="sexo" val="M" color="primary" label="Masculino"/>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-5 col-md-3 q-ma-md">
+            <p class="caption">Estado Civil</p>
+            <q-select inverted
+              v-model="estadoCivil"
+              :options="opcoesEstadoCivil"
+            />
+          </div>
+          <div class="col-xs-12 col-sm-5 col-md-3 q-ma-md">
+            <p class="caption">Com quem mora</p>
+            <q-select inverted
+              v-model="moradia"
+              :options="opcoesMoradia"
+            />
+          </div>
+          <div class="col-xs-12 col-sm-5 col-md-3 q-ma-md">
+            <p class="caption">Cor da pele referida</p>
+            <q-select inverted
+              v-model="corPele"
+              :options="opcoesCorDaPele"
+            />
+          </div>
+          <div class="col-xs-12 col-sm-5 col-md-3 q-ma-md">
+            <p class="caption">Escolaridade</p>
+            <q-select inverted
+              v-model="escolaridade"
+              :options="opcoesEscolaridade"
+            />
+          </div>
+          <q-input class="col-xs-12 col-sm-5 col-md-3 q-ma-md" v-model="altura" type="number" float-label="Altura"/>
+          <q-input class="col-xs-12 col-sm-5 col-md-3 q-ma-md" v-model="peso" type="number" float-label="Peso"/>
+          <q-input class="col-xs-12 col-sm-5 col-md-3 q-ma-md" v-model="profissao" type="text" float-label="Profissão"/>
         </div>
-        <div>
-          <p class="caption q-mt-md">Estado Civil</p>
-          <q-select
-            v-model="estadoCivil"
-            :options="opcoesEstadoCivil"
-          />
-        </div>
-        <div>
-          <p class="caption q-mt-md">Com quem mora</p>
-          <q-select
-            v-model="moradia"
-            :options="opcoesMoradia"
-          />
-        </div>
-        <div>
-          <p class="caption q-mt-md">Cor da pele referida</p>
-          <q-select
-            v-model="corPele"
-            :options="opcoesCorDaPele"
-          />
-        </div>
-        <div>
-          <p class="caption q-mt-md">Escolaridade</p>
-          <q-select
-            v-model="escolaridade"
-            :options="opcoesEscolaridade"
-          />
-        </div>
-        <q-input v-model="altura" type="number" float-label="Altura"/>
-        <q-input v-model="peso" type="number" float-label="Peso"/>
-        <q-input v-model="profissao" type="text" float-label="Profissão"/>
       </q-step>
 
       <!-- Step: Biológico-->
