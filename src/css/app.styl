@@ -1,1 +1,25 @@
 // app global css
+.q-card-title {
+  padding: 1em;
+  text-align: justify;
+}
+
+@media screen and (max-width: 575px) {
+    .q-card-title {
+        font-size 0.8rem
+        line-height 1rem
+    }
+    .q-card-title, .q-card-main, .q-card-actions {
+        padding 0
+    }
+    .q-item-label {
+        font-size 0.8rem
+        line-height 0.8rem;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .layout-padding{
+        padding 3rem 10rem
+    }
+}

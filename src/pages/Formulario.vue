@@ -1,13 +1,13 @@
 <template>
   <q-page padding>
-    <q-stepper ref="stepper">
+    <q-stepper ref="stepper" v-model="step">
       <!-- Step: Pessoal -->
-      <q-step default title="Pessoal" subtitle="Aqui vamos nós">
+      <q-step default name="pessoal" title="Pessoal" subtitle="Dados pessoais">
         <div class="row justify-around">
-          <q-input autofocus class="col-xs-12 col-sm-5 col-md-3 q-ma-md" v-model="nome" type="text" float-label="Nome"/>
+          <q-input autofocus class="col-xs-12 col-sm-5 col-md-3 q-ma-md" v-model="nome" type="text" float-label="Nome" border/>
           <q-input class="col-xs-12 col-sm-5 col-md-3 q-ma-md" v-model="codIdentificacao" type="text" float-label="Cód. Identificação"/>
           <q-input class="col-xs-12 col-sm-5 col-md-3 q-ma-md" upper-case v-model="iniciaisNome" type="text" float-label="Iniciais do nome"/>
-          <q-input class="col-xs-12 col-sm-5 col-md-3 q-ma-md" v-model="idade" type="number" float-label="Idade"/>
+          <q-input class="col-xs-12 col-sm-5 col-md-3 q-ma-md" v-model="idade" type="number" float-label="Idade (anos)"/>
           <div class="col-xs-12 col-sm-5 col-md-3 q-ma-md">
             <p class="caption">Sexo</p>
             <div>
@@ -43,28 +43,67 @@
               :options="opcoesEscolaridade"
             />
           </div>
-          <q-input class="col-xs-12 col-sm-5 col-md-3 q-ma-md" v-model="altura" type="number" float-label="Altura"/>
-          <q-input class="col-xs-12 col-sm-5 col-md-3 q-ma-md" v-model="peso" type="number" float-label="Peso"/>
+          <q-input class="col-xs-12 col-sm-5 col-md-3 q-ma-md" v-model="altura" type="number" float-label="Altura (cm)"/>
+          <q-input class="col-xs-12 col-sm-5 col-md-3 q-ma-md" v-model="peso" type="number" float-label="Peso (kg)"/>
           <q-input class="col-xs-12 col-sm-5 col-md-3 q-ma-md" v-model="profissao" type="text" float-label="Profissão"/>
         </div>
       </q-step>
 
       <!-- Step: Biológico-->
-      <q-step title="Biológicos">...</q-step>
+      <q-step name="biologico" title="Biológicos" subtitle="Dados biológicos">
+        <div class="row justify-around">
+          <q-input class="col-xs-12 col-sm-5 col-md-3 q-ma-md" v-model="idade" type="number" float-label="Cintura (cm)"/>
+          <q-input class="col-xs-12 col-sm-5 col-md-3 q-ma-md" v-model="idade" type="number" float-label="Quadril (cm)"/>
+          <q-input class="col-xs-12 col-sm-5 col-md-3 q-ma-md" v-model="idade" type="number" float-label="IMC (kg/m²)"/>
+          <q-input class="col-xs-12 col-sm-5 col-md-3 q-ma-md" v-model="idade" type="number" float-label="Pressão arterial (mm/hg)"/>
+          <q-input class="col-xs-12 col-sm-5 col-md-3 q-ma-md" v-model="idade" type="number" float-label="Relação cintura/quadril"/>
+          <q-input class="col-xs-12 col-sm-5 col-md-3 q-ma-md" v-model="idade" type="number" float-label="Relação cintura/estatura"/>
+          <q-input class="col-xs-12 col-sm-5 col-md-3 q-ma-md" v-model="idade" type="number" float-label="Glicemia capilar (mg/dl)"/>
+          <q-input class="col-xs-12 col-sm-5 col-md-3 q-ma-md" v-model="idade" type="number" float-label="Espirometria (dl)"/>
+          <q-input class="col-xs-12 col-sm-5 col-md-3 q-ma-md" v-model="idade" type="number" float-label="Doenças referidas"/>
+          <q-input class="col-xs-12 col-sm-5 col-md-5 q-ma-md" v-model="idade" type="number" float-label="Teste de esforço antes (bpm)"/>
+          <q-input class="col-xs-12 col-sm-11 col-md-5 q-ma-md" v-model="idade" type="number" float-label="Teste de esforço depois (bpm)"/>
+        </div>
+      </q-step>
 
       <!-- Step: Religião/Saúde-->
-      <q-step title="Religião/Saúde">...</q-step>
+      <q-step name="religiao-saude" title="Religião/Saúde">
+        <div class="row justify-around">
+          <q-input class="col-xs-12 col-sm-5 col-md-3 q-ma-md" v-model="idade" type="text" float-label="Religião referida"/>
+          <q-input class="col-xs-12 col-sm-5 col-md-3 q-ma-md" v-model="idade" type="number" float-label="Há quantos anos"/>
+          <div class="col-xs-12 col-sm-5 col-md-3 q-ma-md">
+            <p class="caption">Saúde física</p>
+            <q-select inverted
+              v-model="saudeFisica"
+              :options="opcoesGenericas"
+            />
+          </div>
+          <div class="col-xs-12 col-sm-5 col-md-5 q-ma-md">
+            <p class="caption">Saúde mental</p>
+            <q-select inverted
+              v-model="saudeMental"
+              :options="opcoesGenericas"
+            />
+          </div>
+          <div class="col-xs-12 col-sm-11 col-md-5 q-ma-md">
+            <p class="caption">Qualidade de vida referida</p>
+            <q-select inverted
+              v-model="qualidadeVida"
+              :options="opcoesGenericas"
+            />
+          </div>
+          <q-input class="col-xs-12 col-sm-11 col-md-11 q-ma-md" v-model="idade" type="text" float-label="O que você deseja melhorar em sua saúde?"/>
+        </div>
+      </q-step>
 
       <q-stepper-navigation>
         <q-btn
           flat
           @click="$refs.stepper.previous()"
           label="Voltar"
+          v-if="visualizacaoBotaoVoltar"
         />
-        <q-btn
-          @click="$refs.stepper.next()"
-          label="Próximo"
-        />
+        <q-btn @click="avanca()">{{ labelBotaoNext }}</q-btn>
       </q-stepper-navigation>
     </q-stepper>
   </q-page>
@@ -73,8 +112,26 @@
 <script>
 export default {
   name: 'FormularioPage',
+  computed: {
+    visualizacaoBotaoVoltar () {
+      return this.step !== 'pessoal'
+    },
+    labelBotaoNext () {
+      return this.step === 'religiao-saude' ? 'Finalizar' : 'Próximo'
+    }
+  },
+  methods: {
+    avanca () {
+      this.step !== 'religiao-saude' ? this.$refs.stepper.next() : this.redirecionaQuestionario()
+    },
+    redirecionaQuestionario () {
+      this.$router.push('/questionario')
+    }
+  },
   data () {
     return {
+      step: '',
+      botaoVoltarAtivo: false,
       nome: '',
       codIdentificacao: '',
       iniciaisNome: '',
@@ -87,6 +144,9 @@ export default {
       moradia: '',
       corPele: '',
       escolaridade: '',
+      saudeFisica: '',
+      saudeMental: '',
+      qualidadeVida: '',
       opcoesEstadoCivil: [
         {
           label: 'Solteiro',
@@ -169,6 +229,28 @@ export default {
         {
           label: 'Superior completo',
           value: 'Superior completo'
+        }
+      ],
+      opcoesGenericas: [
+        {
+          label: 'Muito boa',
+          value: 'Muito boa'
+        },
+        {
+          label: 'Boa',
+          value: 'Boa'
+        },
+        {
+          label: 'Regular',
+          value: 'Regular'
+        },
+        {
+          label: 'Ruim',
+          value: 'Ruim'
+        },
+        {
+          label: 'Muito ruim',
+          value: 'Muito ruim'
         }
       ]
     }

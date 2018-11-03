@@ -5,7 +5,7 @@ const routes = [
     component: () => import('layouts/HomeLayout.vue'),
     children: [
       { path: '', component: () => import('pages/Historico.vue') },
-      { path: '/questionario', component: () => import('pages/Questionario.vue') },
+      { path: '/cadastro', component: () => import('pages/Cadastro.vue') },
       { path: '/configuracoes', component: () => import('pages/Configuracoes.vue') }
     ]
   },
@@ -14,6 +14,13 @@ const routes = [
     component: () => import('layouts/FormularioLayout.vue'),
     children: [
       { path: '', component: () => import('pages/Formulario.vue') }
+    ]
+  },
+  {
+    path: '/questionario',
+    component: () => import('layouts/QuestaoLayout.vue'),
+    children: [
+      { path: '', component: () => import('pages/Questao.vue') }
     ]
   }
 ]
