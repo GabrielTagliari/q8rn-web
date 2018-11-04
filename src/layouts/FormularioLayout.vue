@@ -6,8 +6,8 @@
           flat
           round
           dense
-          icon="keyboard_backspace"
-          @click="$router.push('/')"
+          icon="keyboard_arrow_left"
+          @click="$router.push('/cadastro')"
         />
         <q-toolbar-title>
           Preencha o formulário

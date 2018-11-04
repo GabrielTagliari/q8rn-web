@@ -1,7 +1,7 @@
 <template>
   <q-page padding>
     <q-list link>
-      <q-list-header>Toggles</q-list-header>
+      <q-list-header>Rede</q-list-header>
       <q-item link tag="label">
         <q-item-main label="Online" />
         <q-item-side right>

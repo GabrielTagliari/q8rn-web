@@ -99,7 +99,7 @@
       <div class="items-end">
         <q-card-separator />
         <q-card-actions class="float-right">
-          <q-btn color="primary" label="Responder" class="botao-responder q-ma-sm"/>
+          <q-btn rounded color="primary" label="Responder" class="botao-responder q-ma-sm"/>
         </q-card-actions>
       </div>
     </q-card>
