@@ -80,7 +80,8 @@ module.exports = function (ctx) {
         'QModalLayout',
         'QSearch',
         'QPagination',
-        'QCollapsible'
+        'QCollapsible',
+        'QColor'
       ],
       directives: [
         'Ripple',
