@@ -4,7 +4,7 @@ module.exports = function (ctx) {
   return {
     // app plugins (/src/plugins)
     plugins: [
-      'i18n',
+      'i18n'
     ],
     css: [
       'app.styl'
@@ -79,7 +79,8 @@ module.exports = function (ctx) {
         'QModal',
         'QModalLayout',
         'QSearch',
-        'QPagination'
+        'QPagination',
+        'QCollapsible'
       ],
       directives: [
         'Ripple',
@@ -87,7 +88,8 @@ module.exports = function (ctx) {
       ],
       // Quasar plugins
       plugins: [
-        'Notify'
+        'Notify',
+        'Dialog'
       ]
       // iconSet: ctx.theme.mat ? 'material-icons' : 'ionicons'
       // i18n: 'de' // Quasar language

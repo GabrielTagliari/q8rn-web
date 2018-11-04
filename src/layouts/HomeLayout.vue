@@ -27,7 +27,4 @@ export default {
 </script>
 
 <style>
-.tab {
-  flex: 1 !important;
-}
 </style>

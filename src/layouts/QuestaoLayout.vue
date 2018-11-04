@@ -9,11 +9,14 @@
           icon="keyboard_arrow_left"
           @click="$router.push('/formulario')"
         />
+        <img :src="imgPath" alt="Logo do tema" width="30px" height="30px">
         <q-toolbar-title>
-          {{ tema }}
+          <span> {{ tema }} </span>
         </q-toolbar-title>
       </q-toolbar>
-      <q-pagination class="row justify-center" v-model="page" color="tertiary" :min="1" :max="25" :max-pages="6" direction-links />
+      <transition appear enter-active-class="animated fadeIn" leave-active-class="animated bounceInLeft">
+        <q-pagination class="row justify-center" v-model="page" color="tertiary" :min="1" :max="25" :max-pages="6" direction-links />
+      </transition>
     </q-layout-header>
 
     <q-layout-footer>
@@ -32,7 +35,8 @@ export default {
   data: function () {
     return {
       tema: 'Nutrição',
-      page: 1
+      page: 1,
+      imgPath: '../assets/nutrition.svg'
     }
   }
 }
