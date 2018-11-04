@@ -1,20 +1,54 @@
 // app global css
 .q-card-title {
-  padding: 1em;
-  text-align: justify;
+  padding 1em;
+  text-align justify
+}
+
+.q-stepper {
+    min-height: calc(100vh - 143px)
+}
+
+.caption {
+    margin-bottom 8px
+}
+
+.q-input {
+    height 56px !important
+    align-self center
+}
+
+.q-stepper-horizontal > .q-stepper-nav {
+    margin 0 16px 16px
+}
+
+.q-stepper-horizontal > .q-stepper-step > .q-stepper-step-content > .q-stepper-step-inner {
+    padding: 24px 24px 56px 24px;
+}
+
+.q-card-actions, .botao-responder {
+    width 100%
 }
 
 @media screen and (max-width: 575px) {
     .q-card-title {
-        font-size 0.8rem
-        line-height 1rem
+        font-size 1rem
+        line-height 1.5rem
     }
     .q-card-title, .q-card-main, .q-card-actions {
         padding 0
     }
     .q-item-label {
         font-size 0.8rem
-        line-height 0.8rem;
+        line-height 0.8rem
+    }
+    .q-list {
+        padding 16px
+    }
+}
+
+@media screen and (max-width 768px) {
+    .q-stepper-horizontal > .q-stepper-step > .q-stepper-step-content > .q-stepper-step-inner {
+       padding: 0px 24px 65px 24px;
     }
 }
 

@@ -1,6 +1,6 @@
 <template>
   <q-page padding>
-    <q-stepper ref="stepper" v-model="step">
+    <q-stepper ref="stepper" v-model="step" >
       <!-- Step: Pessoal -->
       <q-step default name="pessoal" title="Pessoal" subtitle="Dados pessoais">
         <div class="row justify-around">
@@ -96,7 +96,7 @@
         </div>
       </q-step>
 
-      <q-stepper-navigation>
+      <q-stepper-navigation class="absolute-bottom">
         <q-btn
           flat
           @click="$refs.stepper.previous()"
