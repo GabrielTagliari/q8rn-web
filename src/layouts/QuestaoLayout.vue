@@ -15,7 +15,7 @@
         </q-toolbar-title>
       </q-toolbar>
       <transition appear enter-active-class="animated fadeIn" leave-active-class="animated bounceInLeft">
-        <q-pagination class="row justify-center" v-model="page" color="tertiary" :min="1" :max="25" :max-pages="6" direction-links />
+        <q-pagination class="row justify-center" v-model="page" color="tertiary" :min="1" :max="qtdQuestoes" :max-pages="6" direction-links />
       </transition>
     </q-layout-header>
 
@@ -36,7 +36,8 @@ export default {
     return {
       tema: 'Nutrição',
       page: 1,
-      imgPath: '../assets/nutrition.svg'
+      imgPath: '../assets/nutrition.svg',
+      qtdQuestoes: 25
     }
   }
 }

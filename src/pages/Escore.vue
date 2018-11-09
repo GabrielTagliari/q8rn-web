@@ -10,7 +10,36 @@
       <q-list separator highlight class="q-mt-sm q-mb-sm">
         <q-list-header>Pontos a melhorar</q-list-header>
         <q-collapsible avatar="../assets/nutrition.svg" label="Nutrição" sublabel="Pontos: 10/20">
-          <div>content</div>
+          <q-list highlight separator>
+            <q-item class="row justify-around">
+              <span>Questão</span>
+              <span>Resposta</span>
+            </q-item>
+            <q-item>
+              <item-ponto-melhorar questao="Você utiliza a água como remédio para tratamentos caseiros quando necessário? (Por exemplo, compressas quentes e frias, aplicação de gelo, inalação, escalda pés e banhos em geral)?"
+                resposta="Não vegetariano: Come carne de tipos variados mais de 1 vez por semana"
+                pontos="8000"
+              />
+            </q-item>
+            <q-item>
+              <item-ponto-melhorar questao="Você utiliza a água como remédio para tratamentos caseiros quando necessário? (Por exemplo, compressas quentes e frias, aplicação de gelo, inalação, escalda pés e banhos em geral)?"
+                resposta="Não vegetariano: Come carne de tipos variados mais de 1 vez por semana"
+                pontos="8000"
+              />
+            </q-item>
+            <q-item>
+              <item-ponto-melhorar questao="Você utiliza a água como remédio para tratamentos caseiros quando necessário? (Por exemplo, compressas quentes e frias, aplicação de gelo, inalação, escalda pés e banhos em geral)?"
+                resposta="Não vegetariano: Come carne de tipos variados mais de 1 vez por semana"
+                pontos="8000"
+              />
+            </q-item>
+            <q-item>
+              <item-ponto-melhorar questao="Você utiliza a água como remédio para tratamentos caseiros quando necessário? (Por exemplo, compressas quentes e frias, aplicação de gelo, inalação, escalda pés e banhos em geral)?"
+                resposta="Não vegetariano: Come carne de tipos variados mais de 1 vez por semana"
+                pontos="8000"
+              />
+            </q-item>
+          </q-list>
         </q-collapsible>
         <q-collapsible avatar="../assets/exercise.svg" label="Exercício" sublabel="Pontos: 10/20">
         </q-collapsible>
@@ -35,12 +64,17 @@
 </template>
 
 <script>
+import ItemPontoMelhorar from '../components/ItemPontoMelhorar.vue'
+
 export default {
   name: 'EscorePage',
   data: () => {
     return {
       escore: 55
     }
+  },
+  components: {
+    ItemPontoMelhorar
   },
   methods: {
     abrePopUpConfirmacaoRetorno () {
@@ -57,5 +91,8 @@ export default {
 }
 </script>
 
-<style>
+<style lang="stylus" scoped>
+.q-item-side {
+  flex 1
+}
 </style>

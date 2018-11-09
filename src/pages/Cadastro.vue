@@ -2,15 +2,15 @@
   <q-page padding>
     <div class="column absolute-center">
       <transition appear enter-active-class="animated flipInX" leave-active-class="animated bounceInLeft">
-        <q-btn rounded outline size="lg" color="primary" class="q-ma-md" @click="abrirModal()">Cadastro existente</q-btn>
+        <q-btn rounded outline size="lg" color="primary" class="q-ma-md" @click="$router.push('/formulario')">Adulto</q-btn>
       </transition>
 
       <transition appear enter-active-class="animated flipInX" leave-active-class="animated bounceInLeft">
-        <q-btn rounded outline size="lg" color="secondary" class="q-ma-md" @click="$router.push('/formulario')">Não possuo cadastro</q-btn>
+        <q-btn rounded outline size="lg" color="secondary" class="q-ma-md" @click="$router.push('/formulario')">Adolescente</q-btn>
       </transition>
 
-      <transition appear enter-active-class="animated flipInX" leave-active-class="animated bounceInLeft">
-        <q-btn rounded outline size="lg" color="tertiary" class="q-ma-md" @click="$router.push('/questionario')">Questionário sem cadastro</q-btn>
+      <transition appear enter-active-class="animated flipInX" leave-active-class="animted bounceInLeft">
+        <q-btn rounded outline size="lg" color="tertiary" class="q-ma-md" @click="$router.push('/questionario')">Questionário sem Formulário</q-btn>
       </transition>
     </div>
     <q-modal v-model="layoutModal" :content-css="{minWidth: '80vw', minHeight: '80vh'}">

@@ -81,7 +81,12 @@ module.exports = function (ctx) {
         'QSearch',
         'QPagination',
         'QCollapsible',
-        'QColor'
+        'QColor',
+        'QTable',
+        'QTh',
+        'QTr',
+        'QTd',
+        'QTableColumns'
       ],
       directives: [
         'Ripple',

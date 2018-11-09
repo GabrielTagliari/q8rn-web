@@ -113,7 +113,7 @@ export default {
   name: 'QuestaoPage',
   data: () => {
     return {
-      option: ''
+      option: 'opt1'
     }
   }
 }
