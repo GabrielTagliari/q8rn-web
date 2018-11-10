@@ -7,36 +7,30 @@
           <span>Resultado: Bom</span>
         </q-item>
       </q-list>
-      <q-list separator highlight class="q-mt-sm q-mb-sm">
+      <q-list separator class="q-mt-sm q-mb-sm">
         <q-list-header>Pontos a melhorar</q-list-header>
         <q-collapsible avatar="../assets/nutrition.svg" label="Nutrição" sublabel="Pontos: 10/20">
-          <q-list highlight separator>
-            <q-item class="row justify-around">
-              <span>Questão</span>
-              <span>Resposta</span>
+          <q-list separator>
+            <q-item class="row justify-between">
+              <q-item-tile label>Questão</q-item-tile>
+              <q-item-tile label>Resposta</q-item-tile>
             </q-item>
             <q-item>
               <item-ponto-melhorar questao="Você utiliza a água como remédio para tratamentos caseiros quando necessário? (Por exemplo, compressas quentes e frias, aplicação de gelo, inalação, escalda pés e banhos em geral)?"
                 resposta="Não vegetariano: Come carne de tipos variados mais de 1 vez por semana"
-                pontos="8000"
+                pontos="1/4"
               />
             </q-item>
             <q-item>
               <item-ponto-melhorar questao="Você utiliza a água como remédio para tratamentos caseiros quando necessário? (Por exemplo, compressas quentes e frias, aplicação de gelo, inalação, escalda pés e banhos em geral)?"
                 resposta="Não vegetariano: Come carne de tipos variados mais de 1 vez por semana"
-                pontos="8000"
+                pontos="1/4"
               />
             </q-item>
             <q-item>
               <item-ponto-melhorar questao="Você utiliza a água como remédio para tratamentos caseiros quando necessário? (Por exemplo, compressas quentes e frias, aplicação de gelo, inalação, escalda pés e banhos em geral)?"
                 resposta="Não vegetariano: Come carne de tipos variados mais de 1 vez por semana"
-                pontos="8000"
-              />
-            </q-item>
-            <q-item>
-              <item-ponto-melhorar questao="Você utiliza a água como remédio para tratamentos caseiros quando necessário? (Por exemplo, compressas quentes e frias, aplicação de gelo, inalação, escalda pés e banhos em geral)?"
-                resposta="Não vegetariano: Come carne de tipos variados mais de 1 vez por semana"
-                pontos="8000"
+                pontos="1/4"
               />
             </q-item>
           </q-list>
@@ -92,7 +86,4 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-.q-item-side {
-  flex 1
-}
 </style>

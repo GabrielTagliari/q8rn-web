@@ -1,9 +1,9 @@
 <template>
   <div class="item row no-wrap justify-between">
     <span>{{ questao }}</span>
-    <div class="column items-end justify-around">
-      <span>Pontos: {{ pontos }}</span>
-      <span>Resposta: {{ resposta }}</span>
+    <div class="column items-end justify-around q-pl-sm">
+      <span>{{ resposta }}</span>
+      <span><b>Pontos:</b> {{ pontos }}</span>
     </div>
   </div>
 </template>
@@ -32,6 +32,12 @@ export default {
   }
   > span {
     text-align justify
+  }
+}
+
+@media screen and (max-width 768px){
+  .item {
+    font-size 0.7rem
   }
 }
 </style>

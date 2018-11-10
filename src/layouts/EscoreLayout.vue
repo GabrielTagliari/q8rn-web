@@ -1,6 +1,6 @@
 <template>
   <q-layout>
-    <q-layout-header>
+    <q-layout-header reveal>
       <q-toolbar>
         <q-toolbar-title>
           Escore
