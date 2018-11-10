@@ -7,19 +7,12 @@
         <q-item-side left icon="sync">
         </q-item-side>
       </q-item>
-      <q-item link tag="label">
-        <q-item-main label="Online" />
-        <q-item-side right>
-          <q-toggle v-model="checked" />
-        </q-item-side>
-      </q-item>
     </q-list>
     <q-list class="q-mt-sm q-mb-sm">
-      <q-list-header>Tema</q-list-header>
+      <q-list-header>Ajuda</q-list-header>
       <q-item link tag="label">
-        <q-item-main label="Cor Padrão" />
-        <q-item-side right>
-          <q-color modal ok-label="Escolher" cancel-label="Cancelar" v-model="corPadrao" />
+        <q-item-main label="Relatar um problema" />
+        <q-item-side right stamp="Estou com problemas na aplicação">
         </q-item-side>
       </q-item>
     </q-list>
@@ -31,8 +24,7 @@ export default {
   name: 'ConfiguracoesPage',
   data: function () {
     return {
-      checked: false,
-      corPadrao: '#c52c34'
+      checked: false
     }
   }
 }
