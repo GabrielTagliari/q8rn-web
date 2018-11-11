@@ -9,7 +9,7 @@
       </q-list>
       <q-list separator class="q-mt-sm q-mb-sm">
         <q-list-header>Pontos a melhorar</q-list-header>
-        <q-collapsible avatar="assets/nutrition.png" label="Nutrição" sublabel="Pontos: 10/20">
+        <q-collapsible avatar="~statics/nutrition.png" label="Nutrição" sublabel="Pontos: 10/20">
           <q-list separator>
             <q-item class="row justify-between">
               <q-item-tile label>Questão</q-item-tile>
@@ -35,19 +35,19 @@
             </q-item>
           </q-list>
         </q-collapsible>
-        <q-collapsible avatar="assets/exercise.png" label="Exercício" sublabel="Pontos: 10/20">
+        <q-collapsible avatar="~statics/exercise.png" label="Exercício" sublabel="Pontos: 10/20">
         </q-collapsible>
-        <q-collapsible avatar="assets/water.png" label="Água" sublabel="Pontos: 10/20">
+        <q-collapsible avatar="~statics/water.png" label="Água" sublabel="Pontos: 10/20">
         </q-collapsible>
-        <q-collapsible avatar="assets/sun.png" label="Sol" sublabel="Pontos: 10/20">
+        <q-collapsible avatar="~statics/sun.png" label="Sol" sublabel="Pontos: 10/20">
         </q-collapsible>
-        <q-collapsible avatar="assets/balance.png" label="Temperança" sublabel="Pontos: 10/20">
+        <q-collapsible avatar="~statics/balance.png" label="Temperança" sublabel="Pontos: 10/20">
         </q-collapsible>
-        <q-collapsible avatar="assets/fresh-air.png" label="Ar Fresco" sublabel="Pontos: 10/20">
+        <q-collapsible avatar="~statics/fresh-air.png" label="Ar Fresco" sublabel="Pontos: 10/20">
         </q-collapsible>
-        <q-collapsible avatar="assets/rest.png" label="Descanso" sublabel="Pontos: 10/20">
+        <q-collapsible avatar="~statics/rest.png" label="Descanso" sublabel="Pontos: 10/20">
         </q-collapsible>
-        <q-collapsible avatar="assets/faith.png" label="Confiança" sublabel="Pontos: 10/20">
+        <q-collapsible avatar="~statics/faith.png" label="Confiança" sublabel="Pontos: 10/20">
         </q-collapsible>
       </q-list>
       <div class="flex justify-end">
