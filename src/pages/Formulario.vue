@@ -52,25 +52,26 @@
       <!-- Step: Biológico-->
       <q-step name="biologico" title="Biológicos" subtitle="Dados biológicos">
         <div class="row justify-around">
-          <q-input class="col-xs-12 col-sm-5 col-md-3 q-ma-md" v-model="idade" type="number" float-label="Cintura (cm)"/>
-          <q-input class="col-xs-12 col-sm-5 col-md-3 q-ma-md" v-model="idade" type="number" float-label="Quadril (cm)"/>
-          <q-input class="col-xs-12 col-sm-5 col-md-3 q-ma-md" v-model="idade" type="number" float-label="IMC (kg/m²)"/>
-          <q-input class="col-xs-12 col-sm-5 col-md-3 q-ma-md" v-model="idade" type="number" float-label="Pressão arterial (mm/hg)"/>
-          <q-input class="col-xs-12 col-sm-5 col-md-3 q-ma-md" v-model="idade" type="number" float-label="Relação cintura/quadril"/>
-          <q-input class="col-xs-12 col-sm-5 col-md-3 q-ma-md" v-model="idade" type="number" float-label="Relação cintura/estatura"/>
-          <q-input class="col-xs-12 col-sm-5 col-md-3 q-ma-md" v-model="idade" type="number" float-label="Glicemia capilar (mg/dl)"/>
-          <q-input class="col-xs-12 col-sm-5 col-md-3 q-ma-md" v-model="idade" type="number" float-label="Espirometria (dl)"/>
-          <q-input class="col-xs-12 col-sm-5 col-md-3 q-ma-md" v-model="idade" type="number" float-label="Doenças referidas"/>
-          <q-input class="col-xs-12 col-sm-5 col-md-5 q-ma-md" v-model="idade" type="number" float-label="Teste de esforço antes (bpm)"/>
-          <q-input class="col-xs-12 col-sm-11 col-md-5 q-ma-md" v-model="idade" type="number" float-label="Teste de esforço depois (bpm)"/>
+          <q-input class="col-xs-12 col-sm-5 col-md-3 q-ma-md" v-model="cintura" type="number" float-label="Cintura (cm)"/>
+          <q-input class="col-xs-12 col-sm-5 col-md-3 q-ma-md" v-model="quadril" type="number" float-label="Quadril (cm)"/>
+          <q-input class="col-xs-12 col-sm-5 col-md-3 q-ma-md" v-model="imc" type="number" float-label="IMC (kg/m²)"/>
+          <q-input class="col-xs-12 col-sm-5 col-md-3 q-ma-md" v-model="pas" type="number" float-label="Pressão arterial sistólica (mm/hg)"/>
+          <q-input class="col-xs-12 col-sm-5 col-md-3 q-ma-md" v-model="pad" type="number" float-label="Pressão arterial diastólica (mm/hg)"/>
+          <q-input class="col-xs-12 col-sm-5 col-md-3 q-ma-md" v-model="cinturaQuadril" type="number" float-label="Relação cintura/quadril"/>
+          <q-input class="col-xs-12 col-sm-5 col-md-3 q-ma-md" v-model="cinturaEstatura" type="number" float-label="Relação cintura/estatura"/>
+          <q-input class="col-xs-12 col-sm-5 col-md-3 q-ma-md" v-model="glicemiaCapilar" type="number" float-label="Glicemia capilar (mg/dl)"/>
+          <q-input class="col-xs-12 col-sm-5 col-md-3 q-ma-md" v-model="espirometria" type="number" float-label="Espirometria (dl)"/>
+          <q-input class="col-xs-12 col-sm-5 col-md-3 q-ma-md" v-model="doencasReferidas" type="number" float-label="Doenças referidas"/>
+          <q-input class="col-xs-12 col-sm-5 col-md-3 q-ma-md" v-model="esforcoAntes" type="number" float-label="Teste de esforço antes (bpm)"/>
+          <q-input class="col-xs-12 col-sm-5 col-md-3 q-ma-md" v-model="esforcoDepois" type="number" float-label="Teste de esforço depois (bpm)"/>
         </div>
       </q-step>
 
       <!-- Step: Religião/Saúde-->
       <q-step name="religiao-saude" title="Religião/Saúde">
         <div class="row justify-around">
-          <q-input class="col-xs-12 col-sm-5 col-md-3 q-ma-md" v-model="idade" type="text" float-label="Religião referida"/>
-          <q-input class="col-xs-12 col-sm-5 col-md-3 q-ma-md" v-model="idade" type="number" float-label="Há quantos anos"/>
+          <q-input class="col-xs-12 col-sm-5 col-md-3 q-ma-md" v-model="religiaoReferida" type="text" float-label="Religião referida"/>
+          <q-input class="col-xs-12 col-sm-5 col-md-3 q-ma-md" v-model="haQuantosAnos" type="number" float-label="Há quantos anos"/>
           <div class="col-xs-12 col-sm-5 col-md-3 q-ma-md">
             <p class="caption">Saúde física</p>
             <q-select inverted
@@ -92,7 +93,7 @@
               :options="opcoesGenericas"
             />
           </div>
-          <q-input class="col-xs-12 col-sm-11 col-md-11 q-ma-md" v-model="idade" type="text" float-label="O que você deseja melhorar em sua saúde?"/>
+          <q-input class="col-xs-12 col-sm-11 col-md-11 q-ma-md" v-model="oqueDesejaMelhorar" type="text" float-label="O que você deseja melhorar em sua saúde?"/>
         </div>
       </q-step>
 
@@ -139,6 +140,18 @@ export default {
       altura: '',
       peso: '',
       profissao: '',
+      cintura: '',
+      quadril: '',
+      imc: '',
+      pas: '',
+      pad: '',
+      cinturaQuadril: '',
+      cinturaEstatura: '',
+      glicemiaCapilar: '',
+      espirometria: '',
+      doencasReferidas: '',
+      esforcoAntes: '',
+      esforcoDepois: '',
       sexo: '',
       estadoCivil: '',
       moradia: '',
@@ -147,6 +160,7 @@ export default {
       saudeFisica: '',
       saudeMental: '',
       qualidadeVida: '',
+      oqueDesejaMelhorar: '',
       opcoesEstadoCivil: [
         {
           label: 'Solteiro',
