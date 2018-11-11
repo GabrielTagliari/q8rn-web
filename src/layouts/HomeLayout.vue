@@ -3,7 +3,7 @@
     <q-layout-header reveal>
       <q-toolbar align="center">
         <q-toolbar-title class="q-pa-xs">
-          <img src="../assets/logo_simples.png" alt="Logo" width="40px" height="35px">
+          <img src="assets/logo_simples.png" alt="Logo" width="40px" height="35px">
         </q-toolbar-title>
       </q-toolbar>
       <q-tabs align="justify" inverted >

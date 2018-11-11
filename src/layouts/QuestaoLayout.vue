@@ -36,7 +36,7 @@ export default {
     return {
       tema: 'Nutrição',
       page: 1,
-      imgPath: '../assets/nutrition.png',
+      imgPath: 'assets/nutrition.png',
       qtdQuestoes: 25
     }
   }
