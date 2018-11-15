@@ -160,6 +160,8 @@ export default {
       saudeFisica: '',
       saudeMental: '',
       qualidadeVida: '',
+      religiaoReferida: '',
+      haQuantosAnos: '',
       oqueDesejaMelhorar: '',
       opcoesEstadoCivil: [
         {
