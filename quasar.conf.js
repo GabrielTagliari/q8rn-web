@@ -45,7 +45,6 @@ module.exports = function (ctx) {
         'QLayoutHeader',
         'QLayoutFooter',
         'QScrollArea',
-        'QLayoutDrawer',
         'QPageContainer',
         'QPage',
         'QToolbar',
@@ -63,7 +62,6 @@ module.exports = function (ctx) {
         'QRouteTab',
         'QItemSeparator',
         'QItemTile',
-        'QToggle',
         'QStepper',
         'QStep',
         'QStepperNavigation',
@@ -80,14 +78,7 @@ module.exports = function (ctx) {
         'QModalLayout',
         'QSearch',
         'QPagination',
-        'QCollapsible',
-        'QColor',
-        'QTable',
-        'QTh',
-        'QTr',
-        'QTd',
-        'QTableColumns',
-        'QChip'
+        'QCollapsible'
       ],
       directives: [
         'Ripple',

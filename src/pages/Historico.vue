@@ -3,8 +3,7 @@
     <transition
       appear
       enter-active-class="animated fadeIn"
-      leave-active-class="animated fadeOut"
-    >
+      leave-active-class="animated fadeOut">
       <q-list highlight>
         <q-list-header>Questionários Recentes</q-list-header>
         <q-item link @click.native="$router.push('/entrevistado')">

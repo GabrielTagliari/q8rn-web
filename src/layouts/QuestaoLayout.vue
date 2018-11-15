@@ -32,7 +32,7 @@
 <script>
 export default {
   name: 'QuestaoLayout',
-  data: function () {
+  data: () => {
     return {
       tema: 'Nutrição',
       page: 1,

@@ -11,9 +11,6 @@
 <script>
 export default {
   name: 'ItemPontoMelhorar',
-  data () {
-    return {}
-  },
   props: ['questao', 'pontos', 'resposta']
 }
 </script>

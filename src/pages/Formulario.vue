@@ -129,7 +129,7 @@ export default {
       this.$router.push('/questionario')
     }
   },
-  data () {
+  data: () => {
     return {
       step: '',
       botaoVoltarAtivo: false,

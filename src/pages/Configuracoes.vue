@@ -21,12 +21,7 @@
 
 <script>
 export default {
-  name: 'ConfiguracoesPage',
-  data: function () {
-    return {
-      checked: false
-    }
-  }
+  name: 'ConfiguracoesPage'
 }
 </script>
 
