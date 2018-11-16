@@ -126,7 +126,7 @@ export default {
       this.step !== 'religiao-saude' ? this.$refs.stepper.next() : this.redirecionaQuestionario()
     },
     redirecionaQuestionario () {
-      this.$router.push('/questionario')
+      this.$router.push('/questionario/questao/1')
     }
   },
   data: () => {
@@ -274,5 +274,10 @@ export default {
 }
 </script>
 
-<style>
+<style lang="stylus" scoped>
+@media screen and (max-width: 575px) {
+  div .q-input {
+    margin 8px 8px
+  }
+}
 </style>

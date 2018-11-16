@@ -10,13 +10,13 @@
         </div>
         <div class="row justify-center">
         <q-card-main class="column">
-          <q-list link no-border v-for="opcao in questao.opcoes" :key="opcao.valor">
+          <q-list class="q-pa-none" link no-border v-for="opcao in questao.opcoes" :key="opcao.valor">
             <q-item tag="label">
               <q-item-side>
                 <q-radio v-model="questao.opcaoSelecionada" :val="opcao.valor" />
               </q-item-side>
               <q-item-main>
-                <q-item-tile label>
+                <q-item-tile label class="q-pa-none">
                   {{ opcao.titulo }}
                 </q-item-tile>
               </q-item-main>
