@@ -18,9 +18,9 @@ const routes = [
   },
   {
     path: '/questionario',
-    component: () => import('layouts/QuestaoLayout.vue'),
+    component: () => import('layouts/QuestionarioLayout.vue'),
     children: [
-      { path: '', component: () => import('pages/Questao.vue') }
+      { path: '/questionario/questao/:numero', component: () => import('pages/Questionario.vue') }
     ]
   },
   {

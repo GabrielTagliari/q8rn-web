@@ -10,7 +10,7 @@
       </transition>
 
       <transition appear enter-active-class="animated flipInX" leave-active-class="animted bounceInLeft">
-        <q-btn rounded outline size="lg" color="tertiary" class="q-ma-md" @click="$router.push('/questionario')">Questionário sem Formulário</q-btn>
+        <q-btn rounded outline size="lg" color="tertiary" class="q-ma-md" @click="$router.push('/questionario/questao/1')">Questionário sem Formulário</q-btn>
       </transition>
     </div>
   </q-page>
@@ -18,7 +18,7 @@
 
 <script>
 export default {
-  name: 'QuestionarioPage'
+  name: 'CadastroPage'
 }
 </script>
 

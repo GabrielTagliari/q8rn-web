@@ -15,7 +15,7 @@
           </q-toolbar-title>
         </q-toolbar>
         <transition appear enter-active-class="animated fadeIn" leave-active-class="animated bounceInLeft">
-          <q-pagination class="row justify-center" v-model="page" color="tertiary" :min="1" :max="qtdQuestoes" :max-pages="6" direction-links />
+          <q-pagination direction-links class="row justify-center" v-model="page" color="tertiary" :min="1" :max="qtdQuestoes" :max-pages="6" @input="irParaQuestao"/>
         </transition>
     </q-layout-header>
 
@@ -23,21 +23,39 @@
     </q-layout-footer>
 
     <q-page-container>
-      <router-view />
+      <router-view @atualizar="atualizar" @atualizarNumQuestoes="atualizarNumQuestoes"/>
     </q-page-container>
 
   </q-layout>
 </template>
 
 <script>
+import { pegaCaminhoImagem } from '../helpers/caminho-helper.js'
+
 export default {
-  name: 'QuestaoLayout',
+  name: 'QuestionarioLayout',
   data: () => {
     return {
-      tema: 'Nutrição',
+      tema: '',
       page: 1,
-      imgPath: 'statics/nutrition.svg',
-      qtdQuestoes: 25
+      imgPath: '',
+      qtdQuestoes: null
+    }
+  },
+  methods: {
+    atualizarNumQuestoes (numTotalQuestoes) {
+      this.qtdQuestoes = numTotalQuestoes
+    },
+    atualizar (questao) {
+      this.tema = questao.tema
+      this.page = questao.numero
+      this.imgPath = this.atualizarImagemTema()
+    },
+    atualizarImagemTema () {
+      return pegaCaminhoImagem[this.tema]
+    },
+    irParaQuestao () {
+      this.$router.push('/questionario/questao/' + this.page)
     }
   }
 }

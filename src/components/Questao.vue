@@ -1,0 +1,61 @@
+<template>
+  <div>
+    <transition appear enter-active-class="animated bounceInLeft" leave-active-class="animated bounceInLeft">
+      <q-card class="column justify-between">
+        <div>
+        <q-card-title>
+          {{ questao.titulo }}
+        </q-card-title>
+        <q-card-separator />
+        </div>
+        <div class="row justify-center">
+        <q-card-main class="column">
+          <q-list link no-border v-for="opcao in questao.opcoes" :key="opcao.valor">
+            <q-item tag="label">
+              <q-item-side>
+                <q-radio v-model="questao.opcaoSelecionada" :val="opcao.valor" />
+              </q-item-side>
+              <q-item-main>
+                <q-item-tile label>
+                  {{ opcao.titulo }}
+                </q-item-tile>
+              </q-item-main>
+            </q-item>
+          </q-list>
+        </q-card-main>
+        </div>
+        <div class="items-end">
+          <q-card-separator />
+          <q-card-actions class="float-right">
+            <q-btn rounded v-if="!isUltimaQuestao" color="primary" class="q-ma-xs" @click="proxima">Próxima</q-btn>
+            <q-btn rounded v-else color="primary" class="q-ma-xs" @click="finalizar">Finalizar</q-btn>
+          </q-card-actions>
+        </div>
+      </q-card>
+    </transition>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'Questao',
+  props: ['questao', 'isUltimaQuestao'],
+  mounted () {
+    this.$emit('atualizar', this.questao)
+  },
+  updated () {
+    this.$emit('atualizar', this.questao)
+  },
+  methods: {
+    proxima () {
+      this.$router.push('/questionario/questao/' + (this.questao.numero + 1))
+    },
+    finalizar () {
+      this.$router.push('/escore')
+    }
+  }
+}
+</script>
+
+<style>
+</style>
