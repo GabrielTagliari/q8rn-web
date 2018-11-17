@@ -30,7 +30,7 @@
 </template>
 
 <script>
-import { pegaCaminhoImagem } from '../helpers/caminho-helper.js'
+import { pegaCaminhoImagem } from '../helpers/de-para.js'
 import { removeCaracteresEspeciais } from '../helpers/formatter.js'
 
 export default {

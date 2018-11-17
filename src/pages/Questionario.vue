@@ -30,7 +30,7 @@ export default {
           tema: 'Nutrição',
           titulo: 'Como você se classifica no que se refere ao tipo de alimento que você mais consome? * Escolha a opção mais adequada a seu caso.',
           opcoes: [
-            {titulo: 'Vegetariano estrito Consome leite, queijo, ovos, peixe ou carne no máximo 1 vez por mês ou menos', valor: 4},
+            {titulo: 'Vegetariano estrito: Consome leite, queijo, ovos, peixe ou carne no máximo 1 vez por mês ou menos', valor: 4},
             {titulo: 'Ovolacto Vegetariano: Come laticínios e ovos mais que 1 vez por mês e peixes e carnes menos que 1 vez por mês', valor: 3},
             {titulo: 'Pesco Vegetariano: Come carne, frango e outras aves menos de 1 vez por mês, e come peixe mais de 1 vez por mês', valor: 2},
             {titulo: 'Semi Vegetariano: Come carne de tipos variados no máximo 1 vez por semana', valor: 1},

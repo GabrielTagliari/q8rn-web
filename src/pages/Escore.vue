@@ -4,7 +4,7 @@
       <q-list separator>
         <q-item class="row justify-between items-center">
           <span>Pontuação: {{ escore }}</span>
-          <span>Resultado: Bom</span>
+          <span>Resultado: {{ resultado }}</span>
         </q-item>
       </q-list>
       <q-list separator class="q-mt-sm q-mb-sm">
@@ -59,18 +59,26 @@
 
 <script>
 import ItemPontoMelhorar from '../components/ItemPontoMelhorar.vue'
+import { pegaResultadoPorEscore } from '../helpers/de-para.js'
 
 export default {
   name: 'EscorePage',
   data: () => {
     return {
-      escore: 55
+      escore: 30,
+      resultado: ''
     }
   },
   components: {
     ItemPontoMelhorar
   },
+  mounted () {
+    this.calculaResultadoPorEscore()
+  },
   methods: {
+    calculaResultadoPorEscore () {
+      this.resultado = pegaResultadoPorEscore(this.escore)
+    },
     abrePopUpConfirmacaoRetorno () {
       this.$q.dialog({
         title: 'Alerta',
