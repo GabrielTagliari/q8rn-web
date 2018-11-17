@@ -31,6 +31,7 @@
 
 <script>
 import { pegaCaminhoImagem } from '../helpers/caminho-helper.js'
+import { removeCaracteresEspeciais } from '../helpers/formatter.js'
 
 export default {
   name: 'QuestionarioLayout',
@@ -39,7 +40,7 @@ export default {
       tema: '',
       page: 1,
       imgPath: '',
-      qtdQuestoes: null
+      qtdQuestoes: 0
     }
   },
   methods: {
@@ -52,7 +53,7 @@ export default {
       this.imgPath = this.atualizarImagemTema()
     },
     atualizarImagemTema () {
-      return pegaCaminhoImagem[this.tema]
+      return pegaCaminhoImagem[removeCaracteresEspeciais(this.tema.toUpperCase())]
     },
     irParaQuestao () {
       this.$router.push('/questionario/questao/' + this.page)

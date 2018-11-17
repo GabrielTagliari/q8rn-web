@@ -48,10 +48,26 @@ export default {
   },
   methods: {
     proxima () {
-      this.$router.push('/questionario/questao/' + (this.questao.numero + 1))
+      if (this.isRespostaSelecionada()) {
+        this.$router.push('/questionario/questao/' + (this.questao.numero + 1))
+      }
     },
     finalizar () {
-      this.$router.push('/escore')
+      this.$emit('finalizar')
+    },
+    isRespostaSelecionada () {
+      if (this.questao.opcaoSelecionada === '') {
+        this.abrePopUpRespostaNaoPreenchida()
+        return false
+      }
+      return true
+    },
+    abrePopUpRespostaNaoPreenchida () {
+      this.$q.dialog({
+        title: 'Resposta obrigatória',
+        message: 'Escolha uma resposta para continuar',
+        ok: 'OK'
+      })
     }
   }
 }

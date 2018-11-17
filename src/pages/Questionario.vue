@@ -1,6 +1,6 @@
 <template>
   <q-page padding>
-    <questao :questao="questoes[$route.params.numero - 1]" :isUltimaQuestao="isUltimaQuestao" @atualizar="atualizar"/>
+    <questao :questao="questoes[$route.params.numero - 1]" :isUltimaQuestao="isUltimaQuestao" @atualizar="atualizar" @finalizar="finalizar"/>
   </q-page>
 </template>
 
@@ -37,6 +37,32 @@ export default {
             {titulo: 'Não vegetariano: Come carne de tipos variados mais de 1 vez por semana', valor: 0}
           ],
           opcaoSelecionada: ''
+        },
+        {
+          numero: 3,
+          tema: 'Exercício',
+          titulo: 'Você pratica atividades de lazer, tais como caminhar, pedalar, jogar bola, esportes radicais ou outros hobbies e atividades prazerosas?',
+          opcoes: [
+            {titulo: 'Sempre', valor: 4},
+            {titulo: 'Muitas vezes', valor: 3},
+            {titulo: 'Algumas vezes', valor: 2},
+            {titulo: 'Quase nunca', valor: 1},
+            {titulo: 'Nunca', valor: 0}
+          ],
+          opcaoSelecionada: ''
+        },
+        {
+          numero: 4,
+          tema: 'Água',
+          titulo: 'Você utiliza a água como remédio para tratamentos caseiros quando necessário? (Por exemplo, compressas quentes e frias, aplicação de gelo, inalação, escalda pés e banhos em geral).',
+          opcoes: [
+            {titulo: 'Sempre', valor: 4},
+            {titulo: 'Muitas vezes', valor: 3},
+            {titulo: 'Algumas vezes', valor: 2},
+            {titulo: 'Quase nunca', valor: 1},
+            {titulo: 'Nunca', valor: 0}
+          ],
+          opcaoSelecionada: ''
         }
       ]
     }
@@ -48,6 +74,33 @@ export default {
     atualizar (questao) {
       this.questoes[questao.numero - 1].opcaoSelecionada = questao.opcaoSelecionada
       this.$emit('atualizar', questao)
+    },
+    finalizar () {
+      if (this.verificarTodasRespostasSelecionadas()) {
+        this.$router.push('/escore')
+      }
+    },
+    verificarTodasRespostasSelecionadas () {
+      let respostasNaoPreenchidas = this.questoes.filter(questao => questao.opcaoSelecionada === '')
+      if (respostasNaoPreenchidas.length > 0) {
+        this.abrePopUpRespostaNaoPreenchida(respostasNaoPreenchidas)
+        return false
+      }
+      return true
+    },
+    abrePopUpRespostaNaoPreenchida (respostasNaoPreenchidas) {
+      this.$q.dialog({
+        title: this.preencheTituloDinamico(respostasNaoPreenchidas.length),
+        message: this.preencheMensagemDinamico(respostasNaoPreenchidas),
+        ok: 'OK'
+      })
+    },
+    preencheTituloDinamico (qtdRespostasNaoPreenchidas) {
+      return qtdRespostasNaoPreenchidas > 1 ? 'Respostas obrigatórias' : 'Resposta obrigatória'
+    },
+    preencheMensagemDinamico (respostasNaoPreenchidas) {
+      let mensagem = respostasNaoPreenchidas.length > 1 ? 'Preencha as questões: ' : 'Preencha a questão: '
+      return mensagem + respostasNaoPreenchidas.map(questao => questao.numero)
     }
   },
   computed: {
