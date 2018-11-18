@@ -11,8 +11,8 @@
           <div class="col-xs-12 col-sm-5 col-md-3 q-ma-md">
             <p class="caption">Sexo</p>
             <div>
-              <q-radio v-model="entrevistado.sexo" val="F" color="primary" label="Feminino" class="q-mr-md"/>
-              <q-radio v-model="entrevistado.sexo" val="M" color="primary" label="Masculino"/>
+              <q-radio v-model="entrevistado.sexo" val="Feminino" color="primary" label="Feminino" class="q-mr-md"/>
+              <q-radio v-model="entrevistado.sexo" val="Masculino" color="primary" label="Masculino"/>
             </div>
           </div>
           <div class="col-xs-12 col-sm-5 col-md-3 q-ma-md">
@@ -121,6 +121,8 @@ export default {
       step: '',
       botaoVoltarAtivo: false,
       entrevistado: {
+        id: 1,
+        tipoFormulario: 'Adulto',
         nome: '',
         codIdentificacao: '',
         iniciaisNome: '',
@@ -305,7 +307,7 @@ export default {
         doencasReferidas: 681,
         esforcoAntes: 6818181,
         esforcoDepois: 81,
-        sexo: 'M',
+        sexo: 'Masculino',
         estadoCivil: 'Solteiro',
         moradia: 'Pai e Mãe',
         corPele: 'Branca',
