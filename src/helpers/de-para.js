@@ -1,4 +1,10 @@
-const pegaCaminhoImagem = {
+import { removeCaracteresEspeciais } from './formatter.js'
+
+function pegaCaminhoImagem (tema) {
+  return caminhoImagem[removeCaracteresEspeciais(tema.toUpperCase())]
+}
+
+const caminhoImagem = {
   'NUTRICAO': 'statics/nutrition.svg',
   'EXERCICIO': 'statics/exercise.svg',
   'AGUA': 'statics/water.svg',

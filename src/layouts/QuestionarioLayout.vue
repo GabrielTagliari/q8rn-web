@@ -31,7 +31,6 @@
 
 <script>
 import { pegaCaminhoImagem } from '../helpers/de-para.js'
-import { removeCaracteresEspeciais } from '../helpers/formatter.js'
 
 export default {
   name: 'QuestionarioLayout',
@@ -53,7 +52,7 @@ export default {
       this.imgPath = this.atualizarImagemTema()
     },
     atualizarImagemTema () {
-      return pegaCaminhoImagem[removeCaracteresEspeciais(this.tema.toUpperCase())]
+      return pegaCaminhoImagem(this.tema)
     },
     irParaQuestao () {
       this.$router.push('/questionario/questao/' + this.page)

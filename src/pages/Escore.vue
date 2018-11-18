@@ -9,46 +9,26 @@
       </q-list>
       <q-list separator class="q-mt-sm q-mb-sm">
         <q-list-header>Pontos a melhorar</q-list-header>
-        <q-collapsible avatar="statics/nutrition.svg" label="Nutrição" sublabel="Pontos: 10/20">
-          <q-list separator>
-            <q-item class="row justify-between">
-              <q-item-tile label>Questão</q-item-tile>
-              <q-item-tile label>Resposta</q-item-tile>
-            </q-item>
-            <q-item>
-              <item-ponto-melhorar questao="Você utiliza a água como remédio para tratamentos caseiros quando necessário? (Por exemplo, compressas quentes e frias, aplicação de gelo, inalação, escalda pés e banhos em geral)?"
-                resposta="Não vegetariano: Come carne de tipos variados mais de 1 vez por semana"
-                pontos="1/4"
-              />
-            </q-item>
-            <q-item>
-              <item-ponto-melhorar questao="Você utiliza a água como remédio para tratamentos caseiros quando necessário? (Por exemplo, compressas quentes e frias, aplicação de gelo, inalação, escalda pés e banhos em geral)?"
-                resposta="Não vegetariano: Come carne de tipos variados mais de 1 vez por semana"
-                pontos="1/4"
-              />
-            </q-item>
-            <q-item>
-              <item-ponto-melhorar questao="Você utiliza a água como remédio para tratamentos caseiros quando necessário? (Por exemplo, compressas quentes e frias, aplicação de gelo, inalação, escalda pés e banhos em geral)?"
-                resposta="Não vegetariano: Come carne de tipos variados mais de 1 vez por semana"
-                pontos="1/4"
-              />
-            </q-item>
-          </q-list>
-        </q-collapsible>
-        <q-collapsible avatar="statics/exercise.svg" label="Exercício" sublabel="Pontos: 10/20">
-        </q-collapsible>
-        <q-collapsible avatar="statics/water.svg" label="Água" sublabel="Pontos: 10/20">
-        </q-collapsible>
-        <q-collapsible avatar="statics/sun.svg" label="Sol" sublabel="Pontos: 10/20">
-        </q-collapsible>
-        <q-collapsible avatar="statics/balance.svg" label="Temperança" sublabel="Pontos: 10/20">
-        </q-collapsible>
-        <q-collapsible avatar="statics/fresh-air.svg" label="Ar Fresco" sublabel="Pontos: 10/20">
-        </q-collapsible>
-        <q-collapsible avatar="statics/rest.svg" label="Descanso" sublabel="Pontos: 10/20">
-        </q-collapsible>
-        <q-collapsible avatar="statics/faith.svg" label="Confiança" sublabel="Pontos: 10/20">
-        </q-collapsible>
+        <div v-for="tema in pontosParaMelhorar.map(ponto => ponto.tema).filter((v, i, a) => a.indexOf(v) === i)" :key="tema">
+          <q-item-separator />
+          <q-collapsible :avatar="caminhoImagem(tema)" :label="tema" :sublabel="exibePontuacaoPorTema(tema)">
+            <q-list>
+              <q-item class="row justify-between">
+                <q-item-tile label>Questão</q-item-tile>
+                <q-item-tile label>Resposta</q-item-tile>
+              </q-item>
+              <div v-for="pontoParaMelhorar in pontosParaMelhorar.filter(ponto => ponto.tema === tema)" :key="pontoParaMelhorar.titulo">
+                <q-item-separator />
+                <q-item>
+                  <item-ponto-melhorar :questao="pontoParaMelhorar.titulo"
+                    :resposta="pontoParaMelhorar.resposta"
+                    :pontos="pontoParaMelhorar.pontos"
+                  />
+                </q-item>
+              </div>
+            </q-list>
+          </q-collapsible>
+        </div>
       </q-list>
       <div class="flex justify-end">
           <q-btn rounded color="primary" label="Voltar ao menu" class="botao-responder q-ma-sm" @click="abrePopUpConfirmacaoRetorno"/>
@@ -59,14 +39,50 @@
 
 <script>
 import ItemPontoMelhorar from '../components/ItemPontoMelhorar.vue'
-import { pegaResultadoPorEscore } from '../helpers/de-para.js'
+import { pegaCaminhoImagem, pegaResultadoPorEscore } from '../helpers/de-para.js'
 
 export default {
   name: 'EscorePage',
   data: () => {
     return {
-      escore: 30,
-      resultado: ''
+      escore: 48,
+      resultado: '',
+      totalPontosPorTema: [
+        {tema: 'Nutrição', totalRealizado: 5, total: 12},
+        {tema: 'Exercício', totalRealizado: 7, total: 12},
+        {tema: 'Água', totalRealizado: 8, total: 8},
+        {tema: 'Sol', totalRealizado: 6, total: 8},
+        {tema: 'Temperança', totalRealizado: 15, total: 16},
+        {tema: 'Ar puro', totalRealizado: 2, total: 8},
+        {tema: 'Descanso', totalRealizado: 1, total: 8},
+        {tema: 'Confiança', totalRealizado: 4, total: 16}
+      ],
+      pontosParaMelhorar: [
+        {
+          tema: 'Nutrição',
+          titulo: 'Com que frequência você inclui nas principais refeições do dia: feijões, cereais integrais, castanhas, frutas, legumes e verduras?',
+          resposta: 'Raramente',
+          pontos: 1
+        },
+        {
+          tema: 'Nutrição',
+          titulo: 'Quantos dos itens a seguir você consome uma ou mais vezes por semana? (salgadinhos, bolachas, frituras, refrigerantes e doces de maneira geral)',
+          resposta: 'Raramente',
+          pontos: 3
+        },
+        {
+          tema: 'Exercício',
+          titulo: 'Quantos minutos você gasta “em média” quando faz exercícios intensos até suar?',
+          resposta: '30 a 60 minutos',
+          pontos: 4
+        },
+        {
+          tema: 'Confiança',
+          titulo: 'Sua confiança em Deus (Ser Superior ou algo sagrado) influencia positivamente sua maneira de viver?',
+          resposta: 'Algumas vezes',
+          pontos: 2
+        }
+      ]
     }
   },
   components: {
@@ -76,8 +92,20 @@ export default {
     this.calculaResultadoPorEscore()
   },
   methods: {
+    caminhoImagem (tema) {
+      return pegaCaminhoImagem(tema)
+    },
     calculaResultadoPorEscore () {
       this.resultado = pegaResultadoPorEscore(this.escore)
+    },
+    exibePontuacaoPorTema (tema) {
+      return 'Pontos: ' + this.calculaTotalPontosRealizadosPorTema(tema) + '/' + this.calculaTotalPontosPorTema(tema)
+    },
+    calculaTotalPontosRealizadosPorTema (tema) {
+      return this.totalPontosPorTema.filter(ponto => ponto.tema === tema).map(ponto => ponto.totalRealizado).reduce(ponto => ponto.totalRealizado)
+    },
+    calculaTotalPontosPorTema (tema) {
+      return this.totalPontosPorTema.filter(total => total.tema === tema).map(total => total.total)
     },
     abrePopUpConfirmacaoRetorno () {
       this.$q.dialog({
@@ -87,7 +115,7 @@ export default {
         cancel: 'Não'
       }).then(() => {
         this.$router.push('/')
-      }).catch(() => {})
+      })
     }
   }
 }

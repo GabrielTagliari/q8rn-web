@@ -3,7 +3,7 @@
     <span>{{ questao }}</span>
     <div class="column items-end justify-around q-pl-sm">
       <span>{{ resposta }}</span>
-      <span><b>Pontos:</b> {{ pontos }}</span>
+      <span><b>Pontos:</b> {{ pontos }}/{{ totalPontos }}</span>
     </div>
   </div>
 </template>
@@ -11,7 +11,12 @@
 <script>
 export default {
   name: 'ItemPontoMelhorar',
-  props: ['questao', 'pontos', 'resposta']
+  props: ['questao', 'pontos', 'resposta'],
+  data: () => {
+    return {
+      totalPontos: 4
+    }
+  }
 }
 </script>
 
