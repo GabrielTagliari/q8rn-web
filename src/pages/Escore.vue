@@ -81,6 +81,12 @@ export default {
           titulo: 'Sua confiança em Deus (Ser Superior ou algo sagrado) influencia positivamente sua maneira de viver?',
           resposta: 'Algumas vezes',
           pontos: 2
+        },
+        {
+          tema: 'Confiança',
+          titulo: 'Sua confiança em Deus (Ser Superior ou algo sagrado) influencia positivamente?',
+          resposta: 'Algumas vezes',
+          pontos: 3
         }
       ]
     }
