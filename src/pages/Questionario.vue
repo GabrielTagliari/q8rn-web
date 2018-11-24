@@ -8,7 +8,7 @@
 import Questao from '../components/Questao.vue'
 
 export default {
-  name: 'QuestionarioPage',
+  name: 'Questionario',
   data: () => {
     return {
       questoes: [

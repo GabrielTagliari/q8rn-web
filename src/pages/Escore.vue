@@ -42,7 +42,7 @@ import ItemPontoMelhorar from '../components/ItemPontoMelhorar.vue'
 import { pegaCaminhoImagem, pegaResultadoPorEscore } from '../helpers/de-para.js'
 
 export default {
-  name: 'EscorePage',
+  name: 'Escore',
   data: () => {
     return {
       escore: 48,

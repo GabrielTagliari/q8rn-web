@@ -4,9 +4,9 @@ const routes = [
     path: '/',
     component: () => import('layouts/HomeLayout.vue'),
     children: [
-      { path: '', component: () => import('pages/Historico.vue') },
-      { path: '/cadastro', component: () => import('pages/Cadastro.vue') },
-      { path: '/configuracoes', component: () => import('pages/Configuracoes.vue') }
+      { path: '', component: () => import('pages/tabs/Historico.vue') },
+      { path: '/cadastro', component: () => import('pages/tabs/Questionario.vue') },
+      { path: '/configuracoes', component: () => import('pages/tabs/Configuracoes.vue') }
     ]
   },
   {

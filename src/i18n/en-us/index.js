@@ -2,6 +2,12 @@
 // so you can safely delete all default props below
 
 export default {
-  failed: 'Action failed',
-  success: 'Action was successful'
+  tab: {
+    historico: 'History',
+    questionario: 'Questionnaire',
+    configuracoes: 'Settings'
+  },
+  adulto: 'Adult',
+  adolescente: 'Teenager',
+  questionarioSemFormulario: 'Questionnaire without form'
 }

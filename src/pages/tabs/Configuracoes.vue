@@ -21,7 +21,7 @@
 
 <script>
 export default {
-  name: 'ConfiguracoesPage'
+  name: 'Configuracoes'
 }
 </script>
 

@@ -131,7 +131,7 @@
 
 <script>
 export default {
-  name: 'EntrevistadoPage',
+  name: 'Entrevistado',
   data: () => {
     return {
       entrevistado: {

@@ -115,7 +115,7 @@
 import CalculadoraMedidas from '../classes/CalculadoraMedidas.js'
 
 export default {
-  name: 'FormularioPage',
+  name: 'Formulario',
   data: () => {
     return {
       step: '',
