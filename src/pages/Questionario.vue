@@ -96,11 +96,11 @@ export default {
       })
     },
     preencheTituloDinamico (qtdRespostasNaoPreenchidas) {
-      return qtdRespostasNaoPreenchidas > 1 ? 'Respostas obrigatórias' : 'Resposta obrigatória'
+      return qtdRespostasNaoPreenchidas > 1 ? this.$t('questionario.respostasObrigatorias') : this.$t('questionario.respostaObrigatoria')
     },
     preencheMensagemDinamico (respostasNaoPreenchidas) {
-      let mensagem = respostasNaoPreenchidas.length > 1 ? 'Preencha as questões: ' : 'Preencha a questão: '
-      return mensagem + respostasNaoPreenchidas.map(questao => questao.numero)
+      let mensagem = respostasNaoPreenchidas.length > 1 ? this.$t('questionario.preenchaAsQuestoes') : this.$t('questionario.preenchaAQuestao')
+      return mensagem.concat(': ').concat(respostasNaoPreenchidas.map(questao => questao.numero))
     }
   },
   computed: {

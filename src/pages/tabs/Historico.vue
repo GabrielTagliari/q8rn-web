@@ -5,57 +5,53 @@
       enter-active-class="animated fadeIn"
       leave-active-class="animated fadeOut">
       <q-list highlight>
-        <q-list-header>Questionários Recentes</q-list-header>
+        <q-list-header>{{ $t('tab.historico.questionariosRecentes') }}</q-list-header>
         <q-item link @click.native="$router.push('/entrevistado/1')">
           <q-item-side avatar="statics/male.svg" />
-          <q-item-main label="Jim Doe" />
-          <q-item-side right stamp="01/11/2018 - Escore: 100" />
+          <q-item-main label="Jim Doe" label-lines="2" sublabel="02/11/2018" />
+          <q-item-side right :stamp="$t('tab.historico.escore').concat(': ').concat('70')" />
         </q-item>
         <q-item link @click.native="$router.push('/entrevistado/1')">
           <q-item-side avatar="statics/female.svg" />
-          <q-item-main label="Gina Doe" />
-          <q-item-side right stamp="01/11/2018 - Escore: 95" />
+          <q-item-main label="Gina Doe" label-lines="2" sublabel="01/11/2018" />
+          <q-item-side right :stamp="$t('tab.historico.escore').concat(': ').concat('95')" />
         </q-item>
         <q-item link @click.native="$router.push('/entrevistado/1')">
           <q-item-side avatar="statics/male.svg" />
-          <q-item-main label="Carlos Doe" />
-          <q-item-side right stamp="01/11/2018 - Escore: 70" />
+          <q-item-main label="Carlos Doe" label-lines="2" sublabel="01/11/2018" />
+          <q-item-side right :stamp="$t('tab.historico.escore').concat(': ').concat('70')" />
         </q-item>
         <q-item-separator />
-        <q-list-header>Questionários Anteriores</q-list-header>
-        <q-item link @click.native="$router.push('/entrevistado/1')">
-          <q-item-side avatar="statics/female.svg" />
-          <q-item-main label="Donna Doe" />
-        </q-item>
+        <q-list-header>{{ $t('tab.historico.questionariosAnteriores') }}</q-list-header>
         <q-item link @click.native="$router.push('/entrevistado/1')">
           <q-item-side avatar="statics/male.svg" />
-          <q-item-main label="Jim Doe" />
-          <q-item-side right stamp="01/11/2018 - Escore: 100" />
+          <q-item-main label="Jim Doe" label-lines="2" sublabel="01/11/2018" />
+          <q-item-side right :stamp="$t('tab.historico.escore').concat(': ').concat('100')" />
         </q-item>
         <q-item link @click.native="$router.push('/entrevistado/1')">
           <q-item-side avatar="statics/female.svg" />
-          <q-item-main label="Gina Doe" />
-          <q-item-side right stamp="01/11/2018 - Escore: 95" />
+          <q-item-main label="Gina Doe" label-lines="2" sublabel="01/11/2018" />
+          <q-item-side right :stamp="$t('tab.historico.escore').concat(': ').concat('95')" />
         </q-item>
         <q-item link @click.native="$router.push('/entrevistado/1')">
           <q-item-side avatar="statics/male.svg" />
-          <q-item-main label="Carlos Doe" />
-          <q-item-side right stamp="01/11/2018 - Escore: 70" />
+          <q-item-main label="Carlos Doe" label-lines="2" sublabel="01/11/2018" />
+          <q-item-side right :stamp="$t('tab.historico.escore').concat(': ').concat('70')" />
         </q-item>
         <q-item link @click.native="$router.push('/entrevistado/1')">
           <q-item-side avatar="statics/male.svg" />
-          <q-item-main label="Jim Doe" />
-          <q-item-side right stamp="01/11/2018 - Escore: 100" />
+          <q-item-main label="Jim Doe" label-lines="2" sublabel="01/11/2018" />
+          <q-item-side right :stamp="$t('tab.historico.escore').concat(': ').concat('100')" />
         </q-item>
         <q-item link @click.native="$router.push('/entrevistado/1')">
           <q-item-side avatar="statics/female.svg" />
-          <q-item-main label="Gina Doe" />
-          <q-item-side right stamp="01/11/2018 - Escore: 95" />
+          <q-item-main label="Gina Doe" label-lines="2" sublabel="01/11/2018" />
+          <q-item-side right :stamp="$t('tab.historico.escore').concat(': ').concat('95')" />
         </q-item>
         <q-item link @click.native="$router.push('/entrevistado/1')">
           <q-item-side avatar="statics/male.svg" />
-          <q-item-main label="Carlos Doe" />
-          <q-item-side right stamp="01/11/2018 - Escore: 70" />
+          <q-item-main label="Carlos Doe" label-lines="2" sublabel="01/11/2018" />
+          <q-item-side right :stamp="$t('tab.historico.escore').concat(': ').concat('70')" />
         </q-item>
       </q-list>
     </transition>

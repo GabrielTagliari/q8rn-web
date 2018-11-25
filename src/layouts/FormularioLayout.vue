@@ -10,7 +10,7 @@
           @click="$router.push('/cadastro')"
         />
         <q-toolbar-title>
-          Preencha o formulário
+          {{ $t('layout.formulario.titulo') }}
         </q-toolbar-title>
       </q-toolbar>
     </q-layout-header>

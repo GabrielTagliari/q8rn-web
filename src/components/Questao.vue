@@ -27,8 +27,8 @@
         <div class="items-end">
           <q-card-separator />
           <q-card-actions class="float-right">
-            <q-btn rounded v-if="!isUltimaQuestao" color="primary" class="q-ma-xs" @click="proxima">Próxima</q-btn>
-            <q-btn rounded v-else color="primary" class="q-ma-xs" @click="finalizar">Finalizar</q-btn>
+            <q-btn rounded v-if="!isUltimaQuestao" color="primary" class="q-ma-xs" @click="proxima">{{ $t('questao.proxima') }}</q-btn>
+            <q-btn rounded v-else color="primary" class="q-ma-xs" @click="finalizar">{{ $t('questao.finalizar') }}</q-btn>
           </q-card-actions>
         </div>
       </q-card>
@@ -64,8 +64,8 @@ export default {
     },
     abrePopUpRespostaNaoPreenchida () {
       this.$q.dialog({
-        title: 'Resposta obrigatória',
-        message: 'Escolha uma resposta para continuar',
+        title: this.$t('questionario.respostaObrigatoria'),
+        message: this.$t('questionario.escolhaUmaResposta'),
         ok: 'OK'
       })
     }

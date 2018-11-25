@@ -10,7 +10,7 @@
           @click="$router.push('/')"
         />
         <q-toolbar-title>
-          Dados do entrevistado
+          {{ $t('layout.dadosEntrevistado.titulo') }}
         </q-toolbar-title>
       </q-toolbar>
     </q-layout-header>

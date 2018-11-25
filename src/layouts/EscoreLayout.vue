@@ -3,8 +3,8 @@
     <q-layout-header reveal>
       <q-toolbar>
         <q-toolbar-title>
-          Escore
-          <span slot="subtitle">Resultado obtido com base nas respostas</span>
+          {{ $t('layout.escore.titulo') }}
+          <span slot="subtitle">{{ $t('layout.escore.subtitulo') }}</span>
         </q-toolbar-title>
       </q-toolbar>
     </q-layout-header>

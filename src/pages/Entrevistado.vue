@@ -4,123 +4,123 @@
       <q-card-main>
         <q-list no-border class="row">
           <q-item class="column items-start col-xs-12 col-sm-12 col-md-6 col-lg-4">
-            <q-item-main label="Questionário" />
+            <q-item-main :label="$t('tab.questionario.titulo')" />
             <q-item-tile stamp>{{ entrevistado.tipoFormulario }}</q-item-tile>
           </q-item>
           <q-item class="column items-start col-xs-12 col-sm-12 col-md-6 col-lg-4">
-            <q-item-main label="Código de identificacão" />
+            <q-item-main :label="$t('entrevistado.codIdentificacao')" />
             <q-item-tile stamp>{{ entrevistado.codIdentificacao }}</q-item-tile>
           </q-item>
           <q-item class="column items-start col-xs-12 col-sm-12 col-md-6 col-lg-4">
-            <q-item-main label="Iniciais do nome" />
+            <q-item-main :label="$t('entrevistado.iniciaisNome')" />
             <q-item-tile stamp>{{ entrevistado.iniciaisNome }}</q-item-tile>
           </q-item>
           <q-item class="column items-start col-xs-12 col-sm-12 col-md-6 col-lg-4">
-            <q-item-main label="Idade" />
+            <q-item-main :label="$t('entrevistado.idade')" />
             <q-item-tile stamp>{{ entrevistado.idade }} anos</q-item-tile>
           </q-item>
           <q-item class="column items-start col-xs-12 col-sm-12 col-md-6 col-lg-4">
-            <q-item-main label="Sexo" />
+            <q-item-main :label="$t('entrevistado.sexo')" />
             <q-item-tile stamp>{{ entrevistado.sexo }}</q-item-tile>
           </q-item>
           <q-item class="column items-start col-xs-12 col-sm-12 col-md-6 col-lg-4">
-            <q-item-main label="Estado civil" />
+            <q-item-main :label="$t('entrevistado.estadoCivil')" />
             <q-item-tile stamp>{{ entrevistado.estadoCivil }}</q-item-tile>
           </q-item>
           <q-item class="column items-start col-xs-12 col-sm-12 col-md-6 col-lg-4">
-            <q-item-main label="Cor da pele" />
+            <q-item-main :label="$t('entrevistado.corPele')" />
             <q-item-tile stamp>{{ entrevistado.corPele }}</q-item-tile>
           </q-item>
           <q-item class="column items-start col-xs-12 col-sm-12 col-md-6 col-lg-4">
-            <q-item-main label="Com quem mora" />
+            <q-item-main :label="$t('entrevistado.moradia')" />
             <q-item-tile stamp>{{ entrevistado.moradia }}</q-item-tile>
           </q-item>
           <q-item class="column items-start col-xs-12 col-sm-12 col-md-6 col-lg-4">
-            <q-item-main label="Profissão" />
+            <q-item-main :label="$t('entrevistado.profissao')" />
             <q-item-tile stamp>{{ entrevistado.profissao }}</q-item-tile>
           </q-item>
           <q-item class="column items-start col-xs-12 col-sm-12 col-md-6 col-lg-4">
-            <q-item-main label="Escolaridade" />
+            <q-item-main :label="$t('entrevistado.escolaridade')" />
             <q-item-tile stamp>{{ entrevistado.escolaridade }}</q-item-tile>
           </q-item>
           <q-item class="column items-start col-xs-12 col-sm-12 col-md-6 col-lg-4">
-            <q-item-main label="Altura" />
+            <q-item-main :label="$t('entrevistado.altura')" />
             <q-item-tile stamp>{{ entrevistado.altura }} m</q-item-tile>
           </q-item>
           <q-item class="column items-start col-xs-12 col-sm-12 col-md-6 col-lg-4">
-            <q-item-main label="Peso" />
+            <q-item-main :label="$t('entrevistado.peso')" />
             <q-item-tile stamp>{{ entrevistado.peso }} kg</q-item-tile>
           </q-item>
           <q-item class="column items-start col-xs-12 col-sm-12 col-md-6 col-lg-4">
-            <q-item-main label="IMC" />
+            <q-item-main :label="$t('entrevistado.imc')" />
             <q-item-tile stamp>{{ entrevistado.imc }} kg/m²</q-item-tile>
           </q-item>
           <q-item class="column items-start col-xs-12 col-sm-12 col-md-6 col-lg-4">
-            <q-item-main label="Cintura" />
+            <q-item-main :label="$t('entrevistado.cintura')" />
             <q-item-tile stamp>{{ entrevistado.cintura }} cm</q-item-tile>
           </q-item>
           <q-item class="column items-start col-xs-12 col-sm-12 col-md-6 col-lg-4">
-            <q-item-main label="Quadril" />
+            <q-item-main :label="$t('entrevistado.quadril')" />
             <q-item-tile stamp>{{ entrevistado.quadril }} cm</q-item-tile>
           </q-item>
           <q-item class="column items-start col-xs-12 col-sm-12 col-md-6 col-lg-4">
-            <q-item-main label="Relação cintura/quadril" />
+            <q-item-main :label="$t('entrevistado.cinturaQuadril')" />
             <q-item-tile stamp>{{ entrevistado.cinturaQuadril }}</q-item-tile>
           </q-item>
           <q-item class="column items-start col-xs-12 col-sm-12 col-md-6 col-lg-4">
-            <q-item-main label="Relação cintura/estatura" />
+            <q-item-main :label="$t('entrevistado.cinturaEstatura')" />
             <q-item-tile stamp>{{ entrevistado.cinturaEstatura }}</q-item-tile>
           </q-item>
           <q-item class="column items-start col-xs-12 col-sm-12 col-md-6 col-lg-4">
-            <q-item-main label="Pressão arterial sistólica (PAS)" />
+            <q-item-main :label="$t('entrevistado.pas')" />
             <q-item-tile stamp>{{ entrevistado.pas }} mm/hg</q-item-tile>
           </q-item>
           <q-item class="column items-start col-xs-12 col-sm-12 col-md-6 col-lg-4">
-            <q-item-main label="Pressão arterial diastólica (PAD)" />
+            <q-item-main :label="$t('entrevistado.pad')" />
             <q-item-tile stamp>{{ entrevistado.pad }} mm/hg</q-item-tile>
           </q-item>
           <q-item class="column items-start col-xs-12 col-sm-12 col-md-6 col-lg-4">
-            <q-item-main label="Glicemia capilar" />
+            <q-item-main :label="$t('entrevistado.glicemiaCapilar')" />
             <q-item-tile stamp>{{ entrevistado.glicemiaCapilar }}</q-item-tile>
           </q-item>
           <q-item class="column items-start col-xs-12 col-sm-12 col-md-6 col-lg-4">
-            <q-item-main label="Espirometria" />
+            <q-item-main :label="$t('entrevistado.espirometria')" />
             <q-item-tile stamp>{{ entrevistado.espirometria }}</q-item-tile>
           </q-item>
           <q-item class="column items-start col-xs-12 col-sm-12 col-md-6 col-lg-4">
-            <q-item-main label="Doenças referidas" />
+            <q-item-main :label="$t('entrevistado.doencasReferidas')" />
             <q-item-tile stamp>{{ entrevistado.doencasReferidas }}</q-item-tile>
           </q-item>
           <q-item class="column items-start col-xs-12 col-sm-12 col-md-6 col-lg-4">
-            <q-item-main label="Teste de esforço antes" />
+            <q-item-main :label="$t('entrevistado.esforcoAntes')" />
             <q-item-tile stamp>{{ entrevistado.esforcoAntes }} bpm</q-item-tile>
           </q-item>
           <q-item class="column items-start col-xs-12 col-sm-12 col-md-6 col-lg-4">
-            <q-item-main label="Teste de esforço depois" />
+            <q-item-main :label="$t('entrevistado.esforcoDepois')" />
             <q-item-tile stamp>{{ entrevistado.esforcoDepois }} bpm</q-item-tile>
           </q-item>
           <q-item class="column items-start col-xs-12 col-sm-12 col-md-6 col-lg-4">
-            <q-item-main label="Religião referida" />
+            <q-item-main :label="$t('entrevistado.religiaoReferida')" />
             <q-item-tile stamp>{{ entrevistado.religiaoReferida }}</q-item-tile>
           </q-item>
           <q-item class="column items-start col-xs-12 col-sm-12 col-md-6 col-lg-4">
-            <q-item-main label="Quantos anos" />
+            <q-item-main :label="$t('entrevistado.haQuantosAnos')" />
             <q-item-tile stamp>{{ entrevistado.haQuantosAnos }} anos</q-item-tile>
           </q-item>
           <q-item class="column items-start col-xs-12 col-sm-12 col-md-6 col-lg-4">
-            <q-item-main label="Saúde física" />
+            <q-item-main :label="$t('entrevistado.saudeFisica')" />
             <q-item-tile stamp>{{ entrevistado.saudeFisica }}</q-item-tile>
           </q-item>
           <q-item class="column items-start col-xs-12 col-sm-12 col-md-6 col-lg-4">
-            <q-item-main label="Saúde mental" />
+            <q-item-main :label="$t('entrevistado.saudeMental')" />
             <q-item-tile stamp>{{ entrevistado.saudeMental }}</q-item-tile>
           </q-item>
           <q-item class="column items-start col-xs-12 col-sm-12 col-md-6 col-lg-4">
-            <q-item-main label="Qualidade de vida" />
+            <q-item-main :label="$t('entrevistado.qualidadeVida')" />
             <q-item-tile stamp>{{ entrevistado.qualidadeVida }}</q-item-tile>
           </q-item>
           <q-item class="column items-start col-xs-12 col-sm-12 col-md-6 col-lg-4">
-            <q-item-main label="O que deseja melhorar em sua saúde?" />
+            <q-item-main :label="$t('entrevistado.oqueDesejaMelhorar')" />
             <q-item-tile stamp>{{ entrevistado.oqueDesejaMelhorar }}</q-item-tile>
           </q-item>
         </q-list>
