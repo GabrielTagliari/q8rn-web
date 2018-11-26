@@ -1,11 +1,10 @@
-
 const routes = [
   {
     path: '/',
     component: () => import('layouts/HomeLayout.vue'),
     children: [
-      { path: '', component: () => import('pages/tabs/Historico.vue') },
-      { path: '/cadastro', component: () => import('pages/tabs/Questionario.vue') },
+      { path: '/historico', component: () => import('pages/tabs/Historico.vue') },
+      { path: '/questionario', component: () => import('pages/tabs/Questionario.vue') },
       { path: '/configuracoes', component: () => import('pages/tabs/Configuracoes.vue') }
     ]
   },
@@ -13,11 +12,12 @@ const routes = [
     path: '/formulario',
     component: () => import('layouts/FormularioLayout.vue'),
     children: [
-      { path: '', component: () => import('pages/Formulario.vue') }
+      { path: '/formulario/adulto', component: () => import('pages/FormularioAdulto.vue') },
+      { path: '/formulario/adolescente', component: () => import('pages/FormularioAdolescente.vue') }
     ]
   },
   {
-    path: '/questionario',
+    path: '',
     component: () => import('layouts/QuestionarioLayout.vue'),
     children: [
       { path: '/questionario/questao/:numero', component: () => import('pages/Questionario.vue') }

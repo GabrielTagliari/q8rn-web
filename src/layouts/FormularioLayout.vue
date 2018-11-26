@@ -7,7 +7,7 @@
           round
           dense
           icon="keyboard_arrow_left"
-          @click="$router.push('/cadastro')"
+          @click="$router.push('/questionario')"
         />
         <q-toolbar-title>
           {{ $t('layout.formulario.titulo') }}
