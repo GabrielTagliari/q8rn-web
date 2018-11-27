@@ -2,13 +2,7 @@
   <q-layout>
     <q-layout-header>
       <q-toolbar>
-        <q-btn
-          flat
-          round
-          dense
-          icon="keyboard_arrow_left"
-          @click="$router.push('/questionario')"
-        />
+        <botao-voltar />
         <q-toolbar-title>
           {{ $t('layout.formulario.titulo') }}
         </q-toolbar-title>
@@ -22,8 +16,13 @@
 </template>
 
 <script>
+import BotaoVoltar from '../components/BotaoVoltar.vue'
+
 export default {
-  name: 'FormularioLayout'
+  name: 'FormularioLayout',
+  components: {
+    BotaoVoltar
+  }
 }
 </script>
 

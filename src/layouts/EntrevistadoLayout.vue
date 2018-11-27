@@ -2,13 +2,7 @@
   <q-layout>
     <q-layout-header>
       <q-toolbar>
-        <q-btn
-          flat
-          round
-          dense
-          icon="keyboard_arrow_left"
-          @click="$router.push('/')"
-        />
+        <botao-voltar />
         <q-toolbar-title>
           {{ $t('layout.dadosEntrevistado.titulo') }}
         </q-toolbar-title>
@@ -22,8 +16,13 @@
 </template>
 
 <script>
+import BotaoVoltar from '../components/BotaoVoltar.vue'
+
 export default {
-  name: 'EntrevistadoLayout'
+  name: 'EntrevistadoLayout',
+  components: {
+    BotaoVoltar
+  }
 }
 </script>
 

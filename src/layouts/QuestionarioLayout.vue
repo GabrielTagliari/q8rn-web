@@ -2,13 +2,7 @@
   <q-layout>
     <q-layout-header reveal>
         <q-toolbar>
-          <q-btn
-            flat
-            round
-            dense
-            icon="keyboard_arrow_left"
-            @click="$router.push('/formulario')"
-          />
+          <botao-voltar />
           <img :src="imgPath" alt="Logo do tema" width="30px" height="30px">
           <q-toolbar-title>
             <span> {{ tema }} </span>
@@ -30,10 +24,14 @@
 </template>
 
 <script>
+import BotaoVoltar from '../components/BotaoVoltar.vue'
 import { pegaCaminhoImagem } from '../helpers/de-para.js'
 
 export default {
   name: 'QuestionarioLayout',
+  components: {
+    BotaoVoltar
+  },
   data: () => {
     return {
       tema: '',
