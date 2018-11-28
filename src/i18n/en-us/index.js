@@ -31,17 +31,21 @@ export default {
     escore: {
       titulo: 'Score',
       subtitulo: 'Result obtained on the basis of the answers'
+    },
+    formulario: {
+      titulo: 'Fill out the form'
     }
   },
   entrevistado: {
     tipoFormulario: 'Questionnaire',
+    nome: 'Name',
     codIdentificacao: 'Identification code',
     iniciaisNome: 'Initials of the name',
     idade: 'Age',
     sexo: 'Gender',
     estadoCivil: 'Civil status',
     corPele: 'Skin color',
-    moradia: 'Who do they live with',
+    moradia: 'Who do you live with',
     profissao: 'Occupation',
     escolaridade: 'Education',
     altura: 'Height',
@@ -75,5 +79,22 @@ export default {
   questao: {
     proxima: 'Next',
     finalizar: 'Finish'
-  }
+  },
+  escore: {
+    pontuacao: 'Score',
+    resultado: 'Result',
+    questao: 'Question',
+    resposta: 'Answer',
+    pontosMelhorar: 'Points to improve',
+    pontos: 'Points',
+    voltarMenu: 'Back to menu',
+    alertaPopUp: {
+      alerta: 'Warning',
+      mensagem: {
+        alerta: 'After going back to menu will no longer be possible to see points to improve. Are you sure?'
+      }
+    }
+  },
+  sim: 'Yes',
+  nao: 'No'
 }

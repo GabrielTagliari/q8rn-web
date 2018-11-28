@@ -3,19 +3,19 @@
     <div class="animate-pop">
       <q-list separator>
         <q-item class="row justify-between items-center">
-          <span>Pontuação: {{ escore }}</span>
-          <span>Resultado: {{ resultado }}</span>
+          <span>{{ $t('escore.pontuacao').concat(': ').concat(escore) }}</span>
+          <span>{{ $t('escore.resultado').concat(': ').concat(resultado) }}</span>
         </q-item>
       </q-list>
       <q-list separator class="q-mt-sm q-mb-sm">
-        <q-list-header>Pontos a melhorar</q-list-header>
+        <q-list-header>{{ $t('escore.pontosMelhorar') }}</q-list-header>
         <div v-for="tema in pontosParaMelhorar.map(ponto => ponto.tema).filter((v, i, a) => a.indexOf(v) === i)" :key="tema">
           <q-item-separator />
           <q-collapsible :avatar="caminhoImagem(tema)" :label="tema" :sublabel="exibePontuacaoPorTema(tema)">
             <q-list>
               <q-item class="row justify-between">
-                <q-item-tile label>Questão</q-item-tile>
-                <q-item-tile label>Resposta</q-item-tile>
+                <q-item-tile label>{{ $t('escore.questao') }}</q-item-tile>
+                <q-item-tile label>{{ $t('escore.resposta') }}</q-item-tile>
               </q-item>
               <div v-for="pontoParaMelhorar in pontosParaMelhorar.filter(ponto => ponto.tema === tema)" :key="pontoParaMelhorar.titulo">
                 <q-item-separator />
@@ -105,7 +105,10 @@ export default {
       this.resultado = pegaResultadoPorEscore(this.escore)
     },
     exibePontuacaoPorTema (tema) {
-      return 'Pontos: ' + this.calculaTotalPontosRealizadosPorTema(tema) + '/' + this.calculaTotalPontosPorTema(tema)
+      return this.$t('escore.pontos')
+        .concat(': ')
+        .concat(this.calculaTotalPontosRealizadosPorTema(tema))
+        .concat('/').concat(this.calculaTotalPontosPorTema(tema))
     },
     calculaTotalPontosRealizadosPorTema (tema) {
       return this.totalPontosPorTema.filter(ponto => ponto.tema === tema).map(ponto => ponto.totalRealizado).reduce(ponto => ponto.totalRealizado)
@@ -115,10 +118,10 @@ export default {
     },
     abrePopUpConfirmacaoRetorno () {
       this.$q.dialog({
-        title: 'Alerta',
-        message: 'Após voltar ao menu não será mais possível visualizar os pontos a melhorar. Deseja voltar ao menu?',
-        ok: 'Sim',
-        cancel: 'Não'
+        title: this.$t('escore.alertaPopUp.alerta'),
+        message: this.$t('escore.alertaPopUp.mensagem.alerta'),
+        ok: this.$t('sim'),
+        cancel: this.$t('nao')
       }).then(() => {
         this.$router.push('/')
       })

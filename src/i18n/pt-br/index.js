@@ -38,6 +38,7 @@ export default {
   },
   entrevistado: {
     tipoFormulario: 'Questionário',
+    nome: 'Nome',
     codIdentificacao: 'Código de identificacão',
     iniciaisNome: 'Iniciais do nome',
     idade: 'Idade',
@@ -78,5 +79,22 @@ export default {
   questao: {
     proxima: 'Próxima',
     finalizar: 'Finalizar'
-  }
+  },
+  escore: {
+    pontuacao: 'Pontuação',
+    resultado: 'Resultado',
+    questao: 'Questão',
+    resposta: 'Resposta',
+    pontosMelhorar: 'Pontos a melhorar',
+    pontos: 'Pontos',
+    voltarMenu: 'Voltar ao menu',
+    alertaPopUp: {
+      alerta: 'Alerta',
+      mensagem: {
+        alerta: 'Após voltar ao menu não será mais possível visualizar os pontos a melhorar. Deseja voltar ao menu?'
+      }
+    }
+  },
+  sim: 'Sim',
+  nao: 'Não'
 }

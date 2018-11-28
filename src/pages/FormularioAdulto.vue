@@ -4,96 +4,96 @@
       <!-- Step: Pessoal -->
       <q-step default name="pessoal" title="Pessoal" subtitle="Dados pessoais">
         <div class="row justify-around">
-          <q-input autofocus class="col-xs-12 col-sm-5 col-md-3 q-ma-md" v-model="entrevistado.nome" type="text" float-label="Nome" border/>
-          <q-input class="col-xs-12 col-sm-5 col-md-3 q-ma-md" v-model="entrevistado.codIdentificacao" type="text" float-label="Cód. Identificação"/>
-          <q-input class="col-xs-12 col-sm-5 col-md-3 q-ma-md" upper-case v-model="entrevistado.iniciaisNome" type="text" float-label="Iniciais do nome"/>
-          <q-input class="col-xs-12 col-sm-5 col-md-3 q-ma-md" v-model="entrevistado.idade" type="number" float-label="Idade (anos)"/>
+          <q-input autofocus class="col-xs-12 col-sm-5 col-md-3 q-ma-md" v-model="entrevistado.nome" type="text" :float-label="$t('entrevistado.nome')" border/>
+          <q-input class="col-xs-12 col-sm-5 col-md-3 q-ma-md" v-model="entrevistado.codIdentificacao" type="text" :float-label="$t('entrevistado.codIdentificacao')"/>
+          <q-input class="col-xs-12 col-sm-5 col-md-3 q-ma-md" upper-case v-model="entrevistado.iniciaisNome" type="text" :float-label="$t('entrevistado.iniciaisNome')"/>
+          <q-input class="col-xs-12 col-sm-5 col-md-3 q-ma-md" v-model="entrevistado.idade" type="number" :float-label="$t('entrevistado.idade').concat(' (anos)')"/>
           <div class="col-xs-12 col-sm-5 col-md-3 q-ma-md">
-            <p class="caption">Sexo</p>
+            <p class="caption">{{ $t('entrevistado.sexo') }}</p>
             <div>
               <q-radio v-model="entrevistado.sexo" val="Feminino" color="primary" label="Feminino" class="q-mr-md"/>
               <q-radio v-model="entrevistado.sexo" val="Masculino" color="primary" label="Masculino"/>
             </div>
           </div>
           <div class="col-xs-12 col-sm-5 col-md-3 q-ma-md">
-            <p class="caption">Estado Civil</p>
+            <p class="caption">{{ $t('entrevistado.estadoCivil') }}</p>
             <q-select inverted
               v-model="entrevistado.estadoCivil"
               :options="opcoesEstadoCivil"
             />
           </div>
           <div class="col-xs-12 col-sm-5 col-md-3 q-ma-md">
-            <p class="caption">Com quem mora</p>
-            <q-select inverted
-              v-model="entrevistado.moradia"
-              :options="opcoesMoradia"
-            />
-          </div>
-          <div class="col-xs-12 col-sm-5 col-md-3 q-ma-md">
-            <p class="caption">Cor da pele referida</p>
+            <p class="caption">{{ $t('entrevistado.corPele') }}</p>
             <q-select inverted
               v-model="entrevistado.corPele"
               :options="opcoesCorDaPele"
             />
           </div>
           <div class="col-xs-12 col-sm-5 col-md-3 q-ma-md">
-            <p class="caption">Escolaridade</p>
+            <p class="caption">{{ $t('entrevistado.moradia') }}</p>
+            <q-select inverted
+              v-model="entrevistado.moradia"
+              :options="opcoesMoradia"
+            />
+          </div>
+          <div class="col-xs-12 col-sm-5 col-md-3 q-ma-md">
+            <p class="caption">{{ $t('entrevistado.escolaridade') }}</p>
             <q-select inverted
               v-model="entrevistado.escolaridade"
               :options="opcoesEscolaridade"
             />
           </div>
-          <q-input class="col-xs-12 col-sm-5 col-md-3 q-ma-md" v-model="entrevistado.altura" type="number" float-label="Altura (cm)"/>
-          <q-input class="col-xs-12 col-sm-5 col-md-3 q-ma-md" v-model="entrevistado.peso" type="number" float-label="Peso (kg)"/>
-          <q-input class="col-xs-12 col-sm-5 col-md-3 q-ma-md" v-model="entrevistado.profissao" type="text" float-label="Profissão"/>
+          <q-input class="col-xs-12 col-sm-5 col-md-3 q-ma-md" v-model="entrevistado.altura" type="number" :float-label="$t('entrevistado.altura').concat(' (cm)')"/>
+          <q-input class="col-xs-12 col-sm-5 col-md-3 q-ma-md" v-model="entrevistado.peso" type="number" :float-label="$t('entrevistado.peso').concat(' (kg)')"/>
+          <q-input class="col-xs-12 col-sm-5 col-md-3 q-ma-md" v-model="entrevistado.profissao" type="text" :float-label="$t('entrevistado.profissao')"/>
         </div>
       </q-step>
 
       <!-- Step: Biológico-->
       <q-step name="biologico" title="Biológicos" subtitle="Dados biológicos">
         <div class="row justify-around">
-          <q-input class="col-xs-12 col-sm-5 col-md-3 q-ma-md" v-model="entrevistado.cintura" type="number" float-label="Cintura (cm)"/>
-          <q-input class="col-xs-12 col-sm-5 col-md-3 q-ma-md" v-model="entrevistado.quadril" type="number" float-label="Quadril (cm)"/>
-          <q-input readonly class="col-xs-12 col-sm-5 col-md-3 q-ma-md" v-model="preencheIMC" type="number" float-label="IMC (kg/m²)" />
-          <q-input readonly class="col-xs-12 col-sm-5 col-md-3 q-ma-md" v-model="preencheRCQ" type="number" float-label="Relação cintura/quadril"/>
-          <q-input readonly class="col-xs-12 col-sm-5 col-md-3 q-ma-md" v-model="preencheRCE" type="number" float-label="Relação cintura/estatura"/>
-          <q-input class="col-xs-12 col-sm-5 col-md-3 q-ma-md" v-model="entrevistado.pas" type="number" float-label="Pressão arterial sistólica (mm/hg)"/>
-          <q-input class="col-xs-12 col-sm-5 col-md-3 q-ma-md" v-model="entrevistado.pad" type="number" float-label="Pressão arterial diastólica (mm/hg)"/>
-          <q-input class="col-xs-12 col-sm-5 col-md-3 q-ma-md" v-model="entrevistado.glicemiaCapilar" type="number" float-label="Glicemia capilar (mg/dl)"/>
-          <q-input class="col-xs-12 col-sm-5 col-md-3 q-ma-md" v-model="entrevistado.espirometria" type="number" float-label="Espirometria (dl)"/>
-          <q-input class="col-xs-12 col-sm-5 col-md-3 q-ma-md" v-model="entrevistado.esforcoAntes" type="number" float-label="Teste de esforço antes (bpm)"/>
-          <q-input class="col-xs-12 col-sm-5 col-md-3 q-ma-md" v-model="entrevistado.esforcoDepois" type="number" float-label="Teste de esforço depois (bpm)"/>
-          <q-input class="col-xs-12 col-sm-5 col-md-3 q-ma-md" v-model="entrevistado.doencasReferidas" type="text" float-label="Doenças referidas"/>
+          <q-input class="col-xs-12 col-sm-5 col-md-3 q-ma-md" v-model="entrevistado.cintura" type="number" :float-label="$t('entrevistado.cintura').concat('(cm)')"/>
+          <q-input class="col-xs-12 col-sm-5 col-md-3 q-ma-md" v-model="entrevistado.quadril" type="number" :float-label="$t('entrevistado.quadril').concat('(cm)')"/>
+          <q-input readonly class="col-xs-12 col-sm-5 col-md-3 q-ma-md" v-model="preencheIMC" type="number" :float-label="$t('entrevistado.imc').concat('(kg/m²)')" />
+          <q-input readonly class="col-xs-12 col-sm-5 col-md-3 q-ma-md" v-model="preencheRCQ" type="number" :float-label="$t('entrevistado.cinturaQuadril')"/>
+          <q-input readonly class="col-xs-12 col-sm-5 col-md-3 q-ma-md" v-model="preencheRCE" type="number" :float-label="$t('entrevistado.cinturaEstatura')"/>
+          <q-input class="col-xs-12 col-sm-5 col-md-3 q-ma-md" v-model="entrevistado.pas" type="number" :float-label="$t('entrevistado.pas').concat('(mm/hg)')"/>
+          <q-input class="col-xs-12 col-sm-5 col-md-3 q-ma-md" v-model="entrevistado.pad" type="number" :float-label="$t('entrevistado.pad').concat('(mm/hg)')"/>
+          <q-input class="col-xs-12 col-sm-5 col-md-3 q-ma-md" v-model="entrevistado.glicemiaCapilar" type="number" :float-label="$t('entrevistado.glicemiaCapilar').concat('(mg/dl)')"/>
+          <q-input class="col-xs-12 col-sm-5 col-md-3 q-ma-md" v-model="entrevistado.espirometria" type="number" :float-label="$t('entrevistado.espirometria').concat('(dl)')"/>
+          <q-input class="col-xs-12 col-sm-5 col-md-3 q-ma-md" v-model="entrevistado.esforcoAntes" type="number" :float-label="$t('entrevistado.esforcoAntes').concat('(bpm)')"/>
+          <q-input class="col-xs-12 col-sm-5 col-md-3 q-ma-md" v-model="entrevistado.esforcoDepois" type="number" :float-label="$t('entrevistado.esforcoDepois').concat('(bpm)')"/>
+          <q-input class="col-xs-12 col-sm-5 col-md-3 q-ma-md" v-model="entrevistado.doencasReferidas" type="text" :float-label="$t('entrevistado.doencasReferidas')"/>
         </div>
       </q-step>
 
       <!-- Step: Religião/Saúde-->
       <q-step name="religiao-saude" title="Religião/Saúde">
         <div class="row justify-around">
-          <q-input class="col-xs-12 col-sm-5 col-md-3 q-ma-md" v-model="entrevistado.religiaoReferida" type="text" float-label="Religião referida"/>
-          <q-input class="col-xs-12 col-sm-5 col-md-3 q-ma-md" v-model="entrevistado.haQuantosAnos" type="number" float-label="Há quantos anos"/>
+          <q-input class="col-xs-12 col-sm-5 col-md-3 q-ma-md" v-model="entrevistado.religiaoReferida" type="text" :float-label="$t('entrevistado.religiaoReferida')"/>
+          <q-input class="col-xs-12 col-sm-5 col-md-3 q-ma-md" v-model="entrevistado.haQuantosAnos" type="number" :float-label="$t('entrevistado.haQuantosAnos')"/>
           <div class="col-xs-12 col-sm-5 col-md-3 q-ma-md">
-            <p class="caption">Saúde física</p>
+            <p class="caption">{{ $t('entrevistado.saudeFisica') }}</p>
             <q-select inverted
               v-model="entrevistado.saudeFisica"
               :options="opcoesGenericas"
             />
           </div>
           <div class="col-xs-12 col-sm-5 col-md-5 q-ma-md">
-            <p class="caption">Saúde mental</p>
+            <p class="caption">{{ $t('entrevistado.saudeMental') }}</p>
             <q-select inverted
               v-model="entrevistado.saudeMental"
               :options="opcoesGenericas"
             />
           </div>
           <div class="col-xs-12 col-sm-11 col-md-5 q-ma-md">
-            <p class="caption">Qualidade de vida referida</p>
+            <p class="caption">{{ $t('entrevistado.qualidadeVida') }}</p>
             <q-select inverted
               v-model="entrevistado.qualidadeVida"
               :options="opcoesGenericas"
             />
           </div>
-          <q-input class="col-xs-12 col-sm-11 col-md-11 q-ma-md" v-model="entrevistado.oqueDesejaMelhorar" type="text" float-label="O que você deseja melhorar em sua saúde?"/>
+          <q-input class="col-xs-12 col-sm-11 col-md-11 q-ma-md" v-model="entrevistado.oqueDesejaMelhorar" type="text" :float-label="$t('entrevistado.oqueDesejaMelhorar')"/>
         </div>
       </q-step>
 
