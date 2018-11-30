@@ -31,7 +31,7 @@
         </div>
       </q-list>
       <div class="flex justify-end">
-          <q-btn rounded color="primary" label="Voltar ao menu" class="botao-responder q-ma-sm" @click="abrePopUpConfirmacaoRetorno"/>
+          <q-btn rounded color="primary" :label="$t('escore.voltarMenu')" class="botao-responder q-ma-sm" @click="abrePopUpConfirmacaoRetorno"/>
       </div>
     </div>
   </q-page>

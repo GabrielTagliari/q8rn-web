@@ -76,9 +76,10 @@ export default {
     preenchaAsQuestoes: 'Preencha as questões',
     escolhaUmaResposta: 'Escolha uma resposta para continuar'
   },
-  questao: {
+  navegacao: {
     proxima: 'Próxima',
-    finalizar: 'Finalizar'
+    finalizar: 'Finalizar',
+    voltar: 'Voltar'
   },
   escore: {
     pontuacao: 'Pontuação',
@@ -93,6 +94,17 @@ export default {
       mensagem: {
         alerta: 'Após voltar ao menu não será mais possível visualizar os pontos a melhorar. Deseja voltar ao menu?'
       }
+    }
+  },
+  stepper: {
+    titulo: {
+      pessoais: 'Pessoais',
+      biologicos: 'Biologicos',
+      religiaoSaude: 'Religião/Saúde'
+    },
+    subtitulo: {
+      dadosPessoais: 'Dados pessoais',
+      dadosBiologicos: 'Dados biológicos'
     }
   },
   sim: 'Sim',

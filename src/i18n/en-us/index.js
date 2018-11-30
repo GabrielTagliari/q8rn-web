@@ -76,9 +76,10 @@ export default {
     preenchaAsQuestoes: 'Fill out the questions',
     escolhaUmaResposta: 'Choose an answer to continue'
   },
-  questao: {
+  navegacao: {
     proxima: 'Next',
-    finalizar: 'Finish'
+    finalizar: 'Finish',
+    voltar: 'Back'
   },
   escore: {
     pontuacao: 'Score',
@@ -93,6 +94,17 @@ export default {
       mensagem: {
         alerta: 'After going back to menu will no longer be possible to see points to improve. Are you sure?'
       }
+    }
+  },
+  stepper: {
+    titulo: {
+      pessoais: 'Personal',
+      biologicos: 'Biological',
+      religiaoSaude: 'Religion/Health'
+    },
+    subtitulo: {
+      dadosPessoais: 'Personal data',
+      dadosBiologicos: 'Biological data'
     }
   },
   sim: 'Yes',

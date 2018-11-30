@@ -2,7 +2,7 @@
   <q-page padding>
     <q-stepper ref="stepper" v-model="step" >
       <!-- Step: Pessoal -->
-      <q-step default name="pessoal" title="Pessoal" subtitle="Dados pessoais">
+      <q-step default name="pessoal" :title="$t('stepper.titulo.pessoais')" :subtitle="$t('stepper.subtitulo.dadosPessoais')">
         <div class="row justify-around">
           <q-input autofocus class="col-xs-12 col-sm-5 col-md-3 q-ma-md" v-model="entrevistado.nome" type="text" :float-label="$t('entrevistado.nome')" border/>
           <q-input class="col-xs-12 col-sm-5 col-md-3 q-ma-md" v-model="entrevistado.codIdentificacao" type="text" :float-label="$t('entrevistado.codIdentificacao')"/>
@@ -50,7 +50,7 @@
       </q-step>
 
       <!-- Step: Biológico-->
-      <q-step name="biologico" title="Biológicos" subtitle="Dados biológicos">
+      <q-step name="biologico" :title="$t('stepper.titulo.biologicos')" :subtitle="$t('stepper.subtitulo.dadosBiologicos')">
         <div class="row justify-around">
           <q-input class="col-xs-12 col-sm-5 col-md-3 q-ma-md" v-model="entrevistado.cintura" type="number" :float-label="$t('entrevistado.cintura').concat('(cm)')"/>
           <q-input class="col-xs-12 col-sm-5 col-md-3 q-ma-md" v-model="entrevistado.quadril" type="number" :float-label="$t('entrevistado.quadril').concat('(cm)')"/>
@@ -68,7 +68,7 @@
       </q-step>
 
       <!-- Step: Religião/Saúde-->
-      <q-step name="religiao-saude" title="Religião/Saúde">
+      <q-step name="religiao-saude" :title="$t('stepper.titulo.religiaoSaude')">
         <div class="row justify-around">
           <q-input class="col-xs-12 col-sm-5 col-md-3 q-ma-md" v-model="entrevistado.religiaoReferida" type="text" :float-label="$t('entrevistado.religiaoReferida')"/>
           <q-input class="col-xs-12 col-sm-5 col-md-3 q-ma-md" v-model="entrevistado.haQuantosAnos" type="number" :float-label="$t('entrevistado.haQuantosAnos')"/>
@@ -102,7 +102,7 @@
         <q-btn
           flat
           @click="$refs.stepper.previous()"
-          label="Voltar"
+          :label="$t('navegacao.voltar')"
           v-if="visualizacaoBotaoVoltar"
         />
         <q-btn @click="avanca()">{{ labelBotaoNext }}</q-btn>
@@ -267,7 +267,7 @@ export default {
       return this.step !== 'pessoal'
     },
     labelBotaoNext () {
-      return this.step === 'religiao-saude' ? 'Finalizar' : 'Próximo'
+      return this.step === 'religiao-saude' ? this.$t('navegacao.finalizar') : this.$t('navegacao.proxima')
     },
     preencheIMC () {
       return new CalculadoraMedidas(this.entrevistado.peso, this.entrevistado.altura).valida().calculaIMC()
