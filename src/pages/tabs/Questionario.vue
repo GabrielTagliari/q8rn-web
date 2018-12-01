@@ -17,11 +17,18 @@
 </template>
 
 <script>
+import { mapActions } from 'vuex'
+
 export default {
   name: 'Questionario',
   methods: {
+    ...mapActions(['carregarQuestoes']),
     abreQuestionarioSemFormulario () {
-      this.$router.push('/questionario/questao/1')
+      this.$q.loading.show()
+      this.carregarQuestoes().then(() => {
+        this.$q.loading.hide()
+        this.$router.push('/questionario/questao/1')
+      })
     }
   }
 }

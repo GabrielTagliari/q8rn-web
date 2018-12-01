@@ -9,7 +9,7 @@
           </q-toolbar-title>
         </q-toolbar>
         <transition appear enter-active-class="animated fadeIn" leave-active-class="animated bounceInLeft">
-          <q-pagination direction-links class="row justify-center" v-model="page" color="tertiary" :min="1" :max="qtdQuestoes" :max-pages="6" @input="irParaQuestao"/>
+          <q-pagination direction-links class="row justify-center" v-model="page" color="tertiary" :min="1" :max="getQtdQuestoes" :max-pages="6" @input="irParaQuestao"/>
         </transition>
     </q-layout-header>
 
@@ -17,7 +17,7 @@
     </q-layout-footer>
 
     <q-page-container>
-      <router-view @atualizar="atualizar" @atualizarNumQuestoes="atualizarNumQuestoes"/>
+      <router-view @atualizar="atualizar"/>
     </q-page-container>
 
   </q-layout>
@@ -26,6 +26,7 @@
 <script>
 import BotaoVoltar from '../components/BotaoVoltar.vue'
 import { pegaCaminhoImagem } from '../helpers/de-para.js'
+import { mapGetters } from 'vuex'
 
 export default {
   name: 'QuestionarioLayout',
@@ -40,10 +41,10 @@ export default {
       qtdQuestoes: 0
     }
   },
+  computed: {
+    ...mapGetters(['getQtdQuestoes'])
+  },
   methods: {
-    atualizarNumQuestoes (numTotalQuestoes) {
-      this.qtdQuestoes = numTotalQuestoes
-    },
     atualizar (questao) {
       this.tema = questao.tema
       this.page = questao.numero

@@ -113,6 +113,7 @@
 
 <script>
 import CalculadoraMedidas from '../classes/CalculadoraMedidas.js'
+import { mapActions } from 'vuex'
 
 export default {
   name: 'Formulario',
@@ -280,11 +281,16 @@ export default {
     }
   },
   methods: {
+    ...mapActions(['carregarQuestoes']),
     avanca () {
       this.step !== 'religiao-saude' ? this.$refs.stepper.next() : this.redirecionaQuestionario()
     },
     redirecionaQuestionario () {
-      this.$router.push('/questionario/questao/1')
+      this.$q.loading.show()
+      this.carregarQuestoes().then(() => {
+        this.$q.loading.hide()
+        this.$router.push('/questionario/questao/1')
+      })
     },
     mockDadosParaTestes () {
       this.entrevistado = {
