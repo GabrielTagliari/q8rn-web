@@ -3,7 +3,7 @@
     <span>{{ questao }}</span>
     <div class="column items-end justify-around q-pl-sm">
       <span>{{ resposta }}</span>
-      <span><b>{{ this.$t('escore.pontos').concat(': ') }}</b> {{ pontos }}/{{ totalPontos }}</span>
+      <span><b>{{ $t('escore.pontos').concat(': ') }}</b>{{ pontos }}/{{ totalPontos }}</span>
     </div>
   </div>
 </template>

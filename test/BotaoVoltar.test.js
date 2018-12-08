@@ -7,8 +7,4 @@ describe('BotaoVoltar', () => {
   it('is a Vue instance', () => {
     expect(wrapper.isVueInstance()).toBeTruthy()
   })
-
-  it('is a Vue instance', () => {
-    expect(wrapper.isVueInstance()).toBeTruthy()
-  })
 })
