@@ -1,8 +1,8 @@
 import { shallowMount } from "@vue/test-utils";
-import BotaoVoltar from "../src/components/BotaoVoltar";
+import ItemPontoMelhorar from "../src/components/ItemPontoMelhorar";
 
-describe('BotaoVoltar', () => {
-  const wrapper = shallowMount(BotaoVoltar)
+describe('ItemPontoMelhorar', () => {
+  const wrapper = shallowMount(ItemPontoMelhorar)
 
   it('is a Vue instance', () => {
     expect(wrapper.isVueInstance()).toBeTruthy()
