@@ -1,0 +1,605 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for pages/Entrevistado.vue</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../index.html">All files</a> / <a href="index.html">pages</a> Entrevistado.vue
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>0/1</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/0</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/1</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>0/1</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">&lt;template&gt;
+  &lt;q-page padding&gt;
+    &lt;q-card&gt;
+      &lt;q-card-main&gt;
+        &lt;q-list no-border class="row"&gt;
+          &lt;q-item class="column items-start col-xs-12 col-sm-12 col-md-6 col-lg-4"&gt;
+            &lt;q-item-main :label="$t('tab.questionario.titulo')" /&gt;
+            &lt;q-item-tile stamp&gt;{{ entrevistado.tipoFormulario }}&lt;/q-item-tile&gt;
+          &lt;/q-item&gt;
+          &lt;q-item class="column items-start col-xs-12 col-sm-12 col-md-6 col-lg-4"&gt;
+            &lt;q-item-main :label="$t('entrevistado.codIdentificacao')" /&gt;
+            &lt;q-item-tile stamp&gt;{{ entrevistado.codIdentificacao }}&lt;/q-item-tile&gt;
+          &lt;/q-item&gt;
+          &lt;q-item class="column items-start col-xs-12 col-sm-12 col-md-6 col-lg-4"&gt;
+            &lt;q-item-main :label="$t('entrevistado.iniciaisNome')" /&gt;
+            &lt;q-item-tile stamp&gt;{{ entrevistado.iniciaisNome }}&lt;/q-item-tile&gt;
+          &lt;/q-item&gt;
+          &lt;q-item class="column items-start col-xs-12 col-sm-12 col-md-6 col-lg-4"&gt;
+            &lt;q-item-main :label="$t('entrevistado.idade')" /&gt;
+            &lt;q-item-tile stamp&gt;{{ entrevistado.idade }} anos&lt;/q-item-tile&gt;
+          &lt;/q-item&gt;
+          &lt;q-item class="column items-start col-xs-12 col-sm-12 col-md-6 col-lg-4"&gt;
+            &lt;q-item-main :label="$t('entrevistado.sexo')" /&gt;
+            &lt;q-item-tile stamp&gt;{{ entrevistado.sexo }}&lt;/q-item-tile&gt;
+          &lt;/q-item&gt;
+          &lt;q-item class="column items-start col-xs-12 col-sm-12 col-md-6 col-lg-4"&gt;
+            &lt;q-item-main :label="$t('entrevistado.estadoCivil')" /&gt;
+            &lt;q-item-tile stamp&gt;{{ entrevistado.estadoCivil }}&lt;/q-item-tile&gt;
+          &lt;/q-item&gt;
+          &lt;q-item class="column items-start col-xs-12 col-sm-12 col-md-6 col-lg-4"&gt;
+            &lt;q-item-main :label="$t('entrevistado.corPele')" /&gt;
+            &lt;q-item-tile stamp&gt;{{ entrevistado.corPele }}&lt;/q-item-tile&gt;
+          &lt;/q-item&gt;
+          &lt;q-item class="column items-start col-xs-12 col-sm-12 col-md-6 col-lg-4"&gt;
+            &lt;q-item-main :label="$t('entrevistado.moradia')" /&gt;
+            &lt;q-item-tile stamp&gt;{{ entrevistado.moradia }}&lt;/q-item-tile&gt;
+          &lt;/q-item&gt;
+          &lt;q-item class="column items-start col-xs-12 col-sm-12 col-md-6 col-lg-4"&gt;
+            &lt;q-item-main :label="$t('entrevistado.profissao')" /&gt;
+            &lt;q-item-tile stamp&gt;{{ entrevistado.profissao }}&lt;/q-item-tile&gt;
+          &lt;/q-item&gt;
+          &lt;q-item class="column items-start col-xs-12 col-sm-12 col-md-6 col-lg-4"&gt;
+            &lt;q-item-main :label="$t('entrevistado.escolaridade')" /&gt;
+            &lt;q-item-tile stamp&gt;{{ entrevistado.escolaridade }}&lt;/q-item-tile&gt;
+          &lt;/q-item&gt;
+          &lt;q-item class="column items-start col-xs-12 col-sm-12 col-md-6 col-lg-4"&gt;
+            &lt;q-item-main :label="$t('entrevistado.altura')" /&gt;
+            &lt;q-item-tile stamp&gt;{{ entrevistado.altura }} m&lt;/q-item-tile&gt;
+          &lt;/q-item&gt;
+          &lt;q-item class="column items-start col-xs-12 col-sm-12 col-md-6 col-lg-4"&gt;
+            &lt;q-item-main :label="$t('entrevistado.peso')" /&gt;
+            &lt;q-item-tile stamp&gt;{{ entrevistado.peso }} kg&lt;/q-item-tile&gt;
+          &lt;/q-item&gt;
+          &lt;q-item class="column items-start col-xs-12 col-sm-12 col-md-6 col-lg-4"&gt;
+            &lt;q-item-main :label="$t('entrevistado.imc')" /&gt;
+            &lt;q-item-tile stamp&gt;{{ entrevistado.imc }} kg/m²&lt;/q-item-tile&gt;
+          &lt;/q-item&gt;
+          &lt;q-item class="column items-start col-xs-12 col-sm-12 col-md-6 col-lg-4"&gt;
+            &lt;q-item-main :label="$t('entrevistado.cintura')" /&gt;
+            &lt;q-item-tile stamp&gt;{{ entrevistado.cintura }} cm&lt;/q-item-tile&gt;
+          &lt;/q-item&gt;
+          &lt;q-item class="column items-start col-xs-12 col-sm-12 col-md-6 col-lg-4"&gt;
+            &lt;q-item-main :label="$t('entrevistado.quadril')" /&gt;
+            &lt;q-item-tile stamp&gt;{{ entrevistado.quadril }} cm&lt;/q-item-tile&gt;
+          &lt;/q-item&gt;
+          &lt;q-item class="column items-start col-xs-12 col-sm-12 col-md-6 col-lg-4"&gt;
+            &lt;q-item-main :label="$t('entrevistado.cinturaQuadril')" /&gt;
+            &lt;q-item-tile stamp&gt;{{ entrevistado.cinturaQuadril }}&lt;/q-item-tile&gt;
+          &lt;/q-item&gt;
+          &lt;q-item class="column items-start col-xs-12 col-sm-12 col-md-6 col-lg-4"&gt;
+            &lt;q-item-main :label="$t('entrevistado.cinturaEstatura')" /&gt;
+            &lt;q-item-tile stamp&gt;{{ entrevistado.cinturaEstatura }}&lt;/q-item-tile&gt;
+          &lt;/q-item&gt;
+          &lt;q-item class="column items-start col-xs-12 col-sm-12 col-md-6 col-lg-4"&gt;
+            &lt;q-item-main :label="$t('entrevistado.pas')" /&gt;
+            &lt;q-item-tile stamp&gt;{{ entrevistado.pas }} mm/hg&lt;/q-item-tile&gt;
+          &lt;/q-item&gt;
+          &lt;q-item class="column items-start col-xs-12 col-sm-12 col-md-6 col-lg-4"&gt;
+            &lt;q-item-main :label="$t('entrevistado.pad')" /&gt;
+            &lt;q-item-tile stamp&gt;{{ entrevistado.pad }} mm/hg&lt;/q-item-tile&gt;
+          &lt;/q-item&gt;
+          &lt;q-item class="column items-start col-xs-12 col-sm-12 col-md-6 col-lg-4"&gt;
+            &lt;q-item-main :label="$t('entrevistado.glicemiaCapilar')" /&gt;
+            &lt;q-item-tile stamp&gt;{{ entrevistado.glicemiaCapilar }}&lt;/q-item-tile&gt;
+          &lt;/q-item&gt;
+          &lt;q-item class="column items-start col-xs-12 col-sm-12 col-md-6 col-lg-4"&gt;
+            &lt;q-item-main :label="$t('entrevistado.espirometria')" /&gt;
+            &lt;q-item-tile stamp&gt;{{ entrevistado.espirometria }}&lt;/q-item-tile&gt;
+          &lt;/q-item&gt;
+          &lt;q-item class="column items-start col-xs-12 col-sm-12 col-md-6 col-lg-4"&gt;
+            &lt;q-item-main :label="$t('entrevistado.doencasReferidas')" /&gt;
+            &lt;q-item-tile stamp&gt;{{ entrevistado.doencasReferidas }}&lt;/q-item-tile&gt;
+          &lt;/q-item&gt;
+          &lt;q-item class="column items-start col-xs-12 col-sm-12 col-md-6 col-lg-4"&gt;
+            &lt;q-item-main :label="$t('entrevistado.esforcoAntes')" /&gt;
+            &lt;q-item-tile stamp&gt;{{ entrevistado.esforcoAntes }} bpm&lt;/q-item-tile&gt;
+          &lt;/q-item&gt;
+          &lt;q-item class="column items-start col-xs-12 col-sm-12 col-md-6 col-lg-4"&gt;
+            &lt;q-item-main :label="$t('entrevistado.esforcoDepois')" /&gt;
+            &lt;q-item-tile stamp&gt;{{ entrevistado.esforcoDepois }} bpm&lt;/q-item-tile&gt;
+          &lt;/q-item&gt;
+          &lt;q-item class="column items-start col-xs-12 col-sm-12 col-md-6 col-lg-4"&gt;
+            &lt;q-item-main :label="$t('entrevistado.religiaoReferida')" /&gt;
+            &lt;q-item-tile stamp&gt;{{ entrevistado.religiaoReferida }}&lt;/q-item-tile&gt;
+          &lt;/q-item&gt;
+          &lt;q-item class="column items-start col-xs-12 col-sm-12 col-md-6 col-lg-4"&gt;
+            &lt;q-item-main :label="$t('entrevistado.haQuantosAnos')" /&gt;
+            &lt;q-item-tile stamp&gt;{{ entrevistado.haQuantosAnos }} anos&lt;/q-item-tile&gt;
+          &lt;/q-item&gt;
+          &lt;q-item class="column items-start col-xs-12 col-sm-12 col-md-6 col-lg-4"&gt;
+            &lt;q-item-main :label="$t('entrevistado.saudeFisica')" /&gt;
+            &lt;q-item-tile stamp&gt;{{ entrevistado.saudeFisica }}&lt;/q-item-tile&gt;
+          &lt;/q-item&gt;
+          &lt;q-item class="column items-start col-xs-12 col-sm-12 col-md-6 col-lg-4"&gt;
+            &lt;q-item-main :label="$t('entrevistado.saudeMental')" /&gt;
+            &lt;q-item-tile stamp&gt;{{ entrevistado.saudeMental }}&lt;/q-item-tile&gt;
+          &lt;/q-item&gt;
+          &lt;q-item class="column items-start col-xs-12 col-sm-12 col-md-6 col-lg-4"&gt;
+            &lt;q-item-main :label="$t('entrevistado.qualidadeVida')" /&gt;
+            &lt;q-item-tile stamp&gt;{{ entrevistado.qualidadeVida }}&lt;/q-item-tile&gt;
+          &lt;/q-item&gt;
+          &lt;q-item class="column items-start col-xs-12 col-sm-12 col-md-6 col-lg-4"&gt;
+            &lt;q-item-main :label="$t('entrevistado.oqueDesejaMelhorar')" /&gt;
+            &lt;q-item-tile stamp&gt;{{ entrevistado.oqueDesejaMelhorar }}&lt;/q-item-tile&gt;
+          &lt;/q-item&gt;
+        &lt;/q-list&gt;
+      &lt;/q-card-main&gt;
+    &lt;/q-card&gt;
+  &lt;/q-page&gt;
+&lt;/template&gt;
+&nbsp;
+&lt;script&gt;
+export default {
+  name: 'Entrevistado',
+<span class="fstat-no" title="function not covered" >  data: () =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >    return {</span>
+      entrevistado: {
+        id: 1,
+        tipoFormulario: 'Adulto',
+        nome: 'Gabriel',
+        codIdentificacao: 'COD',
+        iniciaisNome: 'GTR',
+        idade: 25,
+        altura: 1.78,
+        peso: 63,
+        profissao: 'Programador',
+        cintura: 1.65,
+        quadril: 15.5,
+        imc: 561,
+        pas: 561,
+        pad: 651,
+        cinturaQuadril: 3216,
+        cinturaEstatura: 651,
+        glicemiaCapilar: 681681,
+        espirometria: 681,
+        doencasReferidas: 681,
+        esforcoAntes: 6818181,
+        esforcoDepois: 81,
+        sexo: 'Masculino',
+        estadoCivil: 'Solteiro',
+        moradia: 'Pai e Mãe',
+        corPele: 'Branca',
+        escolaridade: 'Superior completo',
+        saudeFisica: 'Muito boa',
+        saudeMental: 'Boa',
+        qualidadeVida: 'Regular',
+        religiaoReferida: 'Nenhuma',
+        haQuantosAnos: 0,
+        oqueDesejaMelhorar: 'Nada'
+      }
+    }
+  }
+}
+&lt;/script&gt;
+&nbsp;
+&lt;style lang="stylus" scoped&gt;
+.q-item-main {
+  flex 0
+}
+&lt;/style&gt;
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sat Dec 08 2018 14:33:21 GMT-0200 (-02)
+</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>

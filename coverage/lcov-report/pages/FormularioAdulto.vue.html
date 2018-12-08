@@ -1,0 +1,1082 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for pages/FormularioAdulto.vue</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../index.html">All files</a> / <a href="index.html">pages</a> FormularioAdulto.vue
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>0/15</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/4</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/10</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>0/15</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263
+264
+265
+266
+267
+268
+269
+270
+271
+272
+273
+274
+275
+276
+277
+278
+279
+280
+281
+282
+283
+284
+285
+286
+287
+288
+289
+290
+291
+292
+293
+294
+295
+296
+297
+298
+299
+300
+301
+302
+303
+304
+305
+306
+307
+308
+309
+310
+311
+312
+313
+314
+315
+316
+317
+318
+319
+320
+321
+322
+323
+324
+325
+326
+327
+328
+329
+330
+331
+332
+333
+334
+335
+336
+337
+338
+339
+340</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">&lt;template&gt;
+  &lt;q-page padding&gt;
+    &lt;q-stepper ref="stepper" v-model="step" &gt;
+      &lt;!-- Step: Pessoal --&gt;
+      &lt;q-step default name="pessoal" :title="$t('stepper.titulo.pessoais')" :subtitle="$t('stepper.subtitulo.dadosPessoais')"&gt;
+        &lt;div class="row justify-around"&gt;
+          &lt;q-input autofocus class="col-xs-12 col-sm-5 col-md-3 q-ma-md" v-model="entrevistado.nome" type="text" :float-label="$t('entrevistado.nome')" border/&gt;
+          &lt;q-input class="col-xs-12 col-sm-5 col-md-3 q-ma-md" v-model="entrevistado.codIdentificacao" type="text" :float-label="$t('entrevistado.codIdentificacao')"/&gt;
+          &lt;q-input class="col-xs-12 col-sm-5 col-md-3 q-ma-md" upper-case v-model="entrevistado.iniciaisNome" type="text" :float-label="$t('entrevistado.iniciaisNome')"/&gt;
+          &lt;q-input class="col-xs-12 col-sm-5 col-md-3 q-ma-md" v-model="entrevistado.idade" type="number" :float-label="$t('entrevistado.idade').concat(' (anos)')"/&gt;
+          &lt;div class="col-xs-12 col-sm-5 col-md-3 q-ma-md"&gt;
+            &lt;p class="caption"&gt;{{ $t('entrevistado.sexo') }}&lt;/p&gt;
+            &lt;div&gt;
+              &lt;q-radio v-model="entrevistado.sexo" val="Feminino" color="primary" label="Feminino" class="q-mr-md"/&gt;
+              &lt;q-radio v-model="entrevistado.sexo" val="Masculino" color="primary" label="Masculino"/&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class="col-xs-12 col-sm-5 col-md-3 q-ma-md"&gt;
+            &lt;p class="caption"&gt;{{ $t('entrevistado.estadoCivil') }}&lt;/p&gt;
+            &lt;q-select inverted
+              v-model="entrevistado.estadoCivil"
+              :options="opcoesEstadoCivil"
+            /&gt;
+          &lt;/div&gt;
+          &lt;div class="col-xs-12 col-sm-5 col-md-3 q-ma-md"&gt;
+            &lt;p class="caption"&gt;{{ $t('entrevistado.corPele') }}&lt;/p&gt;
+            &lt;q-select inverted
+              v-model="entrevistado.corPele"
+              :options="opcoesCorDaPele"
+            /&gt;
+          &lt;/div&gt;
+          &lt;div class="col-xs-12 col-sm-5 col-md-3 q-ma-md"&gt;
+            &lt;p class="caption"&gt;{{ $t('entrevistado.moradia') }}&lt;/p&gt;
+            &lt;q-select inverted
+              v-model="entrevistado.moradia"
+              :options="opcoesMoradia"
+            /&gt;
+          &lt;/div&gt;
+          &lt;div class="col-xs-12 col-sm-5 col-md-3 q-ma-md"&gt;
+            &lt;p class="caption"&gt;{{ $t('entrevistado.escolaridade') }}&lt;/p&gt;
+            &lt;q-select inverted
+              v-model="entrevistado.escolaridade"
+              :options="opcoesEscolaridade"
+            /&gt;
+          &lt;/div&gt;
+          &lt;q-input class="col-xs-12 col-sm-5 col-md-3 q-ma-md" v-model="entrevistado.altura" type="number" :float-label="$t('entrevistado.altura').concat(' (cm)')"/&gt;
+          &lt;q-input class="col-xs-12 col-sm-5 col-md-3 q-ma-md" v-model="entrevistado.peso" type="number" :float-label="$t('entrevistado.peso').concat(' (kg)')"/&gt;
+          &lt;q-input class="col-xs-12 col-sm-5 col-md-3 q-ma-md" v-model="entrevistado.profissao" type="text" :float-label="$t('entrevistado.profissao')"/&gt;
+        &lt;/div&gt;
+      &lt;/q-step&gt;
+&nbsp;
+      &lt;!-- Step: Biológico--&gt;
+      &lt;q-step name="biologico" :title="$t('stepper.titulo.biologicos')" :subtitle="$t('stepper.subtitulo.dadosBiologicos')"&gt;
+        &lt;div class="row justify-around"&gt;
+          &lt;q-input class="col-xs-12 col-sm-5 col-md-3 q-ma-md" v-model="entrevistado.cintura" type="number" :float-label="$t('entrevistado.cintura').concat('(cm)')"/&gt;
+          &lt;q-input class="col-xs-12 col-sm-5 col-md-3 q-ma-md" v-model="entrevistado.quadril" type="number" :float-label="$t('entrevistado.quadril').concat('(cm)')"/&gt;
+          &lt;q-input readonly class="col-xs-12 col-sm-5 col-md-3 q-ma-md" v-model="preencheIMC" type="number" :float-label="$t('entrevistado.imc').concat('(kg/m²)')" /&gt;
+          &lt;q-input readonly class="col-xs-12 col-sm-5 col-md-3 q-ma-md" v-model="preencheRCQ" type="number" :float-label="$t('entrevistado.cinturaQuadril')"/&gt;
+          &lt;q-input readonly class="col-xs-12 col-sm-5 col-md-3 q-ma-md" v-model="preencheRCE" type="number" :float-label="$t('entrevistado.cinturaEstatura')"/&gt;
+          &lt;q-input class="col-xs-12 col-sm-5 col-md-3 q-ma-md" v-model="entrevistado.pas" type="number" :float-label="$t('entrevistado.pas').concat('(mm/hg)')"/&gt;
+          &lt;q-input class="col-xs-12 col-sm-5 col-md-3 q-ma-md" v-model="entrevistado.pad" type="number" :float-label="$t('entrevistado.pad').concat('(mm/hg)')"/&gt;
+          &lt;q-input class="col-xs-12 col-sm-5 col-md-3 q-ma-md" v-model="entrevistado.glicemiaCapilar" type="number" :float-label="$t('entrevistado.glicemiaCapilar').concat('(mg/dl)')"/&gt;
+          &lt;q-input class="col-xs-12 col-sm-5 col-md-3 q-ma-md" v-model="entrevistado.espirometria" type="number" :float-label="$t('entrevistado.espirometria').concat('(dl)')"/&gt;
+          &lt;q-input class="col-xs-12 col-sm-5 col-md-3 q-ma-md" v-model="entrevistado.esforcoAntes" type="number" :float-label="$t('entrevistado.esforcoAntes').concat('(bpm)')"/&gt;
+          &lt;q-input class="col-xs-12 col-sm-5 col-md-3 q-ma-md" v-model="entrevistado.esforcoDepois" type="number" :float-label="$t('entrevistado.esforcoDepois').concat('(bpm)')"/&gt;
+          &lt;q-input class="col-xs-12 col-sm-5 col-md-3 q-ma-md" v-model="entrevistado.doencasReferidas" type="text" :float-label="$t('entrevistado.doencasReferidas')"/&gt;
+        &lt;/div&gt;
+      &lt;/q-step&gt;
+&nbsp;
+      &lt;!-- Step: Religião/Saúde--&gt;
+      &lt;q-step name="religiao-saude" :title="$t('stepper.titulo.religiaoSaude')"&gt;
+        &lt;div class="row justify-around"&gt;
+          &lt;q-input class="col-xs-12 col-sm-5 col-md-3 q-ma-md" v-model="entrevistado.religiaoReferida" type="text" :float-label="$t('entrevistado.religiaoReferida')"/&gt;
+          &lt;q-input class="col-xs-12 col-sm-5 col-md-3 q-ma-md" v-model="entrevistado.haQuantosAnos" type="number" :float-label="$t('entrevistado.haQuantosAnos')"/&gt;
+          &lt;div class="col-xs-12 col-sm-5 col-md-3 q-ma-md"&gt;
+            &lt;p class="caption"&gt;{{ $t('entrevistado.saudeFisica') }}&lt;/p&gt;
+            &lt;q-select inverted
+              v-model="entrevistado.saudeFisica"
+              :options="opcoesGenericas"
+            /&gt;
+          &lt;/div&gt;
+          &lt;div class="col-xs-12 col-sm-5 col-md-5 q-ma-md"&gt;
+            &lt;p class="caption"&gt;{{ $t('entrevistado.saudeMental') }}&lt;/p&gt;
+            &lt;q-select inverted
+              v-model="entrevistado.saudeMental"
+              :options="opcoesGenericas"
+            /&gt;
+          &lt;/div&gt;
+          &lt;div class="col-xs-12 col-sm-11 col-md-5 q-ma-md"&gt;
+            &lt;p class="caption"&gt;{{ $t('entrevistado.qualidadeVida') }}&lt;/p&gt;
+            &lt;q-select inverted
+              v-model="entrevistado.qualidadeVida"
+              :options="opcoesGenericas"
+            /&gt;
+          &lt;/div&gt;
+          &lt;q-input class="col-xs-12 col-sm-11 col-md-11 q-ma-md" v-model="entrevistado.oqueDesejaMelhorar" type="text" :float-label="$t('entrevistado.oqueDesejaMelhorar')"/&gt;
+        &lt;/div&gt;
+      &lt;/q-step&gt;
+&nbsp;
+      &lt;q-stepper-navigation class="absolute-bottom"&gt;
+        &lt;q-btn @click="mockDadosParaTestes" color="positive"&gt;Load Mock&lt;/q-btn&gt;
+        &lt;q-btn
+          flat
+          @click="$refs.stepper.previous()"
+          :label="$t('navegacao.voltar')"
+          v-if="visualizacaoBotaoVoltar"
+        /&gt;
+        &lt;q-btn @click="avanca()"&gt;{{ labelBotaoNext }}&lt;/q-btn&gt;
+      &lt;/q-stepper-navigation&gt;
+    &lt;/q-stepper&gt;
+  &lt;/q-page&gt;
+&lt;/template&gt;
+&nbsp;
+&lt;script&gt;
+<span class="cstat-no" title="statement not covered" >import CalculadoraMedidas from '../classes/CalculadoraMedidas.js'</span>
+<span class="cstat-no" title="statement not covered" >import { mapActions } from 'vuex'</span>
+&nbsp;
+export default {
+  name: 'Formulario',
+<span class="fstat-no" title="function not covered" >  data: () =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >    return {</span>
+      step: '',
+      botaoVoltarAtivo: false,
+      entrevistado: {
+        id: 1,
+        tipoFormulario: 'Adulto',
+        nome: '',
+        codIdentificacao: '',
+        iniciaisNome: '',
+        idade: '',
+        altura: '',
+        peso: '',
+        profissao: '',
+        cintura: '',
+        quadril: '',
+        imc: '',
+        pas: '',
+        pad: '',
+        cinturaQuadril: '',
+        cinturaEstatura: '',
+        glicemiaCapilar: '',
+        espirometria: '',
+        doencasReferidas: '',
+        esforcoAntes: '',
+        esforcoDepois: '',
+        sexo: '',
+        estadoCivil: '',
+        moradia: '',
+        corPele: '',
+        escolaridade: '',
+        saudeFisica: '',
+        saudeMental: '',
+        qualidadeVida: '',
+        religiaoReferida: '',
+        haQuantosAnos: '',
+        oqueDesejaMelhorar: ''
+      },
+      opcoesEstadoCivil: [
+        {
+          label: 'Solteiro',
+          value: 'Solteiro'
+        },
+        {
+          label: 'Casado',
+          value: 'Casado'
+        },
+        {
+          label: 'Divorciado',
+          value: 'Divorciado'
+        },
+        {
+          label: 'Viúvo',
+          value: 'Viúvo'
+        },
+        {
+          label: 'Outro',
+          value: 'Outro'
+        }
+      ],
+      opcoesMoradia: [
+        {
+          label: 'Sozinho',
+          value: 'Sozinho'
+        },
+        {
+          label: 'Pai e Mãe',
+          value: 'Pai e Mãe'
+        },
+        {
+          label: 'Pai',
+          value: 'Pai'
+        },
+        {
+          label: 'Mãe',
+          value: 'Mãe'
+        },
+        {
+          label: 'Outros',
+          value: 'Outros'
+        }
+      ],
+      opcoesCorDaPele: [
+        {
+          label: 'Branca',
+          value: 'Branca'
+        },
+        {
+          label: 'Parda',
+          value: 'Parda'
+        },
+        {
+          label: 'Preta',
+          value: 'Preta'
+        },
+        {
+          label: 'Indígena',
+          value: 'Indígena'
+        },
+        {
+          label: 'Amarela',
+          value: 'Amarela'
+        }
+      ],
+      opcoesEscolaridade: [
+        {
+          label: 'Sem instrução ou Fundamental incompleto',
+          value: 'Sem instrução ou Fundamental incompleto'
+        },
+        {
+          label: 'Fundamental completo ou Ensino Médio incompleto',
+          value: 'Fundamental completo ou Ensino Médio incompleto'
+        },
+        {
+          label: 'Ensino médio completo ou Superior incompleto',
+          value: 'Ensino médio completo ou Superior incompleto'
+        },
+        {
+          label: 'Superior completo',
+          value: 'Superior completo'
+        }
+      ],
+      opcoesGenericas: [
+        {
+          label: 'Muito boa',
+          value: 'Muito boa'
+        },
+        {
+          label: 'Boa',
+          value: 'Boa'
+        },
+        {
+          label: 'Regular',
+          value: 'Regular'
+        },
+        {
+          label: 'Ruim',
+          value: 'Ruim'
+        },
+        {
+          label: 'Muito ruim',
+          value: 'Muito ruim'
+        }
+      ]
+    }
+  },
+  computed: {
+<span class="fstat-no" title="function not covered" >    visualizacaoBotaoVoltar () {</span>
+<span class="cstat-no" title="statement not covered" >      return this.step !== 'pessoal'</span>
+    },
+<span class="fstat-no" title="function not covered" >    labelBotaoNext () {</span>
+<span class="cstat-no" title="statement not covered" >      return this.step === 'religiao-saude' ? this.$t('navegacao.finalizar') : this.$t('navegacao.proxima')</span>
+    },
+<span class="fstat-no" title="function not covered" >    preencheIMC () {</span>
+<span class="cstat-no" title="statement not covered" >      return new CalculadoraMedidas(this.entrevistado.peso, this.entrevistado.altura).valida().calculaIMC()</span>
+    },
+<span class="fstat-no" title="function not covered" >    preencheRCQ () {</span>
+<span class="cstat-no" title="statement not covered" >      return new CalculadoraMedidas(this.entrevistado.cintura, this.entrevistado.quadril).valida().calculaRCQ()</span>
+    },
+<span class="fstat-no" title="function not covered" >    preencheRCE () {</span>
+<span class="cstat-no" title="statement not covered" >      return new CalculadoraMedidas(this.entrevistado.cintura, this.entrevistado.altura).valida().calculaRCE()</span>
+    }
+  },
+  methods: {
+    ...mapActions(['carregarQuestoes']),
+<span class="fstat-no" title="function not covered" >    avanca () {</span>
+<span class="cstat-no" title="statement not covered" >      this.step !== 'religiao-saude' ? this.$refs.stepper.next() : this.redirecionaQuestionario()</span>
+    },
+<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >    redirecionaQuestionario () {</span></span>
+<span class="cstat-no" title="statement not covered" >      this.$q.loading.show()</span>
+<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >      this.carregarQuestoes().then(() =&gt; {</span></span>
+<span class="cstat-no" title="statement not covered" >        this.$q.loading.hide()</span>
+<span class="cstat-no" title="statement not covered" >        this.$router.push('/questionario/questao/1')</span>
+      })
+    },
+<span class="fstat-no" title="function not covered" >    mockDadosParaTestes () {</span>
+<span class="cstat-no" title="statement not covered" >      this.entrevistado = {</span>
+        nome: 'Gabriel',
+        codIdentificacao: 'COD',
+        iniciaisNome: 'GTR',
+        idade: 25,
+        altura: 1.78,
+        peso: 63,
+        profissao: 'Programador',
+        cintura: 1.65,
+        quadril: 15.5,
+        imc: 561,
+        pas: 561,
+        pad: 651,
+        cinturaQuadril: 3216,
+        cinturaEstatura: 651,
+        glicemiaCapilar: 681681,
+        espirometria: 681,
+        doencasReferidas: 681,
+        esforcoAntes: 6818181,
+        esforcoDepois: 81,
+        sexo: 'Masculino',
+        estadoCivil: 'Solteiro',
+        moradia: 'Pai e Mãe',
+        corPele: 'Branca',
+        escolaridade: 'Superior completo',
+        saudeFisica: 'Muito boa',
+        saudeMental: 'Boa',
+        qualidadeVida: 'Regular',
+        religiaoReferida: 'Nenhuma',
+        haQuantosAnos: 0,
+        oqueDesejaMelhorar: 'Nada'
+      }
+    }
+  }
+}
+&lt;/script&gt;
+&nbsp;
+&lt;style lang="stylus" scoped&gt;
+@media screen and (max-width: 575px) {
+  div .q-input {
+    margin 8px 8px
+  }
+}
+&lt;/style&gt;
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sat Dec 08 2018 14:33:21 GMT-0200 (-02)
+</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>

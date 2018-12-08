@@ -8,8 +8,8 @@
   "private": true,
   "scripts": {
     "lint": "eslint --ext .js,.vue src",
-    "test": "jest --no-cache",
-    "test:unit": "vue-cli-service test:unit --no-cache",
+    "test:report": "vue-cli-service test:unit --coverage",
+    "test:unit": "vue-cli-service test:unit --no-coverage",
     "build": "quasar build -m pwa -t mat",
     "start": "node server.js",
     "heroku-postbuild": "npm install --only=dev --no-shrinkwrap && npm run build"
@@ -22,6 +22,7 @@
     "vue-i18n": "^7.3.3"
   },
   "devDependencies": {
+    "@babel/plugin-proposal-object-rest-spread": "^7.2.0",
     "@babel/preset-env": "^7.2.0",
     "@vue/cli-plugin-babel": "^3.0.0-beta.15",
     "@vue/cli-plugin-eslint": "^3.0.0-beta.15",
@@ -73,6 +74,10 @@
     "transform": {
       "^.+\\.(js|jsx)?$": "<rootDir>/node_modules/babel-jest",
       ".*\\.(vue)$": "<rootDir>/node_modules/vue-jest"
-    }
+    },
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "src/**/*.{vue}"
+    ]
   }
 }
