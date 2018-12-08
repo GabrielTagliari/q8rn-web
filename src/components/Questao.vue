@@ -3,9 +3,7 @@
     <transition appear enter-active-class="animated bounceInLeft" leave-active-class="animated bounceInLeft">
       <q-card class="column justify-between">
         <div>
-        <q-card-title>
-          {{ questao.titulo }}
-        </q-card-title>
+        <q-card-title>{{ questao.titulo }}</q-card-title>
         <q-card-separator />
         </div>
         <div class="row justify-center">
