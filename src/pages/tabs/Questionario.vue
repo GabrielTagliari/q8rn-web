@@ -10,7 +10,7 @@
       </transition>
 
       <transition appear enter-active-class="animated flipInX" leave-active-class="animted bounceInLeft">
-        <q-btn rounded outline size="lg" color="tertiary" class="q-ma-md" @click="abreQuestionarioSemFormulario">{{ $t('tab.questionario.questionarioSemFormulario') }}</q-btn>
+        <q-btn rounded outline size="lg" color="tertiary" class="questionario-sem-form q-ma-md" @click="abreQuestionarioSemFormulario">{{ $t('tab.questionario.questionarioSemFormulario') }}</q-btn>
       </transition>
     </div>
   </q-page>
@@ -27,7 +27,6 @@ export default {
       this.$q.loading.show()
       this.carregarQuestoes().then(() => {
         this.$q.loading.hide()
-        this.$router.push('/questionario/questao/1')
       })
     }
   }

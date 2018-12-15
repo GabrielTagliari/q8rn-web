@@ -8,8 +8,11 @@
   "private": true,
   "scripts": {
     "lint": "eslint --ext .js,.vue src",
-    "test:report": "vue-cli-service test:unit --coverage",
+    "dev": "quasar dev -m pwa -t mat",
+    "json:server": "json-server --watch ./mock/db.json",
     "test:unit": "vue-cli-service test:unit --no-coverage",
+    "test:end2end": "cypress open",
+    "test:report": "vue-cli-service test:unit --coverage",
     "build": "quasar build -m pwa -t mat",
     "start": "node server.js",
     "heroku-postbuild": "npm install --only=dev --no-shrinkwrap && npm run build"
@@ -35,6 +38,7 @@
     "babel-jest": "^23.6.0",
     "babel-preset-env": "^1.7.0",
     "body-parser": "*",
+    "cypress": "^3.1.3",
     "eslint": "^4.18.2",
     "eslint-config-standard": "^11.0.0",
     "eslint-friendly-formatter": "^4.0.1",
