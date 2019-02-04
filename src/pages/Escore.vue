@@ -40,12 +40,13 @@
 <script>
 import ItemPontoMelhorar from '../components/ItemPontoMelhorar.vue'
 import { pegaCaminhoImagem, pegaResultadoPorEscore } from '../helpers/de-para.js'
+import { mapGetters } from 'vuex'
 
 export default {
   name: 'Escore',
   data: () => {
     return {
-      escore: 48,
+      escore: 0,
       resultado: '',
       totalPontosPorTema: [
         {tema: 'Nutrição', totalRealizado: 5, total: 12},
@@ -97,11 +98,15 @@ export default {
   mounted () {
     this.calculaResultadoPorEscore()
   },
+  computed: {
+    ...mapGetters(['getQuestoes'])
+  },
   methods: {
     caminhoImagem (tema) {
       return pegaCaminhoImagem(tema)
     },
     calculaResultadoPorEscore () {
+      this.escore = this.getQuestoes.map(questao => questao.opcaoSelecionada).reduce((a, b) => a + b, 0)
       this.resultado = pegaResultadoPorEscore(this.escore)
     },
     exibePontuacaoPorTema (tema) {

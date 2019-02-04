@@ -12,10 +12,17 @@ export default {
   name: 'Questionario',
   data: () => {
     return {
+      questoes: []
     }
   },
   components: {
     Questao
+  },
+  created () {
+    this.questoes = this.getQuestoes
+  },
+  updated () {
+    this.questoes = this.getQuestoes
   },
   computed: {
     ...mapGetters(['getQuestoes']),
@@ -25,7 +32,7 @@ export default {
   },
   methods: {
     atualizar (questao) {
-      this.getQuestoes[questao.numero - 1].opcaoSelecionada = questao.opcaoSelecionada
+      this.questoes[questao.numero - 1].opcaoSelecionada = questao.opcaoSelecionada
       this.$emit('atualizar', questao)
     },
     finalizar () {
@@ -34,7 +41,7 @@ export default {
       }
     },
     verificarTodasRespostasSelecionadas () {
-      let respostasNaoPreenchidas = this.getQuestoes.filter(questao => questao.opcaoSelecionada === '')
+      let respostasNaoPreenchidas = this.questoes.filter(questao => questao.opcaoSelecionada === '')
       if (respostasNaoPreenchidas.length > 0) {
         this.abrePopUpRespostaNaoPreenchida(respostasNaoPreenchidas)
         return false

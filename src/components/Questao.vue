@@ -47,10 +47,12 @@ export default {
   methods: {
     proxima () {
       if (this.isRespostaSelecionada()) {
+        this.$store.commit('atualizarOpcaoSelecionada', this.questao)
         this.$router.push('/questionario/questao/' + (this.questao.numero + 1))
       }
     },
     finalizar () {
+      this.$store.commit('atualizarOpcaoSelecionada', this.questao)
       this.$emit('finalizar')
     },
     isRespostaSelecionada () {
