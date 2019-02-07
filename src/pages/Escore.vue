@@ -58,38 +58,7 @@ export default {
         {tema: 'Descanso', totalRealizado: 1, total: 8},
         {tema: 'Confiança', totalRealizado: 4, total: 16}
       ],
-      pontosParaMelhorar: [
-        {
-          tema: 'Nutrição',
-          titulo: 'Com que frequência você inclui nas principais refeições do dia: feijões, cereais integrais, castanhas, frutas, legumes e verduras?',
-          resposta: 'Raramente',
-          pontos: 1
-        },
-        {
-          tema: 'Nutrição',
-          titulo: 'Quantos dos itens a seguir você consome uma ou mais vezes por semana? (salgadinhos, bolachas, frituras, refrigerantes e doces de maneira geral)',
-          resposta: 'Raramente',
-          pontos: 3
-        },
-        {
-          tema: 'Exercício',
-          titulo: 'Quantos minutos você gasta “em média” quando faz exercícios intensos até suar?',
-          resposta: '30 a 60 minutos',
-          pontos: 4
-        },
-        {
-          tema: 'Confiança',
-          titulo: 'Sua confiança em Deus (Ser Superior ou algo sagrado) influencia positivamente sua maneira de viver?',
-          resposta: 'Algumas vezes',
-          pontos: 2
-        },
-        {
-          tema: 'Confiança',
-          titulo: 'Sua confiança em Deus (Ser Superior ou algo sagrado) influencia positivamente?',
-          resposta: 'Algumas vezes',
-          pontos: 3
-        }
-      ]
+      pontosParaMelhorar: []
     }
   },
   components: {
@@ -97,6 +66,8 @@ export default {
   },
   mounted () {
     this.calculaResultadoPorEscore()
+    this.calculaPontosParaMelhorar()
+    this.populaTotalPontosPorTema()
   },
   computed: {
     ...mapGetters(['getQuestoes'])
@@ -104,6 +75,20 @@ export default {
   methods: {
     caminhoImagem (tema) {
       return pegaCaminhoImagem(tema)
+    },
+    populaTotalPontosPorTema () {
+      // this.totalPontosPorTema = this.getQuestoes
+    },
+    calculaPontosParaMelhorar () {
+      this.pontosParaMelhorar = this.getQuestoes.filter(questao => questao.opcaoSelecionada <= 2).map(questao => {
+        let pontos = {
+          tema: questao.tema,
+          titulo: questao.titulo,
+          resposta: questao.opcoes.filter(opcao => opcao.valor === questao.opcaoSelecionada).map(opcao => opcao.titulo)[0],
+          pontos: questao.opcaoSelecionada
+        }
+        return pontos
+      })
     },
     calculaResultadoPorEscore () {
       this.escore = this.getQuestoes.map(questao => questao.opcaoSelecionada).reduce((a, b) => a + b, 0)
