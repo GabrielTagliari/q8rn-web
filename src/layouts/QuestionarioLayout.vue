@@ -54,7 +54,7 @@ export default {
       return pegaCaminhoImagem(this.tema)
     },
     irParaQuestao () {
-      this.$router.push('/questionario/questao/' + this.page)
+      this.$router.push('/adulto/questao/' + this.page)
     }
   }
 }
