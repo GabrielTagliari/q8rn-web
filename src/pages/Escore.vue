@@ -48,16 +48,7 @@ export default {
     return {
       escore: 0,
       resultado: '',
-      totalPontosPorTema: [
-        {tema: 'Nutrição', totalRealizado: 5, total: 12},
-        {tema: 'Exercício', totalRealizado: 7, total: 12},
-        {tema: 'Água', totalRealizado: 8, total: 8},
-        {tema: 'Sol', totalRealizado: 6, total: 8},
-        {tema: 'Temperança', totalRealizado: 15, total: 16},
-        {tema: 'Ar puro', totalRealizado: 2, total: 8},
-        {tema: 'Descanso', totalRealizado: 1, total: 8},
-        {tema: 'Confiança', totalRealizado: 4, total: 16}
-      ],
+      totalPontosPorTema: [],
       pontosParaMelhorar: []
     }
   },
@@ -77,7 +68,18 @@ export default {
       return pegaCaminhoImagem(tema)
     },
     populaTotalPontosPorTema () {
-      // this.totalPontosPorTema = this.getQuestoes
+      this.totalPontosPorTema = []
+      this.getQuestoes.forEach(element => {
+        if (element.tema in this.totalPontosPorTema.filter(item => item.tema)) {
+          this.totalPontosPorTema.filter(item => item.tema === element.tema)
+        }
+
+        this.totalPontosPorTema.push({
+          tema: element.tema,
+          totalRealizado: element.opcaoSelecionada,
+          total: this.getQuestoes.filter(q => q.tema === element.tema).length * 4
+        })
+      })
     },
     calculaPontosParaMelhorar () {
       this.pontosParaMelhorar = this.getQuestoes.filter(questao => questao.opcaoSelecionada <= 2).map(questao => {
@@ -101,10 +103,10 @@ export default {
         .concat('/').concat(this.calculaTotalPontosPorTema(tema))
     },
     calculaTotalPontosRealizadosPorTema (tema) {
-      return this.totalPontosPorTema.filter(ponto => ponto.tema === tema).map(ponto => ponto.totalRealizado).reduce(ponto => ponto.totalRealizado)
+      return this.totalPontosPorTema.filter(ponto => ponto.tema === tema).map(ponto => ponto.totalRealizado).reduce((a, b) => a + b, 0)
     },
     calculaTotalPontosPorTema (tema) {
-      return this.totalPontosPorTema.filter(total => total.tema === tema).map(total => total.total)
+      return this.totalPontosPorTema.filter(total => total.tema === tema).map(total => total.total)[0]
     },
     abrePopUpConfirmacaoRetorno () {
       this.$q.dialog({
