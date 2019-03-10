@@ -27,6 +27,7 @@ export default {
   computed: {
     ...mapGetters(['getQuestoes']),
     isUltimaQuestao () {
+      console.log(this.getQuestoes)
       return this.getQuestoes[this.$route.params.numero - 1].numero === this.getQuestoes.length
     }
   },

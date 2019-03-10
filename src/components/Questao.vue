@@ -48,7 +48,7 @@ export default {
     proxima () {
       if (this.isRespostaSelecionada()) {
         this.$store.commit('atualizarOpcaoSelecionada', this.questao)
-        this.$router.push('/questionario/questao/' + (this.questao.numero + 1))
+        this.$router.push('/adulto/questao/' + (this.questao.numero + 1))
       }
     },
     finalizar () {
