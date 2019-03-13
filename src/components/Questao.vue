@@ -35,6 +35,8 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
+
 export default {
   name: 'Questao',
   props: ['questao', 'isUltimaQuestao'],
@@ -44,15 +46,27 @@ export default {
   updated () {
     this.$emit('atualizar', this.questao)
   },
+  computed: {
+    ...mapGetters(['getTipoQuestionario'])
+  },
   methods: {
     proxima () {
       if (this.isRespostaSelecionada()) {
-        this.$store.commit('atualizarOpcaoSelecionada', this.questao)
-        this.$router.push('/adulto/questao/' + (this.questao.numero + 1))
+        if (this.getTipoQuestionario === 'adulto') {
+          this.$store.commit('atualizarOpcaoSelecionadaAdulto', this.questao)
+          this.$router.push('/' + this.getTipoQuestionario + '/questao/' + (this.questao.numero.adulto + 1))
+        } else {
+          this.$store.commit('atualizarOpcaoSelecionadaAdolescente', this.questao)
+          this.$router.push('/' + this.getTipoQuestionario + '/questao/' + (this.questao.numero.adolescente + 1))
+        }
       }
     },
     finalizar () {
-      this.$store.commit('atualizarOpcaoSelecionada', this.questao)
+      if (this.getTipoQuestionario === 'adulto') {
+        this.$store.commit('atualizarOpcaoSelecionadaAdulto', this.questao)
+      } else {
+        this.$store.commit('atualizarOpcaoSelecionadaAdolescente', this.questao)
+      }
       this.$emit('finalizar')
     },
     isRespostaSelecionada () {

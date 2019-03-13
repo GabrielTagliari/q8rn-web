@@ -25,15 +25,22 @@ export default {
     this.questoes = this.getQuestoes
   },
   computed: {
-    ...mapGetters(['getQuestoes']),
+    ...mapGetters(['getQuestoes', 'getTipoQuestionario']),
     isUltimaQuestao () {
-      console.log(this.getQuestoes)
-      return this.getQuestoes[this.$route.params.numero - 1].numero === this.getQuestoes.length
+      if (this.getTipoQuestionario === 'adulto') {
+        return this.getQuestoes[this.$route.params.numero - 1].numero.adulto === this.getQuestoes.length
+      } else {
+        return this.getQuestoes[this.$route.params.numero - 1].numero.adolescente === this.getQuestoes.length
+      }
     }
   },
   methods: {
     atualizar (questao) {
-      this.questoes[questao.numero - 1].opcaoSelecionada = questao.opcaoSelecionada
+      if (this.getTipoQuestionario === 'adulto') {
+        this.questoes[questao.numero.adulto - 1].opcaoSelecionada = questao.opcaoSelecionada
+      } else {
+        this.questoes[questao.numero.adolescente - 1].opcaoSelecionada = questao.opcaoSelecionada
+      }
       this.$emit('atualizar', questao)
     },
     finalizar () {
@@ -61,7 +68,11 @@ export default {
     },
     preencheMensagemDinamico (respostasNaoPreenchidas) {
       let mensagem = respostasNaoPreenchidas.length > 1 ? this.$t('questionario.preenchaAsQuestoes') : this.$t('questionario.preenchaAQuestao')
-      return mensagem.concat(': ').concat(respostasNaoPreenchidas.map(questao => questao.numero))
+      if (this.getTipoQuestionario === 'adulto') {
+        return mensagem.concat(': ').concat(respostasNaoPreenchidas.map(questao => questao.numero.adulto))
+      } else {
+        return mensagem.concat(': ').concat(respostasNaoPreenchidas.map(questao => questao.numero.adolescente))
+      }
     }
   }
 }
