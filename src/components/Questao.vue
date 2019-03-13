@@ -24,7 +24,7 @@
         </div>
         <div class="items-end">
           <q-card-separator />
-          <q-card-actions class="float-right">
+          <q-card-actions class="fixed-bottom-right">
             <q-btn rounded v-if="!isUltimaQuestao" color="primary" class="q-ma-xs" @click="proxima">{{ $t('navegacao.proxima') }}</q-btn>
             <q-btn rounded v-else color="primary" class="q-ma-xs" @click="finalizar">{{ $t('navegacao.finalizar') }}</q-btn>
           </q-card-actions>
