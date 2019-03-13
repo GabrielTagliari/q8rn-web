@@ -5,3 +5,7 @@ export function getQuestoes (state) {
 export function getQtdQuestoes (state) {
   return state.questoes.length
 }
+
+export function getTipoQuestionario (state) {
+  return state.tipoQuestionario
+}

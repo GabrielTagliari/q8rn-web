@@ -42,19 +42,23 @@ export default {
     }
   },
   computed: {
-    ...mapGetters(['getQtdQuestoes'])
+    ...mapGetters(['getQtdQuestoes', 'getTipoQuestionario'])
   },
   methods: {
     atualizar (questao) {
       this.tema = questao.tema
-      this.page = questao.numero
+      if (this.getTipoQuestionario === 'adulto') {
+        this.page = questao.numero.adulto
+      } else {
+        this.page = questao.numero.adolescente
+      }
       this.imgPath = this.atualizarImagemTema()
     },
     atualizarImagemTema () {
       return pegaCaminhoImagem(this.tema)
     },
     irParaQuestao () {
-      this.$router.push('/adulto/questao/' + this.page)
+      this.$router.push('/' + this.getTipoQuestionario + '/questao/' + this.page)
     }
   }
 }
