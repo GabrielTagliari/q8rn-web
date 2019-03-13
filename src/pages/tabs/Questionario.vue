@@ -693,12 +693,12 @@ export default {
 .fundo {
   background-size: cover;
   background-repeat: no-repeat;
-    background-position: center;
-    background-image:
-    linear-gradient(
-    rgba(0, 0, 0, 0.5),
-    rgba(0, 0, 0, 0.5)
-    ),
-    url("../../assets/remedios.jpeg");
+  background-position: center center;
+  background-image:
+  linear-gradient(
+  rgba(0, 0, 0, 0.5),
+  rgba(0, 0, 0, 0.5)
+  ),
+  url("../../assets/remedios.jpeg");
 }
 </style>
