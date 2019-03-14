@@ -349,11 +349,11 @@ export default {
           'titulo': 'Você ingere bebida alcóolica (cerveja, vinho, licor, aguardente, pinga ou qualquer outra)?',
           'opcoes': [
             {
-              'titulo': 'Sim',
+              'titulo': 'Não',
               'valor': 4
             },
             {
-              'titulo': 'Não',
+              'titulo': 'Sim',
               'valor': 0
             }
           ],
@@ -368,11 +368,11 @@ export default {
           'titulo': 'Você fuma cigarro, charuto, cachimbo ou usa fumo de rolo?',
           'opcoes': [
             {
-              'titulo': 'Sim',
+              'titulo': 'Não',
               'valor': 4
             },
             {
-              'titulo': 'Não',
+              'titulo': 'Sim',
               'valor': 0
             }
           ],
@@ -388,11 +388,11 @@ export default {
           'titulo': 'Você fez uso de alguma droga, tipo maconha, crack, cocaína, etc nos últimos três meses?',
           'opcoes': [
             {
-              'titulo': 'Sim',
+              'titulo': 'Não',
               'valor': 4
             },
             {
-              'titulo': 'Não',
+              'titulo': 'Sim',
               'valor': 0
             }
           ],
@@ -407,11 +407,11 @@ export default {
           'titulo': 'Você ingere bebidas que contém cafeína? (café, chá preto, chá verde, chá mate, chá branco ou refrigerantes)',
           'opcoes': [
             {
-              'titulo': 'Sim',
+              'titulo': 'Não',
               'valor': 4
             },
             {
-              'titulo': 'Não',
+              'titulo': 'Sim',
               'valor': 0
             }
           ],
