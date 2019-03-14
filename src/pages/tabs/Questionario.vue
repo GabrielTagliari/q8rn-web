@@ -385,7 +385,7 @@ export default {
             'adolescente': 11
           },
           'tema': 'Temperança',
-          'titulo': 'Você fez uso de alguma droga, tipo maconha, crack, cocaína, etc nos últimos três meses?',
+          'titulo': 'Você fez uso de alguma droga, tipo maconha, crack, cocaína, etc (nos últimos três meses)?',
           'opcoes': [
             {
               'titulo': 'Não',
