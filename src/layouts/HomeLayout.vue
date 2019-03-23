@@ -17,6 +17,13 @@
       <router-view />
     </q-page-container>
 
+    <q-layout-footer>
+      <q-toolbar align="center">
+        <q-toolbar-title>
+          Copyright &copy; 2019 q8rn.com
+        </q-toolbar-title>
+      </q-toolbar>
+    </q-layout-footer>
   </q-layout>
 </template>
 

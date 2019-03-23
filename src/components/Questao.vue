@@ -25,8 +25,8 @@
         <div class="items-end">
           <q-card-separator />
           <q-card-actions class="fixed-bottom-right">
-            <q-btn rounded v-if="!isUltimaQuestao" color="primary" class="q-ma-xs" @click="proxima">{{ $t('navegacao.proxima') }}</q-btn>
-            <q-btn rounded v-else color="primary" class="q-ma-xs" @click="finalizar">{{ $t('navegacao.finalizar') }}</q-btn>
+            <q-btn fab v-if="!isUltimaQuestao" color="primary" class="q-ma-md" @click="proxima"><q-icon name="arrow_forward" /></q-btn>
+            <q-btn fab v-else color="primary" class="q-ma-md" @click="finalizar">{{ $t('navegacao.finalizar') }}</q-btn>
           </q-card-actions>
         </div>
       </q-card>
@@ -88,9 +88,4 @@ export default {
 </script>
 
 <style lang="stylus">
-.q-card-actions {
-  .q-btn {
-    width 100px
-  }
-}
 </style>
