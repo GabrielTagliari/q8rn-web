@@ -22,15 +22,12 @@
           </q-list>
         </q-card-main>
         </div>
-        <div class="items-end">
-          <q-card-separator />
-          <q-card-actions class="fixed-bottom-right">
-            <q-btn fab v-if="!isUltimaQuestao" color="primary" class="q-ma-md" @click="proxima"><q-icon name="arrow_forward" /></q-btn>
-            <q-btn fab v-else color="primary" class="q-ma-md" @click="finalizar">{{ $t('navegacao.finalizar') }}</q-btn>
-          </q-card-actions>
-        </div>
       </q-card>
     </transition>
+    <div class="fixed-bottom-right">
+      <q-btn fab v-if="!isUltimaQuestao" color="primary" class="q-ma-md" @click="proxima"><q-icon name="arrow_forward" /></q-btn>
+      <q-btn fab v-else color="primary" class="q-ma-md" @click="finalizar">{{ $t('navegacao.finalizar') }}</q-btn>
+    </div>
   </div>
 </template>
 
@@ -86,6 +83,3 @@ export default {
   }
 }
 </script>
-
-<style lang="stylus">
-</style>
