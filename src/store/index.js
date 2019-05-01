@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
+import VuexPersistence from 'vuex-persist'
 
 import state from './state'
 import * as getters from './getters'
@@ -13,12 +14,17 @@ Vue.use(Vuex)
  * directly export the Store instantiation
  */
 
+const vuexLocal = new VuexPersistence({
+  storage: window.localStorage
+})
+
 export default function (/* { ssrContext } */) {
   const Store = new Vuex.Store({
     state,
     getters,
     mutations,
-    actions
+    actions,
+    plugins: [vuexLocal.plugin]
   })
 
   return Store
