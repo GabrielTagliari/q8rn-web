@@ -2,11 +2,11 @@
   <q-page class='fundo' padding>
     <div class='column absolute-center'>
       <transition appear enter-active-class='animated flipInX' leave-active-class='animated bounceInLeft'>
-        <q-btn rounded size='lg' color='primary' class='q-ma-md' @click='abreQuestionarioAdulto'>{{ $t('tab.questionario.adulto') }}</q-btn>
+        <q-btn rounded size='lg' color='primary' class='q-ma-md' @click='abreQuestionarioAdulto'>{{ $t('questionario.adulto') }}</q-btn>
       </transition>
 
       <transition appear enter-active-class='animated flipInX' leave-active-class='animated bounceInLeft'>
-        <q-btn rounded size='lg' color='secondary' class='q-ma-md' @click='abreQuestionarioAdolescente'>{{ $t('tab.questionario.adolescente') }}</q-btn>
+        <q-btn rounded size='lg' color='secondary' class='q-ma-md' @click='abreQuestionarioAdolescente'>{{ $t('questionario.adolescente') }}</q-btn>
       </transition>
     </div>
   </q-page>

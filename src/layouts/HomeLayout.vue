@@ -5,12 +5,11 @@
         <q-toolbar-title class="q-pa-xs">
           <img src="~assets/logo_simples.png" alt="Logo" width="40px" height="35px">
         </q-toolbar-title>
+        <q-select dark class="absolute-right"
+          :options="idiomas"
+          v-model="$i18n.locale"
+        />
       </q-toolbar>
-      <!-- <q-tabs align="justify" inverted >
-        <q-route-tab default class="tab" slot="title" name="tab-1" :label="$t('tab.historico.titulo')" icon="history" to="/historico"/>
-        <q-route-tab class="tab" slot="title" name="tab-2" :label="$t('tab.questionario.titulo')" icon="assignment" to="/questionario"/>
-        <q-route-tab class="tab" slot="title" name="tab-3" :label="$t('tab.configuracoes.titulo')" icon="settings" to="/configuracoes"/>
-      </q-tabs> -->
     </q-layout-header>
 
     <q-page-container>
@@ -29,7 +28,15 @@
 
 <script>
 export default {
-  name: 'HomeLayout'
+  name: 'HomeLayout',
+  data () {
+    return {
+      idiomas: [
+        { label: 'English (US)', value: 'en-us' },
+        { label: 'Português (BRA)', value: 'pt-br' }
+      ]
+    }
+  }
 }
 </script>
 
