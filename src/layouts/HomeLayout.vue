@@ -7,7 +7,7 @@
         </q-toolbar-title>
         <q-select dark class="absolute-right"
           :options="idiomas"
-          v-model="$i18n.locale"
+          v-model="locale"
         />
       </q-toolbar>
     </q-layout-header>
@@ -31,10 +31,19 @@ export default {
   name: 'HomeLayout',
   data () {
     return {
+      locale: this.$q.i18n.lang,
       idiomas: [
-        { label: 'English (US)', value: 'en-us' },
-        { label: 'Português (BRA)', value: 'pt-br' }
+        { label: 'Português (BRA)', value: 'pt-br' },
+        { label: 'English (US)', value: 'en-us' }
       ]
+    }
+  },
+  watch: {
+    locale (locale) {
+      import(`quasar-framework/i18n/${locale}`).then(lang => {
+        this.$q.i18n.set(lang.default)
+        this.$i18n.locale = locale
+      })
     }
   }
 }
