@@ -1,0 +1,678 @@
+[
+    {
+    "numero": {
+        "adulto": 1,
+        "adolescente": 1
+    },
+	"caminhoImagemTema": "statics/nutrition.svg",
+    "tema": "Nutrition",
+    "titulo": "How often do you include in the main meals of the day: beans, whole grains, nuts, fruits, vegetables?",
+    "opcoes": [
+        {
+        "titulo": "Always",
+        "valor": 4
+        },
+        {
+        "titulo": "Many times",
+        "valor": 3
+        },
+        {
+        "titulo": "Sometimes",
+        "valor": 2
+        },
+        {
+        "titulo": "Rarely",
+        "valor": 1
+        },
+        {
+        "titulo": "Almost never",
+        "valor": 0
+        }
+    ],
+    "opcaoSelecionada": "",
+    "tipo": "ambos"
+    },
+    {
+    "numero": {
+        "adulto": 2,
+        "adolescente": 2
+    },
+	"caminhoImagemTema": "statics/nutrition.svg",
+    "tema": "Nutrition",
+    "titulo": "How do you qualify the type of food you eat the most? * Choose the most appropriate option for you.",
+    "opcoes": [
+        {
+        "titulo": "Strict vegetarian: Consume milk, cheese, eggs, fish or meat maximum 1 time per month or less",
+        "valor": 4
+        },
+        {
+        "titulo": "Ovolacto vegetarian: Eat dairy and eggs more than once a month and fish and meat less than once a month",
+        "valor": 3
+        },
+        {
+        "titulo": "Pesco vegetarian: Eat meat, chicken and other poultry less than once a month, and eats fish more than 1 time per month",
+        "valor": 2
+        },
+        {
+        "titulo": "Semi vegetarian: Eat meat of various types maximum 1 time per week",
+        "valor": 1
+        },
+        {
+        "titulo": "Non vegetarian: Eat meat of various types more than once a week",
+        "valor": 0
+        }
+    ],
+    "opcaoSelecionada": "",
+    "tipo": "adulto"
+    },
+    {
+    "numero": {
+        "adulto": 3,
+        "adolescente": 2
+    },
+	"caminhoImagemTema": "statics/nutrition.svg",
+    "tema": "Nutrition",
+    "titulo": "How many of the following items do you consume one or more times a week? (snacks, crackers, fried foods, soft drinks and sweets in general)",
+    "opcoes": [
+        {
+        "titulo": "None",
+        "valor": 4
+        },
+        {
+        "titulo": "One item",
+        "valor": 3
+        },
+        {
+        "titulo": "Two items",
+        "valor": 2
+        },
+        {
+        "titulo": "Three items",
+        "valor": 1
+        },
+        {
+        "titulo": "Four to five items",
+        "valor": 0
+        }
+    ],
+    "opcaoSelecionada": "",
+    "tipo": "ambos"
+    },
+    {
+    "numero": {
+        "adulto": 4,
+        "adolescente": 3
+    },
+	"caminhoImagemTema": "statics/exercise.svg",
+    "tema": "Exercise",
+    "titulo": "Do you practice leisure activities such as walking, cycling, playing ball, extreme sports or other hobbies and enjoyable activities?",
+    "opcoes": [
+        {
+        "titulo": "Always",
+        "valor": 4
+        },
+        {
+        "titulo": "Many times",
+        "valor": 3
+        },
+        {
+        "titulo": "Sometimes",
+        "valor": 2
+        },
+        {
+        "titulo": "Almost never",
+        "valor": 1
+        },
+        {
+        "titulo": "Never",
+        "valor": 0
+        }
+    ],
+    "opcaoSelecionada": "",
+    "tipo": "ambos"
+    },
+    {
+    "numero": {
+        "adulto": 5,
+        "adolescente": 4
+    },
+	"caminhoImagemTema": "statics/exercise.svg",
+    "tema": "Exercise",
+    "titulo": "How many times a week do you do intense exercise (which makes you sweat and increase your heart rate, such as long walking, running, cycling, etc.)?",
+    "opcoes": [
+        {
+        "titulo": "5 or more times per week",
+        "valor": 4
+        },
+        {
+        "titulo": "3 to 4 times per week",
+        "valor": 3
+        },
+        {
+        "titulo": "1 to 2 times per week",
+        "valor": 2
+        },
+        {
+        "titulo": "Less than 1 per week",
+        "valor": 1
+        },
+        {
+        "titulo": "Never",
+        "valor": 0
+        }
+    ],
+    "opcaoSelecionada": "",
+    "tipo": "ambos"
+    },
+    {
+    "numero": {
+        "adulto": 6,
+        "adolescente": 5
+    },
+	"caminhoImagemTema": "statics/exercise.svg",
+    "tema": "Exercise",
+    "titulo": "How many minutes do you spend \"on average\" when you exercise intensely until you sweat?",
+    "opcoes": [
+        {
+        "titulo": "31 to 60 minutes",
+        "valor": 4
+        },
+        {
+        "titulo": "21 to 30 minutes",
+        "valor": 3
+        },
+        {
+        "titulo": "11 to 20 minutes",
+        "valor": 2
+        },
+        {
+        "titulo": "5 to 10 minutes",
+        "valor": 1
+        },
+        {
+        "titulo": "None, I don’t do it",
+        "valor": 0
+        }
+    ],
+    "opcaoSelecionada": "",
+    "tipo": "ambos"
+    },
+    {
+    "numero": {
+        "adulto": 7,
+        "adolescente": 6
+    },
+	"caminhoImagemTema": "statics/water.svg",
+    "tema": "Water",
+    "titulo": "How many cups (250 ml) of water do you drink daily?",
+    "opcoes": [
+        {
+        "titulo": "8 or more",
+        "valor": 4
+        },
+        {
+        "titulo": "7 cups",
+        "valor": 3
+        },
+        {
+        "titulo": "4 to 6 cups",
+        "valor": 2
+        },
+        {
+        "titulo": "1 to 3 cups",
+        "valor": 1
+        },
+        {
+        "titulo": "None",
+        "valor": 0
+        }
+    ],
+    "opcaoSelecionada": "",
+    "tipo": "ambos"
+    },
+    {
+    "numero": {
+        "adulto": 8,
+        "adolescente": 7
+    },
+	"caminhoImagemTema": "statics/water.svg",
+    "tema": "Water",
+    "titulo": "Do you use water as a remedy for home treatments when needed? (For example, hot and cold packs, ice application, inhalation, foot scrub and baths in general).",
+    "opcoes": [
+        {
+        "titulo": "Always",
+        "valor": 4
+        },
+        {
+        "titulo": "Many times",
+        "valor": 3
+        },
+        {
+        "titulo": "Sometimes",
+        "valor": 2
+        },
+        {
+        "titulo": "Almost never",
+        "valor": 1
+        },
+        {
+        "titulo": "Never",
+        "valor": 0
+        }
+    ],
+    "opcaoSelecionada": "",
+    "tipo": "ambos"
+    },
+    {
+    "numero": {
+        "adulto": 9,
+        "adolescente": 8
+    },
+	"caminhoImagemTema": "statics/sun.svg",
+    "tema": "Sun light",
+    "titulo": "How often do you expose yourself to the sun for at least 15 to 20 minutes a day?",
+    "opcoes": [
+        {
+        "titulo": "Always",
+        "valor": 4
+        },
+        {
+        "titulo": "Many times",
+        "valor": 3
+        },
+        {
+        "titulo": "Sometimes",
+        "valor": 2
+        },
+        {
+        "titulo": "Almost never",
+        "valor": 1
+        },
+        {
+        "titulo": "Never",
+        "valor": 0
+        }
+    ],
+    "opcaoSelecionada": "",
+    "tipo": "ambos"
+    },
+    {
+    "numero": {
+        "adulto": 10,
+        "adolescente": 9
+    },
+	"caminhoImagemTema": "statics/sun.svg",
+    "tema": "Sun light",
+    "titulo": "In your house, are the windows and shutters open daily for sunlight and natural light?",
+    "opcoes": [
+        {
+        "titulo": "Always",
+        "valor": 4
+        },
+        {
+        "titulo": "Many times",
+        "valor": 3
+        },
+        {
+        "titulo": "Sometimes",
+        "valor": 2
+        },
+        {
+        "titulo": "Almost never",
+        "valor": 1
+        },
+        {
+        "titulo": "Never",
+        "valor": 0
+        }
+    ],
+    "opcaoSelecionada": "",
+    "tipo": "ambos"
+    },
+    {
+    "numero": {
+        "adulto": 11,
+        "adolescente": 10
+    },
+	"caminhoImagemTema": "statics/balance.svg",
+    "tema": "Temperance",
+    "titulo": "Do you drink alcohol (beer, wine, liquor, brandy, sugarcane liquor, or any other)?",
+    "opcoes": [
+        {
+        "titulo": "No",
+        "valor": 4
+        },
+        {
+        "titulo": "Yes",
+        "valor": 0
+        }
+    ],
+    "opcaoSelecionada": "",
+    "tipo": "ambos"
+    },
+    {
+    "numero": {
+        "adulto": 12
+    },
+	"caminhoImagemTema": "statics/balance.svg",
+    "tema": "Temperance",
+    "titulo": "Do you smoke cigarettes, pipes, or do you use any tobacco smoke?",
+    "opcoes": [
+        {
+        "titulo": "No",
+        "valor": 4
+        },
+        {
+        "titulo": "Yes",
+        "valor": 0
+        }
+    ],
+    "opcaoSelecionada": "",
+    "tipo": "adulto"
+    },
+    {
+    "numero": {
+        "adulto": 13,
+        "adolescente": 11
+    },
+	"caminhoImagemTema": "statics/balance.svg",
+    "tema": "Temperance",
+    "titulo": "Have you used any drugs, such as marijuana, crack, cocaine, etc. in the last three months?",
+    "opcoes": [
+        {
+        "titulo": "No",
+        "valor": 4
+        },
+        {
+        "titulo": "Yes",
+        "valor": 0
+        }
+    ],
+    "opcaoSelecionada": "",
+    "tipo": "ambos"
+    },
+    {
+    "numero": {
+        "adulto": 14
+    },
+	"caminhoImagemTema": "statics/balance.svg",
+    "tema": "Temperance",
+    "titulo": "Do you drink drinks that contain caffeine? (coffee, black tea, green tea, mate tea, white tea or soft drinks)",
+    "opcoes": [
+        {
+        "titulo": "No",
+        "valor": 4
+        },
+        {
+        "titulo": "Yes",
+        "valor": 0
+        }
+    ],
+    "opcaoSelecionada": "",
+    "tipo": "adulto"
+    },
+    {
+    "numero": {
+        "adulto": 15,
+        "adolescente": 12
+    },
+	"caminhoImagemTema": "statics/fresh-air.svg",
+    "tema": "Air",
+    "titulo": "Considering the places where you spend most of the time, how do you rate the quality of the air you breathe?",
+    "opcoes": [
+        {
+        "titulo": "Very good quality",
+        "valor": 4
+        },
+        {
+        "titulo": "Good quality",
+        "valor": 3
+        },
+        {
+        "titulo": "Regular",
+        "valor": 2
+        },
+        {
+        "titulo": "Bad",
+        "valor": 1
+        },
+        {
+        "titulo": "Too bad",
+        "valor": 0
+        }
+    ],
+    "opcaoSelecionada": "",
+    "tipo": "ambos"
+    },
+    {
+    "numero": {
+        "adulto": 16,
+        "adolescente": 13
+    },
+	"caminhoImagemTema": "statics/fresh-air.svg",
+    "tema": "Air",
+    "titulo": "Do you take deep breaths outdoors or when you need to control tension and anxiety?",
+    "opcoes": [
+        {
+        "titulo": "Always",
+        "valor": 4
+        },
+        {
+        "titulo": "Many times",
+        "valor": 3
+        },
+        {
+        "titulo": "Sometimes",
+        "valor": 2
+        },
+        {
+        "titulo": "Rarely",
+        "valor": 1
+        },
+        {
+        "titulo": "Never",
+        "valor": 0
+        }
+    ],
+    "opcaoSelecionada": "",
+    "tipo": "ambos"
+    },
+    {
+    "numero": {
+        "adulto": 17,
+        "adolescente": 14
+    },
+	"caminhoImagemTema": "statics/rest.svg",
+    "tema": "Rest",
+    "titulo": "Do you sleep 7 to 8 hours a night and wake up rested and in good spirits most of the time?",
+    "opcoes": [
+        {
+        "titulo": "Always",
+        "valor": 4
+        },
+        {
+        "titulo": "Many times",
+        "valor": 3
+        },
+        {
+        "titulo": "Sometimes",
+        "valor": 2
+        },
+        {
+        "titulo": "Rarely",
+        "valor": 1
+        },
+        {
+        "titulo": "Never",
+        "valor": 0
+        }
+    ],
+    "opcaoSelecionada": "",
+    "tipo": "ambos"
+    },
+    {
+    "numero": {
+        "adulto": 18,
+        "adolescente": 15
+    },
+	"caminhoImagemTema": "statics/rest.svg",
+    "tema": "Rest",
+    "titulo": "Do you usually sleep early? (around 10 pm or before that time).",
+    "opcoes": [
+        {
+        "titulo": "Always",
+        "valor": 4
+        },
+        {
+        "titulo": "Many times",
+        "valor": 3
+        },
+        {
+        "titulo": "Sometimes",
+        "valor": 2
+        },
+        {
+        "titulo": "Rarely",
+        "valor": 1
+        },
+        {
+        "titulo": "Never",
+        "valor": 0
+        }
+    ],
+    "opcaoSelecionada": "",
+    "tipo": "ambos"
+    },
+    {
+    "numero": {
+        "adulto": 19,
+        "adolescente": 16
+    },
+	"caminhoImagemTema": "statics/faith.svg",
+    "tema": "Trust",
+    "titulo": "Do you trust in God? (in a Higher Self or something sacred)",
+    "opcoes": [
+        {
+        "titulo": "Always",
+        "valor": 4
+        },
+        {
+        "titulo": "Many times",
+        "valor": 3
+        },
+        {
+        "titulo": "Sometimes",
+        "valor": 2
+        },
+        {
+        "titulo": "Rarely",
+        "valor": 1
+        },
+        {
+        "titulo": "Never",
+        "valor": 0
+        }
+    ],
+    "opcaoSelecionada": "",
+    "tipo": "ambos"
+    },
+    {
+    "numero": {
+        "adulto": 20,
+        "adolescente": 17
+    },
+	"caminhoImagemTema": "statics/faith.svg",
+    "tema": "Trust",
+    "titulo": "Does your trust in God (Higher Self or something sacred) positively influence your way of life?",
+    "opcoes": [
+        {
+        "titulo": "Always",
+        "valor": 4
+        },
+        {
+        "titulo": "Many times",
+        "valor": 3
+        },
+        {
+        "titulo": "Sometimes",
+        "valor": 2
+        },
+        {
+        "titulo": "Rarely",
+        "valor": 1
+        },
+        {
+        "titulo": "Never",
+        "valor": 0
+        }
+    ],
+    "opcaoSelecionada": "",
+    "tipo": "ambos"
+    },
+    {
+    "numero": {
+        "adulto": 21,
+        "adolescente": 18
+    },
+	"caminhoImagemTema": "statics/faith.svg",
+    "tema": "Trust",
+    "titulo": "How often do you attend religious or spiritual meetings?",
+    "opcoes": [
+        {
+        "titulo": "More than once a week",
+        "valor": 4
+        },
+        {
+        "titulo": "Once a week",
+        "valor": 3
+        },
+        {
+        "titulo": "Two or three times per month",
+        "valor": 2
+        },
+        {
+        "titulo": "Sometimes per year",
+        "valor": 1
+        },
+        {
+        "titulo": "Rarely or never",
+        "valor": 0
+        }
+    ],
+    "opcaoSelecionada": "",
+    "tipo": "ambos"
+    },
+    {
+    "numero": {
+        "adulto": 22,
+        "adolescente": 19
+    },
+	"caminhoImagemTema": "statics/faith.svg",
+    "tema": "Trust",
+    "titulo": "Do you practice religious or spiritual activities in your private life? (meditate, pray, read the Bible or religious books, do charity, etc.).",
+    "opcoes": [
+        {
+        "titulo": "More than once a day",
+        "valor": 4
+        },
+        {
+        "titulo": "Once a day",
+        "valor": 3
+        },
+        {
+        "titulo": "Two or three times per week",
+        "valor": 2
+        },
+        {
+        "titulo": "Few times per month",
+        "valor": 1
+        },
+        {
+        "titulo": "Rarely ou Never",
+        "valor": 0
+        }
+    ],
+    "opcaoSelecionada": "",
+    "tipo": "ambos"
+    }
+]

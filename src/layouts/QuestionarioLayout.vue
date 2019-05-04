@@ -25,7 +25,6 @@
 
 <script>
 import BotaoVoltar from '../components/BotaoVoltar.vue'
-import { pegaCaminhoImagem } from '../helpers/de-para.js'
 import { mapGetters } from 'vuex'
 
 export default {
@@ -52,10 +51,7 @@ export default {
       } else {
         this.page = questao.numero.adolescente
       }
-      this.imgPath = this.atualizarImagemTema()
-    },
-    atualizarImagemTema () {
-      return pegaCaminhoImagem(this.tema)
+      this.imgPath = questao.caminhoImagemTema
     },
     irParaQuestao () {
       this.$router.push('/' + this.getTipoQuestionario + '/questao/' + this.page)
