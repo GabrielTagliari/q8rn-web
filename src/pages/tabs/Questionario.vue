@@ -30,6 +30,7 @@ export default {
       if (this.$q.i18n.lang === 'en-us') {
         this.questoes = questoesEnUs
       }
+      this.limpaQuestoes()
       this.carregarQuestoesAdulto(this.questoes)
     },
     abreQuestionarioAdolescente () {
@@ -37,6 +38,11 @@ export default {
         this.questoes = questoesEnUs
       }
       this.carregarQuestoesAdolescente(this.questoes.filter(questao => questao.tipo === 'ambos'))
+    },
+    limpaQuestoes () {
+      this.questoes.forEach(questao => {
+        questao.opcaoSelecionada = ''
+      })
     }
   }
 }

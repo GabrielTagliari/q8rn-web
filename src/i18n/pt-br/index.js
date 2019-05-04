@@ -19,7 +19,7 @@ export default {
     titulo: 'Escore',
     subtitulo: 'Resultado obtido com base nas respostas',
     pontuacao: 'Pontuação',
-    resultado: 'Resultado',
+    classificacao: 'Classificação',
     questao: 'Questão',
     resposta: 'Resposta',
     pontosMelhorar: 'Pontos a melhorar',
@@ -31,6 +31,14 @@ export default {
         alerta: 'Após voltar ao menu não será mais possível visualizar os pontos a melhorar. Deseja voltar ao menu?'
       }
     }
+  },
+  classificacoes: {
+    insuficiente: 'Insuficiente',
+    regular: 'Regular',
+    bom: 'Bom',
+    muitoBom: 'Muito bom',
+    excelente: 'Excelente',
+    indefinido: 'Indefinido'
   },
   sim: 'Sim',
   nao: 'Não'

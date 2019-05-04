@@ -19,7 +19,7 @@ export default {
     titulo: 'Score',
     subtitulo: 'Result obtained on the basis of the answers',
     pontuacao: 'Score',
-    resultado: 'Result',
+    classificacao: 'Classification',
     questao: 'Question',
     resposta: 'Answer',
     pontosMelhorar: 'Points to improve',
@@ -31,6 +31,14 @@ export default {
         alerta: 'After going back to menu will no longer be possible to see points to improve. Are you sure?'
       }
     }
+  },
+  classificacoes: {
+    insuficiente: 'Insufficient',
+    regular: 'Regular',
+    bom: 'Good',
+    muitoBom: 'Very good',
+    excelente: 'Excellent',
+    indefinido: 'Undefined'
   },
   sim: 'Yes',
   nao: 'No'

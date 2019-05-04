@@ -4,7 +4,7 @@
       <q-list separator>
         <q-item class="row justify-between items-center">
           <span>{{ $t('escore.pontuacao').concat(': ').concat(escore) }}</span>
-          <span>{{ $t('escore.resultado').concat(': ').concat(resultado) }}</span>
+          <span>{{ $t('escore.classificacao').concat(': ').concat(resultado) }}</span>
         </q-item>
       </q-list>
       <q-list separator class="q-mt-sm q-mb-sm">
@@ -39,7 +39,7 @@
 
 <script>
 import ItemPontoMelhorar from '../components/ItemPontoMelhorar.vue'
-import { pegaCaminhoImagem, pegaResultadoPorEscore } from '../helpers/de-para.js'
+import { pegaCaminhoImagem } from '../helpers/de-para.js'
 import { mapGetters } from 'vuex'
 
 export default {
@@ -94,7 +94,15 @@ export default {
     },
     calculaResultadoPorEscore () {
       this.escore = this.getQuestoes.map(questao => questao.opcaoSelecionada).reduce((a, b) => a + b, 0)
-      this.resultado = pegaResultadoPorEscore(this.escore)
+      this.resultado = this.pegaResultadoPorEscore(this.escore)
+    },
+    pegaResultadoPorEscore (escore) {
+      return escore <= 25 ? this.$t('classificacoes.insuficiente')
+        : escore >= 26 && escore <= 44 ? this.$t('classificacoes.regular')
+          : escore >= 45 && escore <= 58 ? this.$t('classificacoes.bom')
+            : escore >= 59 && escore <= 73 ? this.$t('classificacoes.muitoBom')
+              : escore >= 74 && escore <= 88 ? this.$t('classificacoes.excelente')
+                : this.$t('classificacoes.indefinido')
     },
     exibePontuacaoPorTema (tema) {
       return this.$t('escore.pontos')
