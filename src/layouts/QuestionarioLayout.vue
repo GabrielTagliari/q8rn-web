@@ -5,7 +5,7 @@
           <botao-voltar />
           <img :src="imgPath" alt="Logo do tema" width="30px" height="30px">
           <q-toolbar-title>
-            <span id="tema"> {{ tema }} </span>
+            <span id="tema">{{ tema }}</span>
           </q-toolbar-title>
         </q-toolbar>
         <transition appear enter-active-class="animated fadeIn" leave-active-class="animated bounceInLeft">

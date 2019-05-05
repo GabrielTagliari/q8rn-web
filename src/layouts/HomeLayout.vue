@@ -5,7 +5,7 @@
         <q-toolbar-title class="q-pa-xs">
           <img src="~assets/logo_simples.png" alt="Logo" width="40px" height="35px">
         </q-toolbar-title>
-        <q-select dark class="absolute-right"
+        <q-select id="lang-dropdown" dark class="absolute-right"
           :options="idiomas"
           v-model="locale"
         />
