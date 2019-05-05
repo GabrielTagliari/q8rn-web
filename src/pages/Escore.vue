@@ -3,8 +3,8 @@
     <div class="animate-pop">
       <q-list separator>
         <q-item class="row justify-between items-center">
-          <span>{{ $t('escore.pontuacao').concat(': ').concat(escore) }}</span>
-          <span>{{ $t('escore.classificacao').concat(': ').concat(resultado) }}</span>
+          <span id="escore">{{ $t('escore.pontuacao').concat(': ').concat(escore) }}</span>
+          <span id="classificacao">{{ $t('escore.classificacao').concat(': ').concat(resultado) }}</span>
         </q-item>
       </q-list>
       <q-list separator class="q-mt-sm q-mb-sm">

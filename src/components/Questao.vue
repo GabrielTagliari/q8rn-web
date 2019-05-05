@@ -25,8 +25,8 @@
       </q-card>
     </transition>
     <div class="fixed-bottom-right">
-      <q-btn fab v-if="!isUltimaQuestao" color="primary" class="q-ma-md" @click="proxima"><q-icon name="arrow_forward" /></q-btn>
-      <q-btn fab v-else color="primary" class="q-ma-md" @click="finalizar"><q-icon name="arrow_forward" /></q-btn>
+      <q-btn fab v-if="!isUltimaQuestao" id="proximo" color="primary" class="q-ma-md" @click="proxima"><q-icon name="arrow_forward" /></q-btn>
+      <q-btn fab v-else color="primary" id="finalizar" class="q-ma-md" @click="finalizar"><q-icon name="arrow_forward" /></q-btn>
     </div>
   </div>
 </template>
