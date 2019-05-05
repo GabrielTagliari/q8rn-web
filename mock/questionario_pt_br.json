@@ -4,8 +4,10 @@
         "adulto": 1,
         "adolescente": 1
     },
-	"caminhoImagemTema": "statics/nutrition.svg",
-    "tema": "Nutrição",
+    "tema": {
+        "titulo": "Nutrição",
+        "caminhoImagemTema": "statics/nutrition.svg"
+    },
     "titulo": "Com que frequência você inclui nas principais refeições do dia: feijões, cereais integrais, castanhas, frutas, legumes e verduras?",
     "opcoes": [
         {
@@ -37,8 +39,10 @@
         "adulto": 2,
         "adolescente": 2
     },
-	"caminhoImagemTema": "statics/nutrition.svg",
-    "tema": "Nutrição",
+    "tema": {
+        "titulo": "Nutrição",
+        "caminhoImagemTema": "statics/nutrition.svg"
+    },
     "titulo": "Como você se classifica no que se refere ao tipo de alimento que você mais consome?* Escolha a opção mais adequada a seu caso.",
     "opcoes": [
         {
@@ -70,8 +74,10 @@
         "adulto": 3,
         "adolescente": 2
     },
-	"caminhoImagemTema": "statics/nutrition.svg",
-    "tema": "Nutrição",
+    "tema": {
+        "titulo": "Nutrição",
+        "caminhoImagemTema": "statics/nutrition.svg"
+    },
     "titulo": "Quantos dos itens a seguir você consome uma ou mais vezes por semana? (salgadinhos, bolachas, frituras, refrigerantes e doces de maneira geral)",
     "opcoes": [
         {
@@ -103,8 +109,10 @@
         "adulto": 4,
         "adolescente": 3
     },
-	"caminhoImagemTema": "statics/exercise.svg",
-    "tema": "Exercício",
+    "tema": {
+        "titulo": "Exercício",
+        "caminhoImagemTema": "statics/exercise.svg"
+    },
     "titulo": "Você pratica atividades de lazer, tais como caminhar, pedalar, jogar bola, esportes radicais ou outros hobbies e atividades prazerosas?",
     "opcoes": [
         {
@@ -136,8 +144,10 @@
         "adulto": 5,
         "adolescente": 4
     },
-	"caminhoImagemTema": "statics/exercise.svg",
-    "tema": "Exercício",
+    "tema": {
+        "titulo": "Exercício",
+        "caminhoImagemTema": "statics/exercise.svg"
+    },
     "titulo": "Quantas vezes por semana você pratica exercício físico intenso (que faz suar e aumentar os batimentos cardíacos, como caminhada longa, corrida, bicicleta, etc)?",
     "opcoes": [
         {
@@ -169,8 +179,10 @@
         "adulto": 6,
         "adolescente": 5
     },
-	"caminhoImagemTema": "statics/exercise.svg",
-    "tema": "Exercício",
+    "tema": {
+        "titulo": "Exercício",
+        "caminhoImagemTema": "statics/exercise.svg"
+    },
     "titulo": "Quantos minutos você gasta “em média” quando faz exercícios intensos até suar?",
     "opcoes": [
         {
@@ -202,8 +214,10 @@
         "adulto": 7,
         "adolescente": 6
     },
-	"caminhoImagemTema": "statics/water.svg",
-    "tema": "Água",
+    "tema": {
+        "titulo": "Água",
+        "caminhoImagemTema": "statics/water.svg"
+    },
     "titulo": "Quantos copos (250 ml) de água você bebe diariamente?",
     "opcoes": [
         {
@@ -235,8 +249,10 @@
         "adulto": 8,
         "adolescente": 7
     },
-	"caminhoImagemTema": "statics/water.svg",
-    "tema": "Água",
+    "tema": {
+        "titulo": "Água",
+        "caminhoImagemTema": "statics/water.svg"
+    },
     "titulo": "Você utiliza a água como remédio para tratamentos caseiros quando necessário? (Por exemplo, compressas quentes e frias, aplicação de gelo, inalação, escalda pés e banhos em geral).",
     "opcoes": [
         {
@@ -268,8 +284,10 @@
         "adulto": 9,
         "adolescente": 8
     },
-	"caminhoImagemTema": "statics/sun.svg",
-    "tema": "Sol",
+    "tema": {
+        "titulo": "Sol",
+        "caminhoImagemTema": "statics/sun.svg"
+    },
     "titulo": "Com que frequência você se expõe ao sol pelo menos 15 a 20 minutos por dia?",
     "opcoes": [
         {
@@ -301,8 +319,10 @@
         "adulto": 10,
         "adolescente": 9
     },
-	"caminhoImagemTema": "statics/sun.svg",
-    "tema": "Sol",
+    "tema": {
+        "titulo": "Sol",
+        "caminhoImagemTema": "statics/sun.svg"
+    },
     "titulo": "Em sua casa, as janelas e persianas são abertas diariamente para que entrem sol e luz natural?",
     "opcoes": [
         {
@@ -334,8 +354,10 @@
         "adulto": 11,
         "adolescente": 10
     },
-	"caminhoImagemTema": "statics/balance.svg",
-    "tema": "Temperança",
+    "tema": {
+        "titulo": "Temperança",
+        "caminhoImagemTema": "statics/balance.svg"
+    },
     "titulo": "Você ingere bebida alcóolica (cerveja, vinho, licor, aguardente, pinga ou qualquer outra)?",
     "opcoes": [
         {
@@ -354,8 +376,10 @@
     "numero": {
         "adulto": 12
     },
-	"caminhoImagemTema": "statics/balance.svg",
-    "tema": "Temperança",
+    "tema": {
+        "titulo": "Temperança",
+        "caminhoImagemTema": "statics/balance.svg"
+    },
     "titulo": "Você fuma cigarro, charuto, cachimbo ou usa fumo de rolo?",
     "opcoes": [
         {
@@ -375,8 +399,10 @@
         "adulto": 13,
         "adolescente": 11
     },
-	"caminhoImagemTema": "statics/balance.svg",
-    "tema": "Temperança",
+    "tema": {
+        "titulo": "Temperança",
+        "caminhoImagemTema": "statics/balance.svg"
+    },
     "titulo": "Você fez uso de alguma droga, tipo maconha, crack, cocaína, etc (nos últimos três meses)?",
     "opcoes": [
         {
@@ -395,8 +421,10 @@
     "numero": {
         "adulto": 14
     },
-	"caminhoImagemTema": "statics/balance.svg",
-    "tema": "Temperança",
+    "tema": {
+        "titulo": "Temperança",
+        "caminhoImagemTema": "statics/balance.svg"
+    },
     "titulo": "Você ingere bebidas que contém cafeína? (café, chá preto, chá verde, chá mate, chá branco ou refrigerantes)",
     "opcoes": [
         {
@@ -416,8 +444,10 @@
         "adulto": 15,
         "adolescente": 12
     },
-	"caminhoImagemTema": "statics/fresh-air.svg",
-    "tema": "Ar puro",
+    "tema": {
+        "titulo": "Ar puro",
+        "caminhoImagemTema": "statics/fresh-air.svg"
+    },
     "titulo": "Considerando os lugares onde passa a maior parte do tempo, como você classifica a qualidade do ar que respira?",
     "opcoes": [
         {
@@ -449,8 +479,10 @@
         "adulto": 16,
         "adolescente": 13
     },
-	"caminhoImagemTema": "statics/fresh-air.svg",
-    "tema": "Ar puro",
+    "tema": {
+        "titulo": "Ar puro",
+        "caminhoImagemTema": "statics/fresh-air.svg"
+    },
     "titulo": "Você faz respiração profunda ao ar livre ou quando precisa controlar a tensão e a ansiedade?",
     "opcoes": [
         {
@@ -482,8 +514,10 @@
         "adulto": 17,
         "adolescente": 14
     },
-	"caminhoImagemTema": "statics/rest.svg",
-    "tema": "Descanso",
+    "tema": {
+        "titulo": "Descanso",
+        "caminhoImagemTema": "statics/rest.svg"
+    },
     "titulo": "Você dorme de 7 a 8 horas por noite e acorda descansado(a) e com boa disposição na maioria das vezes?",
     "opcoes": [
         {
@@ -515,8 +549,10 @@
         "adulto": 18,
         "adolescente": 15
     },
-	"caminhoImagemTema": "statics/rest.svg",
-    "tema": "Descanso",
+    "tema": {
+        "titulo": "Descanso",
+        "caminhoImagemTema": "statics/rest.svg"
+    },
     "titulo": "Você costuma dormir cedo? (por volta das 22h ou antes desse horário).",
     "opcoes": [
         {
@@ -548,8 +584,10 @@
         "adulto": 19,
         "adolescente": 16
     },
-	"caminhoImagemTema": "statics/faith.svg",
-    "tema": "Confiança",
+    "tema": {
+        "titulo": "Confiança",
+        "caminhoImagemTema": "statics/faith.svg"
+    },
     "titulo": "Você confia em Deus? (em um Ser Superior ou algo sagrado)",
     "opcoes": [
         {
@@ -581,8 +619,10 @@
         "adulto": 20,
         "adolescente": 17
     },
-	"caminhoImagemTema": "statics/faith.svg",
-    "tema": "Confiança",
+    "tema": {
+        "titulo": "Confiança",
+        "caminhoImagemTema": "statics/faith.svg"
+    },
     "titulo": "Sua confiança em Deus (Ser Superior ou algo sagrado) influencia positivamente sua maneira de viver?",
     "opcoes": [
         {
@@ -614,8 +654,10 @@
         "adulto": 21,
         "adolescente": 18
     },
-	"caminhoImagemTema": "statics/faith.svg",
-    "tema": "Confiança",
+    "tema": {
+        "titulo": "Confiança",
+        "caminhoImagemTema": "statics/faith.svg"
+    },
     "titulo": "Com que frequência você participa de reuniões religiosas ou espirituais?",
     "opcoes": [
         {
@@ -647,8 +689,10 @@
         "adulto": 22,
         "adolescente": 19
     },
-	"caminhoImagemTema": "statics/faith.svg",
-    "tema": "Confiança",
+    "tema": {
+        "titulo": "Confiança",
+        "caminhoImagemTema": "statics/faith.svg"
+    },
     "titulo": "Você pratica atividades religiosas ou espirituais em sua vida particular? (meditar, rezar ou orar, ler a Bíblia ou livros religiosos, fazer caridade, etc.).",
     "opcoes": [
         {

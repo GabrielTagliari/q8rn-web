@@ -5,7 +5,7 @@
           <botao-voltar />
           <img :src="imgPath" alt="Logo do tema" width="30px" height="30px">
           <q-toolbar-title>
-            <span id="tema">{{ tema }}</span>
+            <span id="tema"> {{ tema.titulo }} </span>
           </q-toolbar-title>
         </q-toolbar>
         <transition appear enter-active-class="animated fadeIn" leave-active-class="animated bounceInLeft">
@@ -25,6 +25,7 @@
 
 <script>
 import BotaoVoltar from '../components/BotaoVoltar.vue'
+import { TipoQuestionario } from '../helpers/TipoQuestionarioEnum.js'
 import { mapGetters } from 'vuex'
 
 export default {
@@ -46,12 +47,12 @@ export default {
   methods: {
     atualizar (questao) {
       this.tema = questao.tema
-      if (this.getTipoQuestionario === 'adulto') {
+      if (this.getTipoQuestionario === TipoQuestionario.ADULTO) {
         this.page = questao.numero.adulto
       } else {
         this.page = questao.numero.adolescente
       }
-      this.imgPath = questao.caminhoImagemTema
+      this.imgPath = questao.tema.caminhoImagemTema
     },
     irParaQuestao () {
       this.$router.push('/' + this.getTipoQuestionario + '/questao/' + this.page)
