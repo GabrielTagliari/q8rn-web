@@ -6,6 +6,7 @@
 
 <script>
 import Questao from '../components/Questao.vue'
+import { TipoQuestionario } from '../helpers/TipoQuestionarioEnum.js'
 import { mapGetters } from 'vuex'
 
 export default {
@@ -27,7 +28,7 @@ export default {
   computed: {
     ...mapGetters(['getQuestoes', 'getTipoQuestionario']),
     isUltimaQuestao () {
-      if (this.getTipoQuestionario === 'adulto') {
+      if (this.getTipoQuestionario === TipoQuestionario.ADULTO) {
         return this.getQuestoes[this.$route.params.numero - 1].numero.adulto === this.getQuestoes.length
       } else {
         return this.getQuestoes[this.$route.params.numero - 1].numero.adolescente === this.getQuestoes.length
@@ -36,7 +37,7 @@ export default {
   },
   methods: {
     atualizar (questao) {
-      if (this.getTipoQuestionario === 'adulto') {
+      if (this.getTipoQuestionario === TipoQuestionario.ADULTO) {
         this.questoes[questao.numero.adulto - 1].opcaoSelecionada = questao.opcaoSelecionada
       } else {
         this.questoes[questao.numero.adolescente - 1].opcaoSelecionada = questao.opcaoSelecionada
@@ -68,7 +69,7 @@ export default {
     },
     preencheMensagemDinamico (respostasNaoPreenchidas) {
       let mensagem = respostasNaoPreenchidas.length > 1 ? this.$t('questionario.preenchaAsQuestoes') : this.$t('questionario.preenchaAQuestao')
-      if (this.getTipoQuestionario === 'adulto') {
+      if (this.getTipoQuestionario === TipoQuestionario.ADULTO) {
         return mensagem.concat(': ').concat(respostasNaoPreenchidas.map(questao => questao.numero.adulto))
       } else {
         return mensagem.concat(': ').concat(respostasNaoPreenchidas.map(questao => questao.numero.adolescente))
