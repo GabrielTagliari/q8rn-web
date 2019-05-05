@@ -37,6 +37,7 @@ export default {
       if (this.$q.i18n.lang === 'en-us') {
         this.questoes = questoesEnUs
       }
+      this.limpaQuestoes()
       this.carregarQuestoesAdolescente(this.questoes.filter(questao => questao.tipo === 'ambos'))
     },
     limpaQuestoes () {

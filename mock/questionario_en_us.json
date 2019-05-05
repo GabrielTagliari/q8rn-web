@@ -4,8 +4,10 @@
         "adulto": 1,
         "adolescente": 1
     },
-	"caminhoImagemTema": "statics/nutrition.svg",
-    "tema": "Nutrition",
+    "tema": {
+        "titulo": "Nutrition",
+        "caminhoImagemTema": "statics/nutrition.svg"
+    },
     "titulo": "How often do you include in the main meals of the day: beans, whole grains, nuts, fruits, vegetables?",
     "opcoes": [
         {
@@ -37,8 +39,10 @@
         "adulto": 2,
         "adolescente": 2
     },
-	"caminhoImagemTema": "statics/nutrition.svg",
-    "tema": "Nutrition",
+    "tema": {
+        "titulo": "Nutrition",
+        "caminhoImagemTema": "statics/nutrition.svg"
+    },
     "titulo": "How do you qualify the type of food you eat the most? * Choose the most appropriate option for you.",
     "opcoes": [
         {
@@ -70,8 +74,10 @@
         "adulto": 3,
         "adolescente": 2
     },
-	"caminhoImagemTema": "statics/nutrition.svg",
-    "tema": "Nutrition",
+    "tema": {
+        "titulo": "Nutrition",
+        "caminhoImagemTema": "statics/nutrition.svg"
+    },
     "titulo": "How many of the following items do you consume one or more times a week? (snacks, crackers, fried foods, soft drinks and sweets in general)",
     "opcoes": [
         {
@@ -103,8 +109,10 @@
         "adulto": 4,
         "adolescente": 3
     },
-	"caminhoImagemTema": "statics/exercise.svg",
-    "tema": "Exercise",
+    "tema": {
+        "titulo": "Exercise",
+        "caminhoImagemTema": "statics/exercise.svg"
+    },
     "titulo": "Do you practice leisure activities such as walking, cycling, playing ball, extreme sports or other hobbies and enjoyable activities?",
     "opcoes": [
         {
@@ -136,8 +144,10 @@
         "adulto": 5,
         "adolescente": 4
     },
-	"caminhoImagemTema": "statics/exercise.svg",
-    "tema": "Exercise",
+    "tema": {
+        "titulo": "Exercise",
+        "caminhoImagemTema": "statics/exercise.svg"
+    },
     "titulo": "How many times a week do you do intense exercise (which makes you sweat and increase your heart rate, such as long walking, running, cycling, etc.)?",
     "opcoes": [
         {
@@ -169,8 +179,10 @@
         "adulto": 6,
         "adolescente": 5
     },
-	"caminhoImagemTema": "statics/exercise.svg",
-    "tema": "Exercise",
+    "tema": {
+        "titulo": "Exercise",
+        "caminhoImagemTema": "statics/exercise.svg"
+    },
     "titulo": "How many minutes do you spend \"on average\" when you exercise intensely until you sweat?",
     "opcoes": [
         {
@@ -202,8 +214,10 @@
         "adulto": 7,
         "adolescente": 6
     },
-	"caminhoImagemTema": "statics/water.svg",
-    "tema": "Water",
+    "tema": {
+        "titulo": "Water",
+        "caminhoImagemTema": "statics/water.svg"
+    },
     "titulo": "How many cups (250 ml) of water do you drink daily?",
     "opcoes": [
         {
@@ -235,8 +249,10 @@
         "adulto": 8,
         "adolescente": 7
     },
-	"caminhoImagemTema": "statics/water.svg",
-    "tema": "Water",
+    "tema": {
+        "titulo": "Water",
+        "caminhoImagemTema": "statics/water.svg"
+    },
     "titulo": "Do you use water as a remedy for home treatments when needed? (For example, hot and cold packs, ice application, inhalation, foot scrub and baths in general).",
     "opcoes": [
         {
@@ -268,8 +284,10 @@
         "adulto": 9,
         "adolescente": 8
     },
-	"caminhoImagemTema": "statics/sun.svg",
-    "tema": "Sun light",
+    "tema": {
+        "titulo": "Sun light",
+        "caminhoImagemTema": "statics/sun.svg"
+    },
     "titulo": "How often do you expose yourself to the sun for at least 15 to 20 minutes a day?",
     "opcoes": [
         {
@@ -301,8 +319,10 @@
         "adulto": 10,
         "adolescente": 9
     },
-	"caminhoImagemTema": "statics/sun.svg",
-    "tema": "Sun light",
+    "tema": {
+        "titulo": "Sun light",
+        "caminhoImagemTema": "statics/sun.svg"
+    },
     "titulo": "In your house, are the windows and shutters open daily for sunlight and natural light?",
     "opcoes": [
         {
@@ -334,8 +354,10 @@
         "adulto": 11,
         "adolescente": 10
     },
-	"caminhoImagemTema": "statics/balance.svg",
-    "tema": "Temperance",
+    "tema": {
+        "titulo": "Temperance",
+        "caminhoImagemTema": "statics/balance.svg"
+    },
     "titulo": "Do you drink alcohol (beer, wine, liquor, brandy, sugarcane liquor, or any other)?",
     "opcoes": [
         {
@@ -354,8 +376,10 @@
     "numero": {
         "adulto": 12
     },
-	"caminhoImagemTema": "statics/balance.svg",
-    "tema": "Temperance",
+    "tema": {
+        "titulo": "Temperance",
+        "caminhoImagemTema": "statics/balance.svg"
+    },
     "titulo": "Do you smoke cigarettes, pipes, or do you use any tobacco smoke?",
     "opcoes": [
         {
@@ -375,8 +399,10 @@
         "adulto": 13,
         "adolescente": 11
     },
-	"caminhoImagemTema": "statics/balance.svg",
-    "tema": "Temperance",
+    "tema": {
+        "titulo": "Temperance",
+        "caminhoImagemTema": "statics/balance.svg"
+    },
     "titulo": "Have you used any drugs, such as marijuana, crack, cocaine, etc. in the last three months?",
     "opcoes": [
         {
@@ -395,8 +421,10 @@
     "numero": {
         "adulto": 14
     },
-	"caminhoImagemTema": "statics/balance.svg",
-    "tema": "Temperance",
+    "tema": {
+        "titulo": "Temperance",
+        "caminhoImagemTema": "statics/balance.svg"
+    },
     "titulo": "Do you drink drinks that contain caffeine? (coffee, black tea, green tea, mate tea, white tea or soft drinks)",
     "opcoes": [
         {
@@ -416,8 +444,10 @@
         "adulto": 15,
         "adolescente": 12
     },
-	"caminhoImagemTema": "statics/fresh-air.svg",
-    "tema": "Air",
+    "tema": {
+        "titulo": "Air",
+        "caminhoImagemTema": "statics/fresh-air.svg"
+    },
     "titulo": "Considering the places where you spend most of the time, how do you rate the quality of the air you breathe?",
     "opcoes": [
         {
@@ -449,8 +479,10 @@
         "adulto": 16,
         "adolescente": 13
     },
-	"caminhoImagemTema": "statics/fresh-air.svg",
-    "tema": "Air",
+    "tema": {
+        "titulo": "Air",
+        "caminhoImagemTema": "statics/fresh-air.svg"
+    },
     "titulo": "Do you take deep breaths outdoors or when you need to control tension and anxiety?",
     "opcoes": [
         {
@@ -482,8 +514,10 @@
         "adulto": 17,
         "adolescente": 14
     },
-	"caminhoImagemTema": "statics/rest.svg",
-    "tema": "Rest",
+    "tema": {
+        "titulo": "Rest",
+        "caminhoImagemTema": "statics/rest.svg"
+    },
     "titulo": "Do you sleep 7 to 8 hours a night and wake up rested and in good spirits most of the time?",
     "opcoes": [
         {
@@ -515,8 +549,10 @@
         "adulto": 18,
         "adolescente": 15
     },
-	"caminhoImagemTema": "statics/rest.svg",
-    "tema": "Rest",
+    "tema": {
+        "titulo": "Rest",
+        "caminhoImagemTema": "statics/rest.svg"
+    },
     "titulo": "Do you usually sleep early? (around 10 pm or before that time).",
     "opcoes": [
         {
@@ -548,8 +584,10 @@
         "adulto": 19,
         "adolescente": 16
     },
-	"caminhoImagemTema": "statics/faith.svg",
-    "tema": "Trust",
+    "tema": {
+        "titulo": "Trust",
+        "caminhoImagemTema": "statics/faith.svg"
+    },
     "titulo": "Do you trust in God? (in a Higher Self or something sacred)",
     "opcoes": [
         {
@@ -581,8 +619,10 @@
         "adulto": 20,
         "adolescente": 17
     },
-	"caminhoImagemTema": "statics/faith.svg",
-    "tema": "Trust",
+    "tema": {
+        "titulo": "Trust",
+        "caminhoImagemTema": "statics/faith.svg"
+    },
     "titulo": "Does your trust in God (Higher Self or something sacred) positively influence your way of life?",
     "opcoes": [
         {
@@ -614,8 +654,10 @@
         "adulto": 21,
         "adolescente": 18
     },
-	"caminhoImagemTema": "statics/faith.svg",
-    "tema": "Trust",
+    "tema": {
+        "titulo": "Trust",
+        "caminhoImagemTema": "statics/faith.svg"
+    },
     "titulo": "How often do you attend religious or spiritual meetings?",
     "opcoes": [
         {
@@ -647,8 +689,10 @@
         "adulto": 22,
         "adolescente": 19
     },
-	"caminhoImagemTema": "statics/faith.svg",
-    "tema": "Trust",
+    "tema": {
+        "titulo": "Trust",
+        "caminhoImagemTema": "statics/faith.svg"
+    },
     "titulo": "Do you practice religious or spiritual activities in your private life? (meditate, pray, read the Bible or religious books, do charity, etc.).",
     "opcoes": [
         {
