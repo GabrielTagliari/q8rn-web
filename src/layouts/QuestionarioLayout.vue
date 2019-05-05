@@ -25,6 +25,7 @@
 
 <script>
 import BotaoVoltar from '../components/BotaoVoltar.vue'
+import { TipoQuestionario } from '../helpers/TipoQuestionarioEnum.js'
 import { mapGetters } from 'vuex'
 
 export default {
@@ -46,7 +47,7 @@ export default {
   methods: {
     atualizar (questao) {
       this.tema = questao.tema
-      if (this.getTipoQuestionario === 'adulto') {
+      if (this.getTipoQuestionario === TipoQuestionario.ADULTO) {
         this.page = questao.numero.adulto
       } else {
         this.page = questao.numero.adolescente

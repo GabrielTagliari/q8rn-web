@@ -32,6 +32,7 @@
 </template>
 
 <script>
+import { TipoQuestionario } from '../helpers/TipoQuestionarioEnum.js'
 import { mapGetters } from 'vuex'
 
 export default {
@@ -49,7 +50,7 @@ export default {
   methods: {
     proxima () {
       if (this.isRespostaSelecionada()) {
-        if (this.getTipoQuestionario === 'adulto') {
+        if (this.getTipoQuestionario === TipoQuestionario.ADULTO) {
           this.$store.commit('atualizarOpcaoSelecionadaAdulto', this.questao)
           this.$router.push('/' + this.getTipoQuestionario + '/questao/' + (this.questao.numero.adulto + 1))
         } else {
@@ -59,7 +60,7 @@ export default {
       }
     },
     finalizar () {
-      if (this.getTipoQuestionario === 'adulto') {
+      if (this.getTipoQuestionario === TipoQuestionario.ADULTO) {
         this.$store.commit('atualizarOpcaoSelecionadaAdulto', this.questao)
       } else {
         this.$store.commit('atualizarOpcaoSelecionadaAdolescente', this.questao)

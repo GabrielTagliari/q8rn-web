@@ -40,6 +40,7 @@
 <script>
 import ItemPontoMelhorar from '../components/ItemPontoMelhorar.vue'
 import { pegaCaminhoImagem } from '../helpers/de-para.js'
+import { TipoQuestionario } from '../helpers/TipoQuestionarioEnum.js'
 import { mapGetters } from 'vuex'
 
 export default {
@@ -61,7 +62,7 @@ export default {
     this.populaTotalPontosPorTema()
   },
   computed: {
-    ...mapGetters(['getQuestoes'])
+    ...mapGetters(['getQuestoes', 'getTipoQuestionario'])
   },
   methods: {
     caminhoImagem (tema) {
@@ -102,7 +103,11 @@ export default {
     },
     calculaResultadoPorEscore () {
       this.escore = this.getQuestoes.map(questao => questao.opcaoSelecionada).reduce((a, b) => a + b, 0)
-      this.resultado = this.pegaClassificacaoPorEscoreAdulto()
+      if (this.getTipoQuestionario === TipoQuestionario.ADULTO) {
+        this.resultado = this.pegaClassificacaoPorEscoreAdulto()
+      } else {
+        this.resultado = this.pegaClassificacaoPorEscoreAdolescente()
+      }
     },
     pegaClassificacaoPorEscoreAdulto () {
       let escala = [25, 44, 58, 73, 88]
