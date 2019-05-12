@@ -8,7 +8,7 @@
         "titulo": "Nutrition",
         "caminhoImagemTema": "statics/nutrition.svg"
     },
-    "titulo": "How often do you include in the main meals of the day: beans, whole grains, nuts, fruits, vegetables?",
+    "titulo": "How often do you include beans, whole grains, nuts, fruits, vegetables in the main meals of the day?",
     "opcoes": [
         {
         "titulo": "Always",
@@ -19,7 +19,7 @@
         "valor": 3
         },
         {
-        "titulo": "Sometimes",
+        "titulo": "Some times",
         "valor": 2
         },
         {
@@ -43,26 +43,26 @@
         "titulo": "Nutrition",
         "caminhoImagemTema": "statics/nutrition.svg"
     },
-    "titulo": "How do you qualify the type of food you eat the most? * Choose the most appropriate option for you.",
+    "titulo": "How do you qualify the type of food you consume the most? * Choose the most appropriate option for you.",
     "opcoes": [
         {
-        "titulo": "Strict vegetarian: Consume milk, cheese, eggs, fish or meat maximum 1 time per month or less",
+        "titulo": "Strict vegetarian: doesn’t consume milk, cheese, eggs, fish or meat or consume 1 time per month or less",
         "valor": 4
         },
         {
-        "titulo": "Ovolacto vegetarian: Eat dairy and eggs more than once a month and fish and meat less than once a month",
+        "titulo": "Ovolacto vegetarian: dairy and eggs consumption more than once a month and fish and meat less than once a month",
         "valor": 3
         },
         {
-        "titulo": "Pesco vegetarian: Eat meat, chicken and other poultry less than once a month, and eats fish more than 1 time per month",
+        "titulo": "Pesco vegetarian: consume meat, chicken and poultry less than once a month, and consume fish more than 1 time per month",
         "valor": 2
         },
         {
-        "titulo": "Semi vegetarian: Eat meat of various types maximum 1 time per week",
+        "titulo": "Semi vegetarian: consume meat of various types maximum 1 time per week",
         "valor": 1
         },
         {
-        "titulo": "Non vegetarian: Eat meat of various types more than once a week",
+        "titulo": "Non vegetarian: consume meat of various types more than once a week",
         "valor": 0
         }
     ],
@@ -113,7 +113,7 @@
         "titulo": "Exercise",
         "caminhoImagemTema": "statics/exercise.svg"
     },
-    "titulo": "Do you practice leisure activities such as walking, cycling, playing ball, extreme sports or other hobbies and enjoyable activities?",
+    "titulo": "Do you practice leisure activities such as walking, cycling, ball playing, radical sports or other hobbies and enjoyable activities?",
     "opcoes": [
         {
         "titulo": "Always",
@@ -128,7 +128,7 @@
         "valor": 2
         },
         {
-        "titulo": "Almost never",
+        "titulo": "Rarely",
         "valor": 1
         },
         {
@@ -148,7 +148,7 @@
         "titulo": "Exercise",
         "caminhoImagemTema": "statics/exercise.svg"
     },
-    "titulo": "How many times a week do you do intense exercise (which makes you sweat and increase your heart rate, such as long walking, running, cycling, etc.)?",
+    "titulo": "How many times a week do you practice vigorous exercise (which makes you sweat and increase your heart rate, such as long walking, running, cycling, etc.)?",
     "opcoes": [
         {
         "titulo": "5 or more times per week",
@@ -183,7 +183,7 @@
         "titulo": "Exercise",
         "caminhoImagemTema": "statics/exercise.svg"
     },
-    "titulo": "How many minutes do you spend \"on average\" when you exercise intensely until you sweat?",
+    "titulo": "How many minutes do you spend \"on average\" when you practice vigorous exercise?",
     "opcoes": [
         {
         "titulo": "31 to 60 minutes",
@@ -253,7 +253,7 @@
         "titulo": "Water",
         "caminhoImagemTema": "statics/water.svg"
     },
-    "titulo": "Do you use water as a remedy for home treatments when needed? (For example, hot and cold packs, ice application, inhalation, foot scrub and baths in general).",
+    "titulo": "Do you use water as a remedy for home treatments when needed? (For example, hot and cold packs, ice application, inhalation, hot foot bath and, baths in general).",
     "opcoes": [
         {
         "titulo": "Always",
@@ -264,7 +264,7 @@
         "valor": 3
         },
         {
-        "titulo": "Sometimes",
+        "titulo": "Some times",
         "valor": 2
         },
         {
@@ -299,7 +299,7 @@
         "valor": 3
         },
         {
-        "titulo": "Sometimes",
+        "titulo": "Some times",
         "valor": 2
         },
         {
@@ -334,7 +334,7 @@
         "valor": 3
         },
         {
-        "titulo": "Sometimes",
+        "titulo": "Some times",
         "valor": 2
         },
         {
@@ -380,7 +380,7 @@
         "titulo": "Temperance",
         "caminhoImagemTema": "statics/balance.svg"
     },
-    "titulo": "Do you smoke cigarettes, pipes, or do you use any tobacco smoke?",
+    "titulo": "Do you smoke cigarettes, pipes, or any tobacco?",
     "opcoes": [
         {
         "titulo": "No",
@@ -425,7 +425,7 @@
         "titulo": "Temperance",
         "caminhoImagemTema": "statics/balance.svg"
     },
-    "titulo": "Do you drink drinks that contain caffeine? (coffee, black tea, green tea, mate tea, white tea or soft drinks)",
+    "titulo": "Do you drink caffeine containing beverages (coffee, black tea, green tea, mate tea, white tea or soft drinks)?",
     "opcoes": [
         {
         "titulo": "No",
@@ -448,7 +448,7 @@
         "titulo": "Air",
         "caminhoImagemTema": "statics/fresh-air.svg"
     },
-    "titulo": "Considering the places where you spend most of the time, how do you rate the quality of the air you breathe?",
+    "titulo": "Considering the places where you spend most of your time, how do you rate the quality of the air you breathe?",
     "opcoes": [
         {
         "titulo": "Very good quality",
@@ -463,11 +463,11 @@
         "valor": 2
         },
         {
-        "titulo": "Bad",
+        "titulo": "Bad quality",
         "valor": 1
         },
         {
-        "titulo": "Too bad",
+        "titulo": "Worst quality",
         "valor": 0
         }
     ],
@@ -483,7 +483,7 @@
         "titulo": "Air",
         "caminhoImagemTema": "statics/fresh-air.svg"
     },
-    "titulo": "Do you take deep breaths outdoors or when you need to control tension and anxiety?",
+    "titulo": "Do you take deep breaths outdoors and/or to control tension and anxiety?",
     "opcoes": [
         {
         "titulo": "Always",
@@ -494,7 +494,7 @@
         "valor": 3
         },
         {
-        "titulo": "Sometimes",
+        "titulo": "Some times",
         "valor": 2
         },
         {
@@ -518,7 +518,7 @@
         "titulo": "Rest",
         "caminhoImagemTema": "statics/rest.svg"
     },
-    "titulo": "Do you sleep 7 to 8 hours a night and wake up rested and in good spirits most of the time?",
+    "titulo": "Do you usually sleep 7 - 8 hours/night, waking up rested and in good spirits?",
     "opcoes": [
         {
         "titulo": "Always",
@@ -529,7 +529,7 @@
         "valor": 3
         },
         {
-        "titulo": "Sometimes",
+        "titulo": "Few times",
         "valor": 2
         },
         {
@@ -553,7 +553,7 @@
         "titulo": "Rest",
         "caminhoImagemTema": "statics/rest.svg"
     },
-    "titulo": "Do you usually sleep early? (around 10 pm or before that time).",
+    "titulo": "Do you usually sleep early (around 10 pm or earlier)?",
     "opcoes": [
         {
         "titulo": "Always",
@@ -564,7 +564,7 @@
         "valor": 3
         },
         {
-        "titulo": "Sometimes",
+        "titulo": "Few times",
         "valor": 2
         },
         {
@@ -588,7 +588,7 @@
         "titulo": "Trust",
         "caminhoImagemTema": "statics/faith.svg"
     },
-    "titulo": "Do you trust in God? (in a Higher Self or something sacred)",
+    "titulo": "Do you trust in God, Higher Power or Ultimate Truth/Reality?",
     "opcoes": [
         {
         "titulo": "Always",
@@ -599,7 +599,7 @@
         "valor": 3
         },
         {
-        "titulo": "Sometimes",
+        "titulo": "Few times",
         "valor": 2
         },
         {
@@ -623,7 +623,7 @@
         "titulo": "Trust",
         "caminhoImagemTema": "statics/faith.svg"
     },
-    "titulo": "Does your trust in God (Higher Self or something sacred) positively influence your way of life?",
+    "titulo": "Does your trust in God, Higher Power or Ultimate Truth/Reality positively influence your way of life?",
     "opcoes": [
         {
         "titulo": "Always",
@@ -634,7 +634,7 @@
         "valor": 3
         },
         {
-        "titulo": "Sometimes",
+        "titulo": "Few times",
         "valor": 2
         },
         {
@@ -693,7 +693,7 @@
         "titulo": "Trust",
         "caminhoImagemTema": "statics/faith.svg"
     },
-    "titulo": "Do you practice religious or spiritual activities in your private life? (meditate, pray, read the Bible or religious books, do charity, etc.).",
+    "titulo": "Do you practice religious or spiritual activities in your private life (meditations, prayers, religious books or Bible readings, volunteer work/charity activities, etc.)?",
     "opcoes": [
         {
         "titulo": "More than once a day",
