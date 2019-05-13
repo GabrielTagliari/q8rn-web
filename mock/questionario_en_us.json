@@ -285,7 +285,7 @@
         "adolescente": 8
     },
     "tema": {
-        "titulo": "Sun light",
+        "titulo": "Sunlight",
         "caminhoImagemTema": "statics/sun.svg"
     },
     "titulo": "How often do you expose yourself to the sun for at least 15 to 20 minutes a day?",
@@ -320,7 +320,7 @@
         "adolescente": 9
     },
     "tema": {
-        "titulo": "Sun light",
+        "titulo": "Sunlight",
         "caminhoImagemTema": "statics/sun.svg"
     },
     "titulo": "In your house, are the windows and shutters open daily for sunlight and natural light?",
