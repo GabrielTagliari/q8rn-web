@@ -34,7 +34,8 @@ export default {
       locale: this.$q.i18n.lang,
       idiomas: [
         { label: 'Português (BRA)', value: 'pt-br' },
-        { label: 'English (US)', value: 'en-us' }
+        { label: 'English (US)', value: 'en-us' },
+        { label: 'Español', value: 'es' }
       ]
     }
   },

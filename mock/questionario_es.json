@@ -1,0 +1,722 @@
+[
+    {
+    "numero": {
+        "adulto": 1,
+        "adolescente": 1
+    },
+    "tema": {
+        "titulo": "Nutrición",
+        "caminhoImagemTema": "statics/nutrition.svg"
+    },
+    "titulo": "¿Con qué frecuencia usted incluye en las principales comidas del día: frijoles, cereales integrales, castañas, frutas y verduras?",
+    "opcoes": [
+        {
+        "titulo": "Siempre",
+        "valor": 4
+        },
+        {
+        "titulo": "Muchas veces",
+        "valor": 3
+        },
+        {
+        "titulo": "Algunas veces",
+        "valor": 2
+        },
+        {
+        "titulo": "Rara vez",
+        "valor": 1
+        },
+        {
+        "titulo": "Casi nunca",
+        "valor": 0
+        }
+    ],
+    "opcaoSelecionada": "",
+    "tipo": "ambos"
+    },
+    {
+    "numero": {
+        "adulto": 2,
+        "adolescente": 2
+    },
+    "tema": {
+        "titulo": "Nutrición",
+        "caminhoImagemTema": "statics/nutrition.svg"
+    },
+    "titulo": "¿Cómo se clasifica en lo que se refiere al tipo de alimento que más consume? * Elija la opción más adecuada a su caso.",
+    "opcoes": [
+        {
+        "titulo": "Vegetariano estricto Consume leche, queso, huevos, pescado o carne en el máximo 1 vez al mes o menos",
+        "valor": 4
+        },
+        {
+        "titulo": "Ovolacto vegetariana: Come productos lácteos y huevos más de 1 vez al mes y los peces y las carnes menos de 1 vez al mes",
+        "valor": 3
+        },
+        {
+        "titulo": "Pesco vegetariana: Come carne, pollo y otras aves menos de 1 vez al mes, y come pescado más de 1 vez al mes",
+        "valor": 2
+        },
+        {
+        "titulo": "Semi vegetariana: Come carne de tipos variados en el máximo 1 vez por semana",
+        "valor": 1
+        },
+        {
+        "titulo": "No vegetariano: Come carne de tipos variados más de 1 vez por semana",
+        "valor": 0
+        }
+    ],
+    "opcaoSelecionada": "",
+    "tipo": "adulto"
+    },
+    {
+    "numero": {
+        "adulto": 3,
+        "adolescente": 2
+    },
+    "tema": {
+        "titulo": "Nutrición",
+        "caminhoImagemTema": "statics/nutrition.svg"
+    },
+    "titulo": "¿Cuántos, de los siguientes elementos, usted consume una o más veces por semana? (salchichas, galletas, frituras, refrescos y dulces de manera general)",
+    "opcoes": [
+        {
+        "titulo": "Ninguno",
+        "valor": 4
+        },
+        {
+        "titulo": "Un elemento",
+        "valor": 3
+        },
+        {
+        "titulo": "Dos elementos",
+        "valor": 2
+        },
+        {
+        "titulo": "Tres elementos",
+        "valor": 1
+        },
+        {
+        "titulo": "Cuatro a cinco elementos",
+        "valor": 0
+        }
+    ],
+    "opcaoSelecionada": "",
+    "tipo": "ambos"
+    },
+    {
+    "numero": {
+        "adulto": 4,
+        "adolescente": 3
+    },
+    "tema": {
+        "titulo": "Ejercicio",
+        "caminhoImagemTema": "statics/exercise.svg"
+    },
+    "titulo": "¿Usted practica actividades físicas, tales como: caminar, pedalear, jugar pelota, deportes extremos o otros pasatiempos y actividades placenteras?",
+    "opcoes": [
+        {
+        "titulo": "Siempre",
+        "valor": 4
+        },
+        {
+        "titulo": "Muchas veces",
+        "valor": 3
+        },
+        {
+        "titulo": "Algunas veces",
+        "valor": 2
+        },
+        {
+        "titulo": "Casi nunca",
+        "valor": 1
+        },
+        {
+        "titulo": "Jamás",
+        "valor": 0
+        }
+    ],
+    "opcaoSelecionada": "",
+    "tipo": "ambos"
+    },
+    {
+    "numero": {
+        "adulto": 5,
+        "adolescente": 4
+    },
+    "tema": {
+        "titulo": "Ejercicio",
+        "caminhoImagemTema": "statics/exercise.svg"
+    },
+    "titulo": "¿Cuántas veces a la semana usted practica ejercicio físico intenso (que hace sudar y aumentar los latidos del corazón, como caminata larga, carrera, bicicleta, etc)?",
+    "opcoes": [
+        {
+        "titulo": "Cinco veces o más por semana",
+        "valor": 4
+        },
+        {
+        "titulo": "Tres a cuatro veces por semana",
+        "valor": 3
+        },
+        {
+        "titulo": "Una a dos veces por semana",
+        "valor": 2
+        },
+        {
+        "titulo": "Menos de una vez por semana",
+        "valor": 1
+        },
+        {
+        "titulo": "Jamás",
+        "valor": 0
+        }
+    ],
+    "opcaoSelecionada": "",
+    "tipo": "ambos"
+    },
+    {
+    "numero": {
+        "adulto": 6,
+        "adolescente": 5
+    },
+    "tema": {
+        "titulo": "Ejercicio",
+        "caminhoImagemTema": "statics/exercise.svg"
+    },
+    "titulo": "¿Cuántos minutos usted pasa \"en promedio\" cuando hace ejercicios intensos hasta sudar?",
+    "opcoes": [
+        {
+        "titulo": "30 a 60 minutos",
+        "valor": 4
+        },
+        {
+        "titulo": "21 a 30 minutos",
+        "valor": 3
+        },
+        {
+        "titulo": "10 a 20 minutos",
+        "valor": 2
+        },
+        {
+        "titulo": "Cinco a 10 minutos",
+        "valor": 1
+        },
+        {
+        "titulo": "Ninguno, no hago",
+        "valor": 0
+        }
+    ],
+    "opcaoSelecionada": "",
+    "tipo": "ambos"
+    },
+    {
+    "numero": {
+        "adulto": 7,
+        "adolescente": 6
+    },
+    "tema": {
+        "titulo": "Agua",
+        "caminhoImagemTema": "statics/water.svg"
+    },
+    "titulo": "¿Cuántos vasos (250 ml) de agua usted bebe diariamente?",
+    "opcoes": [
+        {
+        "titulo": "Ocho o más",
+        "valor": 4
+        },
+        {
+        "titulo": "Siete vasos",
+        "valor": 3
+        },
+        {
+        "titulo": "Cuatro a seis vasos",
+        "valor": 2
+        },
+        {
+        "titulo": "Una a tres vasos",
+        "valor": 1
+        },
+        {
+        "titulo": "Ninguno",
+        "valor": 0
+        }
+    ],
+    "opcaoSelecionada": "",
+    "tipo": "ambos"
+    },
+    {
+    "numero": {
+        "adulto": 8,
+        "adolescente": 7
+    },
+    "tema": {
+        "titulo": "Agua",
+        "caminhoImagemTema": "statics/water.svg"
+    },
+    "titulo": "¿Usted utiliza el agua como remedio para los tratamientos caseros cuando es necesario? (Por ejemplo, compresas calientes y frías, aplicación de hielo, inhalación de vapores, baños de pies y baños en general).",
+    "opcoes": [
+        {
+        "titulo": "Siempre",
+        "valor": 4
+        },
+        {
+        "titulo": "Muchas veces",
+        "valor": 3
+        },
+        {
+        "titulo": "Algunas veces",
+        "valor": 2
+        },
+        {
+        "titulo": "Casi nunca",
+        "valor": 1
+        },
+        {
+        "titulo": "Jamás",
+        "valor": 0
+        }
+    ],
+    "opcaoSelecionada": "",
+    "tipo": "ambos"
+    },
+    {
+    "numero": {
+        "adulto": 9,
+        "adolescente": 8
+    },
+    "tema": {
+        "titulo": "Sol",
+        "caminhoImagemTema": "statics/sun.svg"
+    },
+    "titulo": "¿Con qué frecuencia usted se expone al sol al menos 15 a 20 minutos al día?",
+    "opcoes": [
+        {
+        "titulo": "Siempre",
+        "valor": 4
+        },
+        {
+        "titulo": "Muchas veces",
+        "valor": 3
+        },
+        {
+        "titulo": "Algunas veces",
+        "valor": 2
+        },
+        {
+        "titulo": "Casi nunca",
+        "valor": 1
+        },
+        {
+        "titulo": "Jamás",
+        "valor": 0
+        }
+    ],
+    "opcaoSelecionada": "",
+    "tipo": "ambos"
+    },
+    {
+    "numero": {
+        "adulto": 10,
+        "adolescente": 9
+    },
+    "tema": {
+        "titulo": "Sol",
+        "caminhoImagemTema": "statics/sun.svg"
+    },
+    "titulo": "¿En su casa, las ventanas y persianas se abren diariamente para que entren el sol y luz natural?",
+    "opcoes": [
+        {
+        "titulo": "Siempre",
+        "valor": 4
+        },
+        {
+        "titulo": "Muchas veces",
+        "valor": 3
+        },
+        {
+        "titulo": "Algunas veces",
+        "valor": 2
+        },
+        {
+        "titulo": "Casi nunca",
+        "valor": 1
+        },
+        {
+        "titulo": "Jamás",
+        "valor": 0
+        }
+    ],
+    "opcaoSelecionada": "",
+    "tipo": "ambos"
+    },
+    {
+    "numero": {
+        "adulto": 11,
+        "adolescente": 10
+    },
+    "tema": {
+        "titulo": "Templanza",
+        "caminhoImagemTema": "statics/balance.svg"
+    },
+    "titulo": "¿Usted ingiere bebida alcohólica (cerveza, vino, licor, aguardiente o cualquier otra)?",
+    "opcoes": [
+        {
+        "titulo": "No",
+        "valor": 4
+        },
+        {
+        "titulo": "Si",
+        "valor": 0
+        }
+    ],
+    "opcaoSelecionada": "",
+    "tipo": "ambos"
+    },
+    {
+    "numero": {
+        "adulto": 12
+    },
+    "tema": {
+        "titulo": "Templanza",
+        "caminhoImagemTema": "statics/balance.svg"
+    },
+    "titulo": "¿Usted fuma cigarrillo, cigarro o pipa?",
+    "opcoes": [
+        {
+        "titulo": "No",
+        "valor": 4
+        },
+        {
+        "titulo": "Si",
+        "valor": 0
+        }
+    ],
+    "opcaoSelecionada": "",
+    "tipo": "adulto"
+    },
+    {
+    "numero": {
+        "adulto": 13,
+        "adolescente": 11
+    },
+    "tema": {
+        "titulo": "Templanza",
+        "caminhoImagemTema": "statics/balance.svg"
+    },
+    "titulo": "¿Ha hecho uso de alguna droga, tipo marihuana, crack, cocaína, etc en los últimos tres meses?",
+    "opcoes": [
+        {
+        "titulo": "No",
+        "valor": 4
+        },
+        {
+        "titulo": "Si",
+        "valor": 0
+        }
+    ],
+    "opcaoSelecionada": "",
+    "tipo": "ambos"
+    },
+    {
+    "numero": {
+        "adulto": 14
+    },
+    "tema": {
+        "titulo": "Templanza",
+        "caminhoImagemTema": "statics/balance.svg"
+    },
+    "titulo": "¿Usted ingiere bebidas que contiene cafeína (café, té negro, té verde, té mate, té blanco o cualquier otra)?",
+    "opcoes": [
+        {
+        "titulo": "No",
+        "valor": 4
+        },
+        {
+        "titulo": "Si",
+        "valor": 0
+        }
+    ],
+    "opcaoSelecionada": "",
+    "tipo": "adulto"
+    },
+    {
+    "numero": {
+        "adulto": 15,
+        "adolescente": 12
+    },
+    "tema": {
+        "titulo": "Aire puro",
+        "caminhoImagemTema": "statics/fresh-air.svg"
+    },
+    "titulo": "Considerando los lugares donde pasa la mayor parte del tiempo, ¿cómo clasificaría la calidad del aire que respira?",
+    "opcoes": [
+        {
+        "titulo": "Muy buena calidad",
+        "valor": 4
+        },
+        {
+        "titulo": "Buena calidad",
+        "valor": 3
+        },
+        {
+        "titulo": "Regular",
+        "valor": 2
+        },
+        {
+        "titulo": "Malo",
+        "valor": 1
+        },
+        {
+        "titulo": "Muy malo",
+        "valor": 0
+        }
+    ],
+    "opcaoSelecionada": "",
+    "tipo": "ambos"
+    },
+    {
+    "numero": {
+        "adulto": 16,
+        "adolescente": 13
+    },
+    "tema": {
+        "titulo": "Aire puro",
+        "caminhoImagemTema": "statics/fresh-air.svg"
+    },
+    "titulo": "¿Usted hace respiración profunda al aire libre o cuando necesita controlar la tensión y la ansiedad?",
+    "opcoes": [
+        {
+        "titulo": "Siempre",
+        "valor": 4
+        },
+        {
+        "titulo": "Muchas veces",
+        "valor": 3
+        },
+        {
+        "titulo": "Algunas veces",
+        "valor": 2
+        },
+        {
+        "titulo": "Rara vez",
+        "valor": 1
+        },
+        {
+        "titulo": "Jamás",
+        "valor": 0
+        }
+    ],
+    "opcaoSelecionada": "",
+    "tipo": "ambos"
+    },
+    {
+    "numero": {
+        "adulto": 17,
+        "adolescente": 14
+    },
+    "tema": {
+        "titulo": "Resto",
+        "caminhoImagemTema": "statics/rest.svg"
+    },
+    "titulo": "¿Usted duerme de 7 a 8 horas por noche y despierta descansado (a) y activo la mayoría de las veces?",
+    "opcoes": [
+        {
+        "titulo": "Siempre",
+        "valor": 4
+        },
+        {
+        "titulo": "Muchas veces",
+        "valor": 3
+        },
+        {
+        "titulo": "Algunas veces",
+        "valor": 2
+        },
+        {
+        "titulo": "Rara vez",
+        "valor": 1
+        },
+        {
+        "titulo": "Jamás",
+        "valor": 0
+        }
+    ],
+    "opcaoSelecionada": "",
+    "tipo": "ambos"
+    },
+    {
+    "numero": {
+        "adulto": 18,
+        "adolescente": 15
+    },
+    "tema": {
+        "titulo": "Resto",
+        "caminhoImagemTema": "statics/rest.svg"
+    },
+    "titulo": "¿Usted suele dormir temprano? (alrededor de las 22h o antes de ese horario).",
+    "opcoes": [
+        {
+        "titulo": "Siempre",
+        "valor": 4
+        },
+        {
+        "titulo": "Muchas veces",
+        "valor": 3
+        },
+        {
+        "titulo": "Algunas veces",
+        "valor": 2
+        },
+        {
+        "titulo": "Rara vez",
+        "valor": 1
+        },
+        {
+        "titulo": "Jamás",
+        "valor": 0
+        }
+    ],
+    "opcaoSelecionada": "",
+    "tipo": "ambos"
+    },
+    {
+    "numero": {
+        "adulto": 19,
+        "adolescente": 16
+    },
+    "tema": {
+        "titulo": "Confianza",
+        "caminhoImagemTema": "statics/faith.svg"
+    },
+    "titulo": "¿Confía en Dios? (en un Ser Superior o algo sagrado)",
+    "opcoes": [
+        {
+        "titulo": "Siempre",
+        "valor": 4
+        },
+        {
+        "titulo": "Muchas veces",
+        "valor": 3
+        },
+        {
+        "titulo": "Algunas veces",
+        "valor": 2
+        },
+        {
+        "titulo": "Rara vez",
+        "valor": 1
+        },
+        {
+        "titulo": "Jamás",
+        "valor": 0
+        }
+    ],
+    "opcaoSelecionada": "",
+    "tipo": "ambos"
+    },
+    {
+    "numero": {
+        "adulto": 20,
+        "adolescente": 17
+    },
+    "tema": {
+        "titulo": "Confianza",
+        "caminhoImagemTema": "statics/faith.svg"
+    },
+    "titulo": "¿Su confianza en Dios (Ser Superior o algo sagrado) influye positivamente en su manera de vivir?",
+    "opcoes": [
+        {
+        "titulo": "Siempre",
+        "valor": 4
+        },
+        {
+        "titulo": "Muchas veces",
+        "valor": 3
+        },
+        {
+        "titulo": "Algunas veces",
+        "valor": 2
+        },
+        {
+        "titulo": "Rara vez",
+        "valor": 1
+        },
+        {
+        "titulo": "Jamás",
+        "valor": 0
+        }
+    ],
+    "opcaoSelecionada": "",
+    "tipo": "ambos"
+    },
+    {
+    "numero": {
+        "adulto": 21,
+        "adolescente": 18
+    },
+    "tema": {
+        "titulo": "Confianza",
+        "caminhoImagemTema": "statics/faith.svg"
+    },
+    "titulo": "¿Con qué frecuencia usted participa en reuniones religiosas o espirituales?",
+    "opcoes": [
+        {
+        "titulo": "Más de una vez a la semana",
+        "valor": 4
+        },
+        {
+        "titulo": "Una vez a la semana",
+        "valor": 3
+        },
+        {
+        "titulo": "Dos a tres veces al mes",
+        "valor": 2
+        },
+        {
+        "titulo": "Algunas veces al año",
+        "valor": 1
+        },
+        {
+        "titulo": "Rara vez o nunca",
+        "valor": 0
+        }
+    ],
+    "opcaoSelecionada": "",
+    "tipo": "ambos"
+    },
+    {
+    "numero": {
+        "adulto": 22,
+        "adolescente": 19
+    },
+    "tema": {
+        "titulo": "Confianza",
+        "caminhoImagemTema": "statics/faith.svg"
+    },
+    "titulo": "¿Usted practica actividades religiosas o espirituales en su vida particular? (meditar, rezar o orar, leer la Biblia o libros religiosos, hacer caridad, etc.).",
+    "opcoes": [
+        {
+        "titulo": "Más de una vez al día",
+        "valor": 4
+        },
+        {
+        "titulo": "Una vez al día",
+        "valor": 3
+        },
+        {
+        "titulo": "Dos o más veces por semana",
+        "valor": 2
+        },
+        {
+        "titulo": "Pocas veces al mes",
+        "valor": 1
+        },
+        {
+        "titulo": "Rara vez o nunca",
+        "valor": 0
+        }
+    ],
+    "opcaoSelecionada": "",
+    "tipo": "ambos"
+    }
+]

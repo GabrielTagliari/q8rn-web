@@ -16,6 +16,7 @@
 import { mapActions } from 'vuex'
 import questoesPtBr from '../../../mock/questionario_pt_br.json'
 import questoesEnUs from '../../../mock/questionario_en_us.json'
+import questoesEs from '../../../mock/questionario_es.json'
 
 export default {
   name: 'Questionario',
@@ -27,18 +28,22 @@ export default {
   methods: {
     ...mapActions(['carregarQuestoesAdulto', 'carregarQuestoesAdolescente']),
     abreQuestionarioAdulto () {
-      if (this.$q.i18n.lang === 'en-us') {
-        this.questoes = questoesEnUs
-      }
+      this.detectarIdioma()
       this.limpaQuestoes()
       this.carregarQuestoesAdulto(this.questoes)
     },
     abreQuestionarioAdolescente () {
+      this.detectarIdioma()
+      this.limpaQuestoes()
+      this.carregarQuestoesAdolescente(this.questoes.filter(questao => questao.tipo === 'ambos'))
+    },
+    detectarIdioma () {
       if (this.$q.i18n.lang === 'en-us') {
         this.questoes = questoesEnUs
       }
-      this.limpaQuestoes()
-      this.carregarQuestoesAdolescente(this.questoes.filter(questao => questao.tipo === 'ambos'))
+      if (this.$q.i18n.lang === 'es') {
+        this.questoes = questoesEs
+      }
     },
     limpaQuestoes () {
       this.questoes.forEach(questao => {
