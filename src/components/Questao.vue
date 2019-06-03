@@ -22,19 +22,19 @@
           </q-list>
         </q-card-main>
         </div>
-        <div class="items-end">
-          <q-card-separator />
-          <q-card-actions class="float-right">
-            <q-btn rounded v-if="!isUltimaQuestao" color="primary" class="q-ma-xs" @click="proxima">{{ $t('navegacao.proxima') }}</q-btn>
-            <q-btn rounded v-else color="primary" class="q-ma-xs" @click="finalizar">{{ $t('navegacao.finalizar') }}</q-btn>
-          </q-card-actions>
-        </div>
       </q-card>
     </transition>
+    <div class="fixed-bottom-right">
+      <q-btn fab v-if="!isUltimaQuestao" id="proximo" color="primary" class="q-ma-md" @click="proxima"><q-icon name="arrow_forward" /></q-btn>
+      <q-btn fab v-else color="primary" id="finalizar" class="q-ma-md" @click="finalizar"><q-icon name="arrow_forward" /></q-btn>
+    </div>
   </div>
 </template>
 
 <script>
+import { TipoQuestionario } from '../helpers/TipoQuestionarioEnum.js'
+import { mapGetters } from 'vuex'
+
 export default {
   name: 'Questao',
   props: ['questao', 'isUltimaQuestao'],
@@ -44,15 +44,27 @@ export default {
   updated () {
     this.$emit('atualizar', this.questao)
   },
+  computed: {
+    ...mapGetters(['getTipoQuestionario'])
+  },
   methods: {
     proxima () {
       if (this.isRespostaSelecionada()) {
-        this.$store.commit('atualizarOpcaoSelecionada', this.questao)
-        this.$router.push('/questionario/questao/' + (this.questao.numero + 1))
+        if (this.getTipoQuestionario === TipoQuestionario.ADULTO) {
+          this.$store.commit('atualizarOpcaoSelecionadaAdulto', this.questao)
+          this.$router.push('/' + this.getTipoQuestionario + '/questao/' + (this.questao.numero.adulto + 1))
+        } else {
+          this.$store.commit('atualizarOpcaoSelecionadaAdolescente', this.questao)
+          this.$router.push('/' + this.getTipoQuestionario + '/questao/' + (this.questao.numero.adolescente + 1))
+        }
       }
     },
     finalizar () {
-      this.$store.commit('atualizarOpcaoSelecionada', this.questao)
+      if (this.getTipoQuestionario === TipoQuestionario.ADULTO) {
+        this.$store.commit('atualizarOpcaoSelecionadaAdulto', this.questao)
+      } else {
+        this.$store.commit('atualizarOpcaoSelecionadaAdolescente', this.questao)
+      }
       this.$emit('finalizar')
     },
     isRespostaSelecionada () {
@@ -72,11 +84,3 @@ export default {
   }
 }
 </script>
-
-<style lang="stylus">
-.q-card-actions {
-  .q-btn {
-    width 100px
-  }
-}
-</style>

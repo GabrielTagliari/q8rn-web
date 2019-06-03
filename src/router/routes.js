@@ -20,7 +20,8 @@ const routes = [
     path: '',
     component: () => import('layouts/QuestionarioLayout.vue'),
     children: [
-      { path: '/questionario/questao/:numero', component: () => import('pages/Questionario.vue') }
+      { path: '/adulto/questao/:numero', component: () => import('pages/Questionario.vue') },
+      { path: '/adolescente/questao/:numero', component: () => import('pages/Questionario.vue') }
     ]
   },
   {

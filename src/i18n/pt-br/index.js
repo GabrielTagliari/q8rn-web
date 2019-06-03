@@ -83,6 +83,7 @@ export default {
   },
   escore: {
     pontuacao: 'Pontuação',
+    classificacao: 'Classificação',
     resultado: 'Resultado',
     questao: 'Questão',
     resposta: 'Resposta',
@@ -95,6 +96,14 @@ export default {
         alerta: 'Após voltar ao menu não será mais possível visualizar os pontos a melhorar. Deseja voltar ao menu?'
       }
     }
+  },
+  classificacoes: {
+    insuficiente: 'Insuficiente',
+    regular: 'Regular',
+    bom: 'Bom',
+    muitoBom: 'Muito bom',
+    excelente: 'Excelente',
+    indefinido: 'Indefinido'
   },
   stepper: {
     titulo: {

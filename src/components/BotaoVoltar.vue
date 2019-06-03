@@ -4,7 +4,7 @@
     round
     dense
     icon="keyboard_arrow_left"
-    @click="$router.go(-1)"
+    @click="$router.push('/questionario')"
   />
 </template>
 

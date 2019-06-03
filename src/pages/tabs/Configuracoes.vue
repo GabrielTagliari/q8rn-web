@@ -15,7 +15,7 @@
         <q-item-side right>
           <q-select
             :options="idiomas"
-            v-model="$i18n.locale"
+            v-model="locale"
           />
         </q-item-side>
       </q-item>
@@ -37,10 +37,20 @@ export default {
   data () {
     return {
       dataUltimaSincronizacao: '04/11/2018',
+      locale: this.$q.i18n.lang,
       idiomas: [
+        { label: 'Português (BRA)', value: 'pt-br' },
         { label: 'English (US)', value: 'en-us' },
-        { label: 'Português (BRA)', value: 'pt-br' }
+        { label: 'Español', value: 'es' }
       ]
+    }
+  },
+  watch: {
+    locale (locale) {
+      import(`quasar-framework/i18n/${locale}`).then(lang => {
+        this.$q.i18n.set(lang.default)
+        this.$i18n.locale = locale
+      })
     }
   }
 }

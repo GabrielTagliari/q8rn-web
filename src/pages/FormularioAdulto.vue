@@ -113,12 +113,16 @@
 
 <script>
 import CalculadoraMedidas from '../classes/CalculadoraMedidas.js'
+import questoesPtBr from '../../mock/questionario_pt_br.json'
+import questoesEnUs from '../../mock/questionario_en_us.json'
+import questoesEs from '../../mock/questionario_es.json'
 import { mapActions } from 'vuex'
 
 export default {
   name: 'Formulario',
   data: () => {
     return {
+      questoes: questoesPtBr,
       step: '',
       botaoVoltarAtivo: false,
       entrevistado: {
@@ -281,15 +285,29 @@ export default {
     }
   },
   methods: {
-    ...mapActions(['carregarQuestoes']),
+    ...mapActions(['carregarQuestoesAdulto']),
     avanca () {
       this.step !== 'religiao-saude' ? this.$refs.stepper.next() : this.redirecionaQuestionario()
     },
     redirecionaQuestionario () {
-      this.$q.loading.show()
-      this.carregarQuestoes().then(() => {
-        this.$q.loading.hide()
-        this.$router.push('/questionario/questao/1')
+      this.abreQuestionarioAdulto()
+    },
+    abreQuestionarioAdulto () {
+      this.detectarIdioma()
+      this.limpaQuestoes()
+      this.carregarQuestoesAdulto(this.questoes)
+    },
+    detectarIdioma () {
+      if (this.$q.i18n.lang === 'en-us') {
+        this.questoes = questoesEnUs
+      }
+      if (this.$q.i18n.lang === 'es') {
+        this.questoes = questoesEs
+      }
+    },
+    limpaQuestoes () {
+      this.questoes.forEach(questao => {
+        questao.opcaoSelecionada = ''
       })
     },
     mockDadosParaTestes () {
