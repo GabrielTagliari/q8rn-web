@@ -20,6 +20,7 @@ export default {
     subtitulo: 'Resultado obtido com base nas respostas',
     pontuacao: 'Pontuação',
     classificacao: 'Classificação',
+    resultado: 'Resultado',
     questao: 'Questão',
     resposta: 'Resposta',
     pontosMelhorar: 'Pontos a melhorar',
@@ -39,6 +40,17 @@ export default {
     muitoBom: 'Muito bom',
     excelente: 'Excelente',
     indefinido: 'Indefinido'
+  },
+  stepper: {
+    titulo: {
+      pessoais: 'Pessoais',
+      biologicos: 'Biologicos',
+      religiaoSaude: 'Religião/Saúde'
+    },
+    subtitulo: {
+      dadosPessoais: 'Dados pessoais',
+      dadosBiologicos: 'Dados biológicos'
+    }
   },
   sim: 'Sim',
   nao: 'Não'

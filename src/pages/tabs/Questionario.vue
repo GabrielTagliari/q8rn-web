@@ -2,11 +2,11 @@
   <q-page class='fundo' padding>
     <div class='column absolute-center'>
       <transition appear enter-active-class='animated flipInX' leave-active-class='animated bounceInLeft'>
-        <q-btn rounded size='lg' color='primary' id="adulto" class='q-ma-md' @click='abreQuestionarioAdulto'>{{ $t('questionario.adulto') }}</q-btn>
+        <q-btn rounded size='lg' color='primary' id="adulto" class='q-ma-md' @click='abreFormularioAdulto'>{{ $t('tab.questionario.adulto') }}</q-btn>
       </transition>
 
       <transition appear enter-active-class='animated flipInX' leave-active-class='animated bounceInLeft'>
-        <q-btn rounded size='lg' color='secondary' id="adolescente" class='q-ma-md' @click='abreQuestionarioAdolescente'>{{ $t('questionario.adolescente') }}</q-btn>
+        <q-btn rounded size='lg' color='secondary' id="adolescente" class='q-ma-md' @click='abreQuestionarioAdolescente'>{{ $t('tab.questionario.adolescente') }}</q-btn>
       </transition>
     </div>
   </q-page>
@@ -22,33 +22,15 @@ export default {
   name: 'Questionario',
   data: () => {
     return {
-      questoes: questoesPtBr
     }
   },
   methods: {
     ...mapActions(['carregarQuestoesAdulto', 'carregarQuestoesAdolescente']),
-    abreQuestionarioAdulto () {
-      this.detectarIdioma()
-      this.limpaQuestoes()
-      this.carregarQuestoesAdulto(this.questoes)
+    abreFormularioAdulto () {
+      this.$router.push('/formulario/adulto')
     },
     abreQuestionarioAdolescente () {
-      this.detectarIdioma()
-      this.limpaQuestoes()
-      this.carregarQuestoesAdolescente(this.questoes.filter(questao => questao.tipo === 'ambos'))
-    },
-    detectarIdioma () {
-      if (this.$q.i18n.lang === 'en-us') {
-        this.questoes = questoesEnUs
-      }
-      if (this.$q.i18n.lang === 'es') {
-        this.questoes = questoesEs
-      }
-    },
-    limpaQuestoes () {
-      this.questoes.forEach(questao => {
-        questao.opcaoSelecionada = ''
-      })
+      this.$router.push('/formulario/adolescente')
     }
   }
 }
