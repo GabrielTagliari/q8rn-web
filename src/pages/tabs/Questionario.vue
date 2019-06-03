@@ -14,9 +14,6 @@
 
 <script>
 import { mapActions } from 'vuex'
-import questoesPtBr from '../../../mock/questionario_pt_br.json'
-import questoesEnUs from '../../../mock/questionario_en_us.json'
-import questoesEs from '../../../mock/questionario_es.json'
 
 export default {
   name: 'Questionario',

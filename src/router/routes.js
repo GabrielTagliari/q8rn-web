@@ -3,7 +3,17 @@ const routes = [
     path: '/',
     component: () => import('layouts/HomeLayout.vue'),
     children: [
-      { path: '', component: () => import('pages/tabs/Questionario.vue') }
+      { path: '/historico', component: () => import('pages/tabs/Historico.vue') },
+      { path: '/questionario', component: () => import('pages/tabs/Questionario.vue') },
+      { path: '/configuracoes', component: () => import('pages/tabs/Configuracoes.vue') }
+    ]
+  },
+  {
+    path: '/formulario',
+    component: () => import('layouts/FormularioLayout.vue'),
+    children: [
+      { path: '/formulario/adulto', component: () => import('pages/FormularioAdulto.vue') },
+      { path: '/formulario/adolescente', component: () => import('pages/FormularioAdolescente.vue') }
     ]
   },
   {
@@ -19,6 +29,13 @@ const routes = [
     component: () => import('layouts/EscoreLayout.vue'),
     children: [
       { path: '', component: () => import('pages/Escore.vue') }
+    ]
+  },
+  {
+    path: '/entrevistado',
+    component: () => import('layouts/EntrevistadoLayout.vue'),
+    children: [
+      { path: '/entrevistado/:id', component: () => import('pages/Entrevistado.vue') }
     ]
   }
 ]
