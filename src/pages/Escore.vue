@@ -144,7 +144,7 @@ export default {
         ok: this.$t('sim'),
         cancel: this.$t('nao')
       }).then(() => {
-        this.$router.push('/')
+        this.$router.push('/historico')
       })
     }
   }
