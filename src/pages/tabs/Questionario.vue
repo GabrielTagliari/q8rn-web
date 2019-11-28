@@ -1,13 +1,28 @@
 <template>
-  <q-page class='fundo' padding>
-    <div class='column absolute-center'>
-      <transition appear enter-active-class='animated flipInX' leave-active-class='animated bounceInLeft'>
-        <q-btn rounded size='lg' color='primary' id="adulto" class='q-ma-md' @click='abreQuestionarioAdulto'>{{ $t('questionario.adulto') }}</q-btn>
-      </transition>
-
-      <transition appear enter-active-class='animated flipInX' leave-active-class='animated bounceInLeft'>
-        <q-btn rounded size='lg' color='secondary' id="adolescente" class='q-ma-md' @click='abreQuestionarioAdolescente'>{{ $t('questionario.adolescente') }}</q-btn>
-      </transition>
+  <q-page padding class="column justify-center align-center">
+    <div class="row justify-center align-center">
+      <q-card class="col" inline style="max-width: 640px">
+        <q-card-media>
+          <img src="~assets/remedios.jpeg">
+          <q-card-title slot="overlay">
+            Escolha o tipo do questionario
+          </q-card-title>
+        </q-card-media>
+        <q-card-actions>
+          <q-btn outline size='md' color='primary' class="q-ma-md" id="adulto" @click='abreQuestionarioAdulto'>{{ $t('questionario.adulto') }}</q-btn>
+          <q-btn outline size='md' color='secondary' class="q-ma-md" id="adolescente" @click='abreQuestionarioAdolescente'>{{ $t('questionario.adolescente') }}</q-btn>
+        </q-card-actions>
+        <q-card-separator/>
+        <q-card-main>
+          Quer saber saber mais?
+          <q-btn flat size='md' color='primary' class="q-ma-md" >Revista Q8RN</q-btn>
+        </q-card-main>
+      </q-card>
+      <!-- <q-card class="col" inline style="width: 640px">
+        <q-card-media>
+          <iframe src="https://drive.google.com/file/d/0B4eySEvTiA_yRFdLT2ZOdFdFSG9zX1FZWnFudEU5dkpVTFNn/preview" width="640" height="480"></iframe>
+        </q-card-media>
+      </q-card> -->
     </div>
   </q-page>
 </template>
@@ -53,17 +68,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-.fundo {
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-image:
-  linear-gradient(
-  rgba(0, 0, 0, 0.5),
-  rgba(0, 0, 0, 0.5)
-  ),
-  url("../../assets/remedios.jpeg");
-}
-</style>
