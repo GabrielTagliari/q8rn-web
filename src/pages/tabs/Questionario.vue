@@ -1,7 +1,7 @@
 <template>
   <q-page padding class="column justify-center align-center">
     <div class="row justify-center align-center">
-      <q-card class="col" inline style="max-width: 640px">
+      <q-card class="col" inline style="max-width: 1024px">
         <q-card-media>
           <img src="~assets/remedios.jpeg">
           <q-card-title slot="overlay">
