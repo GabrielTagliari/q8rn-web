@@ -15,7 +15,10 @@
         <q-card-separator/>
         <q-card-main>
           Quer saber saber mais?
-          <q-btn flat size='md' color='primary' class="q-ma-md" >Revista Q8RN</q-btn>
+          <a href="../assets/panfleto.pdf" download class="q-btn inline relative-position q-btn-item non-selectable q-ma-md q-btn-rectangle q-btn-flat q-focusable q-hoverable text-primary">
+            <div class="q-focus-helper"></div>
+            <span class="q-btn-inner row col items-center justify-center">Revista Q8RN</span>
+          </a>
         </q-card-main>
       </q-card>
       <!-- <q-card class="col" inline style="width: 640px">
