@@ -15,17 +15,12 @@
         <q-card-separator/>
         <q-card-main>
           Quer saber saber mais?
-          <a href="../assets/panfleto.pdf" download class="q-btn inline relative-position q-btn-item non-selectable q-ma-md q-btn-rectangle q-btn-flat q-focusable q-hoverable text-primary">
+          <a :href="getPathUrl" download class="q-btn inline relative-position q-btn-item non-selectable q-ma-md q-btn-rectangle q-btn-flat q-focusable q-hoverable text-primary">
             <div class="q-focus-helper"></div>
             <span class="q-btn-inner row col items-center justify-center">Revista Q8RN</span>
           </a>
         </q-card-main>
       </q-card>
-      <!-- <q-card class="col" inline style="width: 640px">
-        <q-card-media>
-          <iframe src="https://drive.google.com/file/d/0B4eySEvTiA_yRFdLT2ZOdFdFSG9zX1FZWnFudEU5dkpVTFNn/preview" width="640" height="480"></iframe>
-        </q-card-media>
-      </q-card> -->
     </div>
   </q-page>
 </template>
@@ -35,12 +30,21 @@ import { mapActions } from 'vuex'
 import questoesPtBr from '../../../mock/questionario_pt_br.json'
 import questoesEnUs from '../../../mock/questionario_en_us.json'
 import questoesEs from '../../../mock/questionario_es.json'
+// import firebase from 'firebase'
 
 export default {
   name: 'Questionario',
   data: () => {
     return {
       questoes: questoesPtBr
+    }
+  },
+  computed: {
+    getPathUrl () {
+      // var storage = firebase.storage()
+      // var gsReference = storage.refFromURL('gs://q8rn-web.appspot.com/panfleto.pdf')
+      // return gsReference
+      return 'https://firebasestorage.googleapis.com/v0/b/q8rn-web.appspot.com/o/panfleto.pdf?alt=media&token=068146e6-57d9-477a-9aab-30ba036e7a18'
     }
   },
   methods: {
