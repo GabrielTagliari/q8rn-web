@@ -41,5 +41,10 @@ export default {
     indefinido: 'Undefined'
   },
   sim: 'Yes',
-  nao: 'No'
+  nao: 'No',
+  revista: {
+    titulo: 'Want to know more?',
+    botao: 'Click here'
+  },
+  downloadQuestionario: 'Download questionnaires (PDF):'
 }
