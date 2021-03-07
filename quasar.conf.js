@@ -2,9 +2,13 @@
 
 module.exports = function (ctx) {
   return {
+    boot: [
+      'firebase'
+    ],
     // app plugins (/src/plugins)
     plugins: [
-      'i18n'
+      'i18n',
+      'firebase'
     ],
     css: [
       'app.styl'

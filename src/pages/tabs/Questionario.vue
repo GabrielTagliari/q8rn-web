@@ -81,11 +81,13 @@ export default {
   methods: {
     ...mapActions(['carregarQuestoesAdulto', 'carregarQuestoesAdolescente']),
     abreQuestionarioAdulto () {
+      this.$analytics.logEvent('click_questionario_adulto')
       this.detectarIdioma()
       this.limpaQuestoes()
       this.carregarQuestoesAdulto(this.questoes)
     },
     abreQuestionarioAdolescente () {
+      this.$analytics.logEvent('click_questionario_adolescente')
       this.detectarIdioma()
       this.limpaQuestoes()
       this.carregarQuestoesAdolescente(this.questoes.filter(questao => questao.tipo === 'ambos'))

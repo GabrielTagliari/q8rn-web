@@ -46,6 +46,12 @@ export default {
         this.$i18n.locale = locale
       })
     }
+  },
+  mounted () {
+    this.$analytics.logEvent('page_view', {
+      content_type: 'view',
+      content_id: 'P12453'
+    })
   }
 }
 </script>

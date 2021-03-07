@@ -15,6 +15,7 @@
     "test:report": "vue-cli-service test:unit --coverage",
     "build": "quasar build -m pwa -t mat",
     "start": "node server.js",
+    "deploy": "firebase deploy --project q8rn-web",
     "heroku-postbuild": "npm install --only=dev --no-shrinkwrap && npm run build"
   },
   "dependencies": {
@@ -22,7 +23,7 @@
     "body-parser": "*",
     "connect-history-api-fallback": "^1.5.0",
     "express": "*",
-    "firebase": "^7.5.0",
+    "firebase": "^7.24.0",
     "vue-i18n": "^7.3.3",
     "vuex-persist": "^2.0.0"
   },
